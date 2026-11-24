@@ -105,3 +105,44 @@ Use the archived reading link for the permanent report. Old action-page links ma
 ### What to expect from this pilot
 
 Reports and the site are evolving. Check the PR description for actual publication, coverage and monitoring status. If a link is wrong, a report appears stale or a question has not been addressed, leave a precise comment on the relevant report PR. Do not assume a scheduled monitor has run unless an observation or update is recorded.
+
+## Report labels
+
+Labels distinguish review origin, current workflow state, and verified feedback. A label is not an automatic target verdict or permission to merge.
+
+### Category
+- **Focused Review:** directly requested review.
+- **Community Service:** proactive community-service review.
+
+Keep one category per report. Metadata and documentation PRs are not target reports.
+
+### Workflow state
+Keep exactly one current state on each report PR; preserve the detailed reason in its body.
+
+| Label | Meaning |
+|---|---|
+| Awaiting Reviewer | Report ready for human review. |
+| Needs Report Update | Target revision or new evidence needs reconciliation. |
+| Waiting Author Response | Feedback submitted; waiting for explanation or correction. |
+| Waiting CI | Source review cleared; remaining CI readiness gate. |
+| Waiting External Review | External reviewer agreement or repository landing decision remains; the body identifies the gate. |
+| Ready to Archive | Target terminal; report archival and page/branch cleanup are due. |
+| Archived | Report archived and its action page/branch cleanup verified. |
+
+### Verified target feedback
+These describe feedback submitted through the report maintainer's account, not merely drafted recommendations or another reviewer's approval.
+
+- **Target Approved:** verified APPROVED review submitted to the target.
+- **Target Changes Requested:** verified REQUEST_CHANGES review submitted to the target.
+- **Target Commented:** verified comment-only target feedback.
+- **Merged Without Our Approval:** the target merged without a verified approval from the maintainer's account before landing. This does not prove the report was ignored or unused; comments and other reviewers may still have informed the decision.
+
+### Attention
+- **Blocking Findings:** confirmed blocking findings in the currently reviewed scope.
+- **Coverage Incomplete:** required review coverage is missing or partial.
+
+Stale historical findings are not automatically current blockers. Categories do not change when states change. Monitoring removes superseded state labels and preserves unrelated labels.
+
+### Historical archival
+
+New actionable report intake normally excludes already-terminal targets. An existing historical report can be explicitly retained and merged as an archive, with no live target-action page. The original reasoning, previous closure/reopening decisions and terminal outcome remain recorded; archival does not certify every finding was fixed.
