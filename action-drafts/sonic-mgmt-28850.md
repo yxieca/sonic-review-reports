@@ -30,6 +30,18 @@ These are draft text, not submitted reviews. Confirm the head, read existing dis
 >
 > AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/1. This comment is not an approval or a Changes Requested verdict.
 
+## 3. Plain-comment feedback draft — prepared 2026-11-24
+
+[Open the comment draft](https://yxieca.github.io/sonic-review-reports/sonic-mgmt-28850.html#comment). This is a plain comment with no formal verdict. It did not exist when the earlier comment decision was made; review this prepared text before renewing that decision.
+
+> I reviewed the findings in https://github.com/yxieca/sonic-review-reports/pull/1 against target head 834b687c739eb0b5e72ad49770afc8a9a9cd6a30. Before landing, please resolve or explain R1 (unconfirmed test-leak cleanup finishing normally) and R3 (vendor MINOR-to-MAJOR escalation missing power recovery). R2's probe-episode synchronization needs either a reliable boundary or an explicit, supported deferral/containment decision.
+>
+> These points are already discussed in the linked target threads; I am referencing those discussions rather than raising them as newly discovered issues. The warning-only cleanup decision and the author's probe-window explanation are acknowledged; the report records the remaining disagreement and its source/inert evidence limits. Please use the report IDs when explaining a correction or disagreement. No physical outage or new hardware validation is claimed.
+>
+> AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/1. This comment is not an approval or a Changes Requested verdict.
+>
+> AI-assisted review, reviewed by Ying Xie (@yxieca).
+
 ## If blockers are later resolved
 
 Reconcile evidence and update issue dispositions first. Then replace the two action drafts with **comment without approval** and **approve with comment**. Keep any remaining nits explicitly optional, preserve this report backlink, and retain the previous draft/disposition history through normal commits. Never offer an approval link merely because CI is green.
