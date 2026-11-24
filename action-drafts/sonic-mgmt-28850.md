@@ -1,3 +1,58 @@
+# Current human-operated drafts: sonic-mgmt #28850
+
+Target head: `551639a26205168f539a1deb66262442cc7aa426`
+Report: https://github.com/yxieca/sonic-review-reports/pull/1
+
+Prepared after bounded coordinator-only source assessment on 2026-11-24. R1/R3 retained P2; R2 conditional P2, no accepted deferral. No fresh full panel or test execution. Earlier decision remains held; renewed revision-bound confirmation is needed for assistant submission. Do not claim the new material was already human-reviewed. No approval draft.
+
+## Current Request changes
+
+https://github.com/sonic-net/sonic-mgmt/pull/28850/files
+
+> Regarding target head 551639a26205168f539a1deb66262442cc7aa426:
+>
+> I reviewed the findings in https://github.com/yxieca/sonic-review-reports/pull/1 against the target change. Before landing, please resolve or explain R1 (unconfirmed test-leak cleanup finishing normally) and R3 (vendor MINOR-to-MAJOR escalation missing power recovery). R2's probe-episode synchronization needs either a reliable boundary or an explicit, supported deferral/containment decision.
+>
+> These points are already discussed in the linked target threads; I am referencing those discussions rather than raising them as newly discovered issues. Please use the report IDs when explaining a correction or disagreement. The report includes the exact reviewed revision, scope and evidence limits.
+>
+> AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/1. This submission reflects my own review and decision.
+>
+> Revision-bound evidence: target head 551639a26205168f539a1deb66262442cc7aa426. The 2026-11-24 follow-up is bounded coordinator-only source review, not a fresh full panel; earlier inert results are reused, not new hardware or test-suite validation. Existing R1/R2/R3 discussions are referenced; no new target feedback has been submitted.
+
+## Current Comment as questions
+
+https://github.com/sonic-net/sonic-mgmt/pull/28850#issuecomment-new
+
+> Regarding target head 551639a26205168f539a1deb66262442cc7aa426:
+>
+> Following the existing discussions, could you clarify the remaining points in https://github.com/yxieca/sonic-review-reports/pull/1?
+>
+> - R1: what establishes unsuccessful teardown or verified cleanup if bulk withdrawal returns false? The warning-only decision is acknowledged.
+> - R2: what ensures reinjection starts a new daemon episode if the recovery predicate observes the old No row before publication? Could this be safely deferred with an explicit containment?
+> - R3: should the vendor recovery guard include the MINOR-to-MAJOR escalation case when MAJOR can remove power?
+>
+> I am asking for correction or explanation, not asserting a physical outage. The report distinguishes new-path gaps, the direct recovery regression, and source/inert versus hardware evidence.
+>
+> AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/1. This comment is not an approval or a Changes Requested verdict.
+>
+> Revision-bound evidence: target head 551639a26205168f539a1deb66262442cc7aa426. The 2026-11-24 follow-up is bounded coordinator-only source review, not a fresh full panel; earlier inert results are reused, not new hardware or test-suite validation. Existing R1/R2/R3 discussions are referenced; no new target feedback has been submitted.
+
+## Current Comment without a formal verdict
+
+https://github.com/sonic-net/sonic-mgmt/pull/28850#issuecomment-new
+
+> I reviewed the findings in https://github.com/yxieca/sonic-review-reports/pull/1 against target head 551639a26205168f539a1deb66262442cc7aa426. Before landing, please resolve or explain R1 (unconfirmed test-leak cleanup finishing normally) and R3 (vendor MINOR-to-MAJOR escalation missing power recovery). R2's probe-episode synchronization needs either a reliable boundary or an explicit, supported deferral/containment decision.
+>
+> These points are already discussed in the linked target threads; I am referencing those discussions rather than raising them as newly discovered issues. The warning-only cleanup decision and the author's probe-window explanation are acknowledged; the report records the remaining disagreement and its source/inert evidence limits. Please use the report IDs when explaining a correction or disagreement. No physical outage or new hardware validation is claimed.
+>
+> AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/1. This comment is not an approval or a Changes Requested verdict.
+>
+> Revision-bound evidence: target head 551639a26205168f539a1deb66262442cc7aa426. The 2026-11-24 follow-up is bounded coordinator-only source review, not a fresh full panel; earlier inert results are reused, not new hardware or test-suite validation. Existing R1/R2/R3 discussions are referenced; no new target feedback has been submitted.
+
+---
+
+## Superseded old-SHA drafts — preserved history, not current submission text
+
 # Human-operated feedback drafts: sonic-mgmt #28850
 
 **STALE — current target head `551639a26205168f539a1deb66262442cc7aa426` differs from reviewed head `834b687c739eb0b5e72ad49770afc8a9a9cd6a30`.** The saved findings and drafts are historical, not current-head clearance. Source review of the changed scope is pending; do not submit these drafts as current feedback. The earlier plain-comment signal remains held and cannot authorize feedback at the new target revision.
