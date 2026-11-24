@@ -1,13 +1,13 @@
 # Editable target feedback drafts
 
-Report PR: REPORT_PR_PENDING
+Report PR: https://github.com/yxieca/sonic-review-reports/pull/10
 Target: https://github.com/sonic-net/sonic-platform-daemons/pull/923
 Reviewed head: `ea5e907b411a882410f06a31e3fb5fc1c219e22a`
 
 ## comment
 
 ```text
-AI-assisted review report: REPORT_PR_PENDING
+AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/10
 
 Source acceptable; no new demonstrated code blocker. Existing human startup/guard objection remains; publication does not release it.
 
@@ -28,7 +28,7 @@ Any submission reflects the reader’s own review and judgment; this comment is 
 ## approve
 
 ```text
-AI-assisted review report: REPORT_PR_PENDING
+AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/10
 
 Source acceptable; no new demonstrated code blocker. Existing human startup/guard objection remains; publication does not release it.
 
