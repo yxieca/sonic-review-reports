@@ -1,5 +1,7 @@
 # Human-operated feedback drafts: sonic-mgmt #28850
 
+**STALE — current target head `551639a26205168f539a1deb66262442cc7aa426` differs from reviewed head `834b687c739eb0b5e72ad49770afc8a9a9cd6a30`.** The saved findings and drafts are historical, not current-head clearance. Source review of the changed scope is pending; do not submit these drafts as current feedback. The earlier plain-comment signal remains held and cannot authorize feedback at the new target revision.
+
 Report: https://github.com/yxieca/sonic-review-reports/pull/1  
 Target: https://github.com/sonic-net/sonic-mgmt/pull/28850  
 Reviewed head: `834b687c739eb0b5e72ad49770afc8a9a9cd6a30`
