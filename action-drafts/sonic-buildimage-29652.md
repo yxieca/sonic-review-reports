@@ -1,13 +1,13 @@
 # Editable target feedback drafts
 
-Report PR: REPORT_PR_PENDING
+Report PR: https://github.com/yxieca/sonic-review-reports/pull/7
 Target: https://github.com/sonic-net/sonic-buildimage/pull/29652
 Reviewed head: `506526151f1bd020a508112ad2af463996198a3a`
 
 ## comment
 
 ```text
-AI-assisted review report: REPORT_PR_PENDING
+AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/7
 
 Source acceptable; no new demonstrated code blocker. Historical review: target MERGED at 2026-11-21T06:17:51Z; no additional target verdict is applicable.
 
@@ -28,7 +28,7 @@ Any submission reflects the reader’s own review and judgment; this comment is 
 ## approve
 
 ```text
-AI-assisted review report: REPORT_PR_PENDING
+AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/7
 
 Source acceptable; no new demonstrated code blocker. Historical review: target MERGED at 2026-11-21T06:17:51Z; no additional target verdict is applicable.
 
