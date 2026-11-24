@@ -6,7 +6,7 @@
 
 The button copies the editable draft and opens the corresponding target GitHub page. The reader still pastes, selects any formal review verdict, and submits using their own account. Clipboard failure leaves the text selected for manual copying. No token, API posting, tracking or automatic review/merge exists.
 
-Proposed hosted URLs (not live until Pages is enabled):
+Verified live pilot URLs:
 - https://yxieca.github.io/sonic-review-reports/sonic-mgmt-28850.html#request-changes
 - https://yxieca.github.io/sonic-review-reports/sonic-mgmt-28850.html#questions
 
@@ -16,4 +16,4 @@ Draft text is copied from the report's action-drafts file; update both if the hu
 
 ## Separation of site metadata and report content
 
-The `.nojekyll` marker is site-wide metadata. A report action HTML page contains target-specific drafts and belongs with its report, not the metadata PR. The pilot now uses `docs/sonic-mgmt-28850.html`; every target gets its own `<repository>-<PR-number>.html` page. Removing one named page retires only that report’s actions. Shared styling and button logic are currently embedded in that page. Extract them only with a coordinated deployment that keeps the live report functional. Unique per-report paths and stable site publication remain implementation work, not capabilities provided by this cleanup.
+The `.nojekyll` marker is site-wide metadata. A report action HTML page contains target-specific drafts and belongs with its report, not the metadata PR. The pilot now uses `docs/sonic-mgmt-28850.html`; every target gets its own `<repository>-<PR-number>.html` page. Removing one named page retires only that report’s actions. Shared styling and button logic are currently embedded in that page. Extract them only with a coordinated deployment that keeps the live report functional. Report-specific filenames are implemented. A stable publishing source that aggregates pages from multiple open report branches remains implementation work; this cleanup does not provide that aggregation.
