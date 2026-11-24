@@ -1,13 +1,13 @@
 # Editable target feedback drafts
 
-Report PR: REPORT_PR_PENDING
+Report PR: https://github.com/yxieca/sonic-review-reports/pull/15
 Target: https://github.com/sonic-net/sonic-mgmt/pull/28369
 Reviewed head: `f445237b36b18c0db54d4cd669399f3dbcb4281d`
 
 ## comment
 
 ```text
-AI-assisted review report: REPORT_PR_PENDING
+AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/15
 
 Source acceptable; no new demonstrated code blocker.
 
@@ -23,7 +23,7 @@ Any submission reflects the reader’s own review and judgment; this comment is 
 ## approve
 
 ```text
-AI-assisted review report: REPORT_PR_PENDING
+AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/15
 
 Source acceptable; no new demonstrated code blocker.
 
