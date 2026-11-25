@@ -1,3 +1,7 @@
+> **HELD — new external signal/terminal scope not reconciled.** New external review at unchanged target `9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f` raises repeated-SIGHUP abort interruption, closed-terminal EIO and replacement of inherited SIG_IGN/nohup behavior ([discussion](https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4700551385), [review](https://github.com/sonic-net/sonic-utilities/pull/5007#pullrequestreview-6064597767)). The reviewer reports subprocess/fake-CDB controls; these results have not been independently executed or source-adjudicated here. Earlier R1/N1/N2 source fixes and Q1 follow-up remain credited. Current action drafts are held for bounded independent source reconciliation of this newly material scope; this is not a confirmed new code blocker or a completed review.
+
+## Preserved previously prepared drafts — not current submission clearance
+
 # Current-head human-operated drafts
 
 Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
