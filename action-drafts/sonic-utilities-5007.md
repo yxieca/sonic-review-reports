@@ -1,3 +1,16 @@
+# Current-head feedback hold — 2026-11-24
+
+Report: https://github.com/yxieca/sonic-review-reports/pull/18
+Target: https://github.com/sonic-net/sonic-utilities/pull/5007
+Observed current head: `9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f`
+Historical full-review head: `8fb199d6da3e909fea0cf2261ef4afd23f8e373a`
+
+R1/N1/N2 source corrections are verified in a bounded delta check. Q1 has a downstream follow-up acknowledgment, not deployed validation. Required current-head independent changed-scope coverage is pending. No current actionable question/request-changes/approval draft is prepared. Historical drafts below must not be submitted as current feedback; they refer to corrected code and are preserved only for history.
+
+---
+
+## Preserved historical drafts (superseded; not current feedback)
+
 # Human-operated feedback drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/18
