@@ -2,16 +2,16 @@
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/18
 Reviewed SHA: `8fb199d6da3e909fea0cf2261ef4afd23f8e373a`
-Coverage: coordinator-only; designated general lenses and SME missing.
+Coverage: completed three independent general passes, separate SME and coordinator grounding.
 
 ## Questions
 
 For reviewed SHA 8fb199d6da3e909fea0cf2261ef4afd23f8e373a, could you clarify/fix the declared-but-unavailable CPO handling in the existing availability-isolation thread (https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4679062681)? The resolver runs before the per-target loop, so a healthy later endpoint is not processed.
 
-Coordinator-only report: https://github.com/yxieca/sonic-review-reports/pull/18. Required independent three-general-lens and SME coverage remains incomplete. No hardware or firmware validation was executed. This is a question without approval or a formal verdict; check current head and replies and avoid duplicating already answered feedback.
+Full batch review report: https://github.com/yxieca/sonic-review-reports/pull/18. Three independent general passes and the separate SME are completed and grounded. No hardware or firmware validation was executed. This is a question without approval or a formal verdict; check current head and replies and avoid duplicating already answered feedback.
 
 ## Request changes
 
 At reviewed SHA 8fb199d6da3e909fea0cf2261ef4afd23f8e373a, the full batch source review in https://github.com/yxieca/sonic-review-reports/pull/18 identifies R1: the all-target resolver can abort before healthy declared endpoints are processed. Please address the existing availability-isolation thread (https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4679062681), preserving invalid-index rejection and adding the missing-CPO/healthy-target case. This references existing feedback rather than adding a duplicate finding.
 
-Required independent three-general-lens and SME coverage is incomplete; no hardware or firmware validation was executed for this assessment. Check the current head, author replies and report before submitting. This draft does not assert anyone else's approval.
+Three independent general passes and separate SME are complete; no hardware or firmware validation was executed for this assessment. Check the current head, author replies and report before submitting. This draft does not assert anyone else's approval.
