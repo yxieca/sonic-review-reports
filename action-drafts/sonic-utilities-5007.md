@@ -1,3 +1,21 @@
+# Current-head human-operated drafts
+
+Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
+
+## Comment
+
+Current source resolves R1/N1/N2: unavailable targets fail inside each per-target boundary while healthy targets run, empty fwversion records fail, and late unsupported exceptions retain progress context. Invalid indices remain fatal. SIGTERM/SIGHUP handling closes interrupted iterators and restores handlers; only fake-handler source controls were executed. The remaining Q1 new-image-before-commit verification belongs to the selected platform hook and has an acknowledged follow-up; do not duplicate the existing discussion or assume it is already installed.
+
+Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
+
+## Approval with comment
+
+Source follow-up is favorable at the current head: R1/N1/N2 are resolved, with the previous full-panel coverage carried for verified unchanged scope and a bounded independent delta cross-check completed. Q1 remains an acknowledged nonblocking platform-common image-switch verification follow-up; source acceptance does not establish hardware upgrade success. Review current evidence/head and existing gates before selecting approval. No automatic submission is performed.
+
+Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
+
+## Preserved historical drafts — superseded, not for submission
+
 # Current-head feedback hold — 2026-11-24
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/18
