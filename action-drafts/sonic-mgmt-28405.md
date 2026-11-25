@@ -1,3 +1,5 @@
+> **Feedback already submitted:** https://github.com/sonic-net/sonic-mgmt/pull/28405#issuecomment-7177731221. The original revision-bound drafts below are retained as history; do not repost identical feedback.
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/35
