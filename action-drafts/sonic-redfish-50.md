@@ -1,3 +1,5 @@
+> **Feedback already submitted:** https://github.com/sonic-net/sonic-redfish/pull/50#pullrequestreview-6063995981. Retained drafts are historical; do not repost identical text. Awaiting author response.
+
 # Human-operated feedback drafts
 
 ## Questions
