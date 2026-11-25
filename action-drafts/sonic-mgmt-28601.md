@@ -6,7 +6,7 @@ Could you review the following grounded questions? Please resolve the existing a
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: eafb857f06ae3445b7abfacef4f7b657d452320f
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/45
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Request changes with comment
@@ -15,6 +15,6 @@ Please address the retained blocking source concerns: Please resolve the existin
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: eafb857f06ae3445b7abfacef4f7b657d452320f
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/45
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
