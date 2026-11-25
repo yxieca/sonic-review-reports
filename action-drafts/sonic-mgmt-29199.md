@@ -1,3 +1,5 @@
+> **Stale current-source coverage:** target `8fd84017fc27f07c22e99346a2b794ba76dface2` is newer than reviewed `9b0fc773bb0e084f6a761775e95b32e95b1d3c83`. Existing R1/R2 and nits below are historical, not revalidated current blockers. Current changed-scope review is incomplete; no current verdict or actionable target feedback is offered. Drafts below are retained history; do not submit them against current source.
+
 # Human-operated current-head feedback drafts
 
 Reviewed revision 9b0fc773bb0e084f6a761775e95b32e95b1d3c83. Report: https://github.com/yxieca/sonic-review-reports/pull/26. Three independent general source lenses, separate SME and coordinator grounding; closed inert Python controls only, no native/DUT/Redis/service/hardware validation. Earlier source fixes are credited; current dependency/review gates remain. Check current source/replies before submitting. Nothing is submitted automatically.
