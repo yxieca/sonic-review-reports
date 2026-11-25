@@ -1,43 +1,27 @@
-> **Freshness hold:** New target discussion reports a different current integration context: [merge-risk assessment](https://github.com/sonic-net/sonic-mgmt/pull/28369#issuecomment-7149704157) identifies the later module-scoped recovery change in `72b557630cbd5ae737c8135ec09b12a56ca32fa4` and a possible duplicate/raw reload path. The target head remains `f445237b36b18c0db54d4cd669399f3dbcb4281d`; the retained review used base `1e5cc07aac72dbce6d41a1d15edba96b0586ab5e`. Changed integration scope and cited execution evidence require source reconciliation before the earlier source recommendation is treated as current merge-context clearance. The automated assessment is external evidence, not an independently confirmed new blocking finding. Existing approval receipt and original reasoning remain historical; no target review was changed or resubmitted.
-> Historical drafts below are not current merge-context clearance.
+# Current reader drafts — integration follow-up2026-11-25
 
-> **Target approval submitted:** [verified review](https://github.com/sonic-net/sonic-mgmt/pull/28369#pullrequestreview-6049714573) at `f445237b36b18c0db54d4cd669399f3dbcb4281d`, authorized by [Ying’s approved decision](https://github.com/yxieca/sonic-review-reports/pull/15#issuecomment-7147901721). Do not duplicate this feedback. The target remains open awaiting the target repository landing decision; no additional approval requirement is inferred.
-> Drafts below are retained historical reading/copy references, not a request for another assistant approval.
+REVISE; R1P2. Existing approval preserved, old approval drafts superseded. These drafts are human-operated only and no target action is authorized by report publication. Avoid duplicate feedback.
 
-# Editable target feedback drafts
+## Questions without verdict
 
-Report PR: https://github.com/yxieca/sonic-review-reports/pull/15
-Target: https://github.com/sonic-net/sonic-mgmt/pull/28369
-Reviewed head: `f445237b36b18c0db54d4cd669399f3dbcb4281d`
-
-## comment
-
-```text
 AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/15
 
-Source acceptable; no new demonstrated code blocker.
+Reviewed target head: f445237b36b18c0db54d4cd669399f3dbcb4281d; integration cutoff: 42205428fbe07ed1d12ea4e8b0eb654b78891726, including module recovery72b557630cbd5ae737c8135ec09b12a56ca32fa4.
 
-The change adds `config reload -y` after restoring and comparing the saved `config_db.json`, before deleting its temporary backup (`tests/gnmi_benchmark/helpers.py:144–152`). It restores live CONFIG_DB and restarts subscriber services rather than merely restoring disk contents or suppressing the dbmemory sanity check.
+R1 (P2): `_restore_config` is shared by per-case cleanup and the later module recovery. Adding raw `config reload -y` there makes a raw-reload failure raise before the module's following checked `config_reload` is attempted, even after the saved file was restored. That module failure propagates as a teardown error; the concern is loss of the checked recovery attempt, not a claim of silently green module teardown. Successful paths also gain per-case and extra module reloads.
 
-Reviewed target revision: f445237b36b18c0db54d4cd669399f3dbcb4281d. Retained source review and bounded validation were reused, not rerun. No independent hardware qualification is claimed.
+Could recovery remain file-only in this helper with the existing one module-scoped checked reload, or could you explain how the checked recovery is reached after raw reload failure? The existing external discussion raises this same concern; do not duplicate it without a useful reason. The earlier approval receipt is preserved and predates this integration follow-up.
 
-Please check existing target feedback and avoid duplicate comments or approvals.
+Source-only independent integration review; no exact merged-tree physical validation, tests or image-specific CLI behavior reproduced. Check latest target/upstream context before submission.
 
-Any submission reflects the reader’s own review and judgment; this comment is not an approval.
-```
+## Request changes
 
-## approve
-
-```text
 AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/15
 
-Source acceptable; no new demonstrated code blocker.
+Reviewed target head: f445237b36b18c0db54d4cd669399f3dbcb4281d; integration cutoff: 42205428fbe07ed1d12ea4e8b0eb654b78891726, including module recovery72b557630cbd5ae737c8135ec09b12a56ca32fa4.
 
-The change adds `config reload -y` after restoring and comparing the saved `config_db.json`, before deleting its temporary backup (`tests/gnmi_benchmark/helpers.py:144–152`). It restores live CONFIG_DB and restarts subscriber services rather than merely restoring disk contents or suppressing the dbmemory sanity check.
+Changes requested for the inspected integration context. R1 (P2): `_restore_config` is shared by per-case cleanup and the later module recovery. Adding raw `config reload -y` there makes a raw-reload failure raise before the module's following checked `config_reload` is attempted, even after the saved file was restored. That module failure propagates as a teardown error; the concern is loss of the checked recovery attempt, not a claim of silently green module teardown. Successful paths also gain per-case and extra module reloads.
 
-Reviewed target revision: f445237b36b18c0db54d4cd669399f3dbcb4281d. Retained source review and bounded validation were reused, not rerun. No independent hardware qualification is claimed.
+Please retain file-only restoration and the existing one module-scoped checked reload, or explain the intended lifecycle. The existing external discussion raises this same concern; do not duplicate it without a useful reason. The earlier approval receipt is preserved and predates this integration follow-up.
 
-Please check existing target feedback and avoid duplicate comments or approvals.
-
-Any approval must reflect the submitting reviewer’s own judgment and permissions; this saved draft is not a claim that anyone has approved it.
-```
+Source-only independent integration review; no exact merged-tree physical validation, tests or image-specific CLI behavior reproduced. Check latest target/upstream context before submission.
