@@ -1,15 +1,24 @@
-# Human-operated feedback drafts
+# Current feedback drafts — R1 clarification required
 
-Full source review at 7d9e0caac5be00833b484fa69e41d1873a83f89a: three independent general lenses, separate SME and coordinator grounding. Native C++/BMC/Redis/D-Bus tests were not run. Report: https://github.com/yxieca/sonic-review-reports/pull/30. Existing inherited follow-ups remain tracked; check current head/replies and review gates before use. Actual PR targets master;202608 applicability is separate. Nothing is submitted automatically.
+Report: https://github.com/yxieca/sonic-review-reports/pull/30
+Reviewed head: `7d9e0caac5be00833b484fa69e41d1873a83f89a`
 
-## Comment
+The earlier Comment/Approve drafts are superseded and retained in commit history. No approval draft is currently offered. These are editable, human-operated drafts; nothing is submitted automatically.
 
-Source review is favorable for the ASPEED-only exclusion of switch-platform-init.service. The existing filter removes it from the generated list, removes wants links and adds the /dev/null mask. The actual late image caller is platform-gated; required BMC services and distinct sonic-platform-init remain untouched. Selected host initializer source supports the switch-only role and DMI/SWSS assumptions. No new blocker found; inherited mask collisions and actual image/system-health evidence remain separate. No live service/build/boot validation was performed.
+## Questions
 
-Full source review at 7d9e0caac5be00833b484fa69e41d1873a83f89a: three independent general lenses, separate SME and coordinator grounding. Native C++/BMC/Redis/D-Bus tests were not run. Report: https://github.com/yxieca/sonic-review-reports/pull/30. Existing inherited follow-ups remain tracked; check current head/replies and review gates before use. Actual PR targets master;202608 applicability is separate. Nothing is submitted automatically.
+Could you clarify the consequences of masking the entire switch-platform-init.service on BMC images? Its executed main path also publishes image/build metadata in CHASSIS_INFO, software/kernel information in SW_COMP_INFO, syslog-server state and SWITCH_PLATFORM_INIT readiness. Which of these outputs are required by BMC consumers, and what existing producer compensates for their omission?
 
-## Approve with comment
+The DMI/CPU-port assumptions explain why this initializer cannot run unchanged, but do not establish that all its outputs are unnecessary. The separate ASPEED sonic-platform-init service installs wheels and the platform symlink; it does not publish equivalent metadata. If required outputs lack replacements, could the shared responsibilities be preserved through a BMC-compatible path?
 
-The current one-name exclusion is coherent and correctly scoped to ASPEED BMC image generation. Source controls with a virtual filesystem verify list removal, wants unlink and mask while preserving required services. The native initializer is not adapted or disabled on other platforms. Verify the actual built image and current head before selecting approval; inherited general mask robustness and unrelated degraded services are not proved fixed. Nothing is submitted automatically.
+R1 and source details: https://github.com/yxieca/sonic-review-reports/pull/30. Reviewed target head: 7d9e0caac5be00833b484fa69e41d1873a83f89a. This is a scope/coverage question, not a claim that every BMC telemetry path is broken. No live boot or device validation was performed.
 
-Full source review at 7d9e0caac5be00833b484fa69e41d1873a83f89a: three independent general lenses, separate SME and coordinator grounding. Native C++/BMC/Redis/D-Bus tests were not run. Report: https://github.com/yxieca/sonic-review-reports/pull/30. Existing inherited follow-ups remain tracked; check current head/replies and review gates before use. Actual PR targets master;202608 applicability is separate. Nothing is submitted automatically.
+## Request changes
+
+Please clarify and account for the BMC-relevant publications lost by masking the entire switch-platform-init.service before landing this change (R1).
+
+Its main path publishes CHASSIS_INFO image/build metadata, SW_COMP_INFO software/kernel information, syslog-server state and SWITCH_PLATFORM_INIT readiness as well as hardware-specific operations. Please identify required BMC consumers, the consequence of omission, and the actual replacement producers. If needed outputs have no compensation, preserve them through a BMC-compatible initializer or split unsupported portions instead of disabling all responsibilities.
+
+The separate ASPEED platform-init service is not evidence of equivalent metadata publication. The masking implementation and boot-failure rationale are acknowledged; the earlier source approval recommendation is withdrawn pending this scope clarification. No universal telemetry failure or live hardware regression is asserted.
+
+Review report: https://github.com/yxieca/sonic-review-reports/pull/30. Reviewed target head: 7d9e0caac5be00833b484fa69e41d1873a83f89a. AI-assisted report; this submission reflects the submitting reviewer's own judgment.
