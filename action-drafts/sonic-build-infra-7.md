@@ -1,3 +1,7 @@
+> **HELD — target revision changed. Do not submit the prior drafts.** Target source advanced from `57f537b9ec9cedc797a19ffade867b3b285a3a9f` to `5bc1832245d8e6885adf7e44bef90d5ef81b2e16`. The author reports correcting R1 by selecting published rules_distroless .26, regenerating the production APT lock and adding an AMD64 default-updater fixture. Claimed 2,719-package/99-collection refresh, empty-cache hash reproduction and CI results are author-reported, not independently executed or current source clearance. The actual changed updater/lock/CI scope requires independent source reconciliation. Original full review and R1/R2/R3 severity history remain retained; no current blocker or fix is inferred solely from the description. Earlier target Changes Requested receipt remains historical at the old head, not current-head verification.
+
+## Historical revision-bound drafts — not current feedback clearance
+
 > **Feedback already submitted — historical drafts.** Verified target CHANGES_REQUESTED review at `57f537b9ec9cedc797a19ffade867b3b285a3a9f`: https://github.com/sonic-net/sonic-build-infra/pull/7#pullrequestreview-6065748013. R1 remains the only P2 blocker; author explanation or fix is next. R2/R3 remain optional P3 input-contract hardening. Identical feedback has already been submitted; saved drafts below are historical and must not be reposted.
 
 ## Verified submitted feedback — retained receipt, do not repost
