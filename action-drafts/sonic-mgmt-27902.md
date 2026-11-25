@@ -1,3 +1,5 @@
+> **Feedback already submitted:** https://github.com/sonic-net/sonic-mgmt/pull/27902#issuecomment-7175243609. The original revision-bound drafts below are retained as history; do not repost identical feedback.
+
 # Human-operated target feedback drafts
 
 ## Comment without approval
