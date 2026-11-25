@@ -6,7 +6,7 @@ Could you review the following grounded questions? Please reconcile the lightwei
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: bf03c7306bf774dfa747182a9788e64512207dbd
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/52
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Request changes with comment
@@ -15,6 +15,6 @@ Please address the retained blocking source concerns: Please reconcile the light
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: bf03c7306bf774dfa747182a9788e64512207dbd
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/52
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
