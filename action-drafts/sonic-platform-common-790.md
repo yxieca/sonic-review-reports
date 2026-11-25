@@ -1,3 +1,5 @@
+> **New discussion requires source reconciliation.** The original full source review is retained, but additional material integration claims are not yet adjudicated. Prepared target feedback remains on hold pending the owned bounded follow-up. This is not a new confirmed code finding or proof that the original panel was incomplete.
+
 # Human-operated feedback drafts
 
 Full source review at 7b1dccafb8498ee3c30b200e623219d364859aad: three independent general roles, separate SME and coordinator grounding. Closed inert source controls only; no firmware/device/native/image/HW validation. Report: https://github.com/yxieca/sonic-review-reports/pull/23. Explicit downstream source comparisons do not establish installed versions. Check current head/replies; no automatic action or approval.
