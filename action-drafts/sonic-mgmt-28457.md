@@ -6,7 +6,7 @@ Source review observations: The new ignore is restricted to the numeric RX-SNR f
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 64beadfcef1a9683ee611f068e6949b0d3d349d2
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/34
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Approve with comment
@@ -15,6 +15,6 @@ Source approval draft, subject to independent reader review and current gates: T
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 64beadfcef1a9683ee611f068e6949b0d3d349d2
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/34
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
