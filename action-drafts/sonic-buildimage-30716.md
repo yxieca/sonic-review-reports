@@ -1,3 +1,5 @@
+> **New discussion requires source reconciliation.** The original full source review is retained, but additional material integration claims are not yet adjudicated. Prepared target feedback remains on hold pending the owned bounded follow-up. This is not a new confirmed code finding or proof that the original panel was incomplete.
+
 # Human-operated feedback drafts
 
 Full source review at bb9507f33c9f0b0bceeb7657a61847b679c8ed23, focused on the last commit against parent97dd087f87423f1e31d5cd13c3ef371a620ccf4f with full stacked source context. Three independent general lenses, separate SME and coordinator grounding. Inert source controls only; no native/image/HW validation. Report: https://github.com/yxieca/sonic-review-reports/pull/21. Check current head/replies. No automatic submission or approval.
