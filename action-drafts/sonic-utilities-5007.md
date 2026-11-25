@@ -12,6 +12,6 @@ Coordinator-only report: https://github.com/yxieca/sonic-review-reports/pull/18.
 
 ## Request changes
 
-At reviewed SHA 8fb199d6da3e909fea0cf2261ef4afd23f8e373a, the coordinator-only source assessment in https://github.com/yxieca/sonic-review-reports/pull/18 identifies R1: the all-target resolver can abort before healthy declared endpoints are processed. Please address the existing availability-isolation thread (https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4679062681), preserving invalid-index rejection and adding the missing-CPO/healthy-target case. This references existing feedback rather than adding a duplicate finding.
+At reviewed SHA 8fb199d6da3e909fea0cf2261ef4afd23f8e373a, the full batch source review in https://github.com/yxieca/sonic-review-reports/pull/18 identifies R1: the all-target resolver can abort before healthy declared endpoints are processed. Please address the existing availability-isolation thread (https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4679062681), preserving invalid-index rejection and adding the missing-CPO/healthy-target case. This references existing feedback rather than adding a duplicate finding.
 
 Required independent three-general-lens and SME coverage is incomplete; no hardware or firmware validation was executed for this assessment. Check the current head, author replies and report before submitting. This draft does not assert anyone else's approval.
