@@ -6,7 +6,7 @@ Source review observations: Could the new X-QP cases reconcile expected active s
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: babffe9faadeb0aefe7cad1129a5659e2ef9886f
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/42
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Questions without verdict
@@ -15,6 +15,6 @@ Could you review the following grounded questions? Could the new X-QP cases reco
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: babffe9faadeb0aefe7cad1129a5659e2ef9886f
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/42
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
