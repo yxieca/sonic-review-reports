@@ -1,3 +1,5 @@
+> **Feedback already submitted:** https://github.com/sonic-net/sonic-swss/pull/5100#issuecomment-7175239897. The original revision-bound drafts below are retained as history; do not repost identical feedback.
+
 # Reader drafts: sonic-swss #5100
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/56
