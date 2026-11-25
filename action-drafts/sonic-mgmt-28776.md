@@ -6,7 +6,7 @@ Source review observations: The capability guard fixes the CRC helper/non-IMIX c
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 9d115d0b812a9a6eda576e1e31392735c9bfc10a
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/37
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Approve with comment
@@ -15,6 +15,6 @@ Source approval draft, subject to independent reader review and current gates: T
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 9d115d0b812a9a6eda576e1e31392735c9bfc10a
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/37
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
