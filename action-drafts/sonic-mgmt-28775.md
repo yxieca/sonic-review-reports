@@ -6,7 +6,7 @@ Source review observations: The new MACsec predicate correctly avoids unrelated 
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 10253dda32a36ef5bc1042c86d672d44f20cef1b
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/38
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Approve with comment
@@ -15,6 +15,6 @@ Source approval draft, subject to independent reader review and current gates: T
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 10253dda32a36ef5bc1042c86d672d44f20cef1b
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/38
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
