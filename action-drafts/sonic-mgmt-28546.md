@@ -1,3 +1,6 @@
+> **Target approval submitted:** [verified review](https://github.com/sonic-net/sonic-mgmt/pull/28546#pullrequestreview-6049715428) at `000cd05d056b448569ad653cb689eee3f50b8b5d`, authorized by [Ying’s approved decision](https://github.com/yxieca/sonic-review-reports/pull/16#issuecomment-7147897373). Do not duplicate this feedback. DCO remains ACTION_REQUIRED; source approval does not clear that administrative/CI gate.
+> Drafts below are retained historical reading/copy references, not a request for another assistant approval.
+
 # Editable target feedback drafts
 
 Report PR: https://github.com/yxieca/sonic-review-reports/pull/16
