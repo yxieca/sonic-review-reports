@@ -1,3 +1,14 @@
+> **Feedback already submitted — historical drafts.** Verified target APPROVED review at `5c45e5df3363d59a45c5d43333d8f1af254e58e0`: https://github.com/sonic-net/sonic-wpa-supplicant/pull/148#pullrequestreview-6065748380. Source approval is verified; Azure aggregate/ARM64 CI remains pending. N1 is optional, not an approval condition. Identical feedback has already been submitted; saved drafts below are historical and must not be reposted.
+
+## Verified submitted feedback — retained receipt, do not repost
+
+Source review supports this MACSEC reply-length correction; no introduced blocker was found. The stored-byte accumulation, NUL handling and association-loop stopping match actual control callers, and the production-linked boundary regression is appropriate. Nonblocking N1 can follow separately: invoke ./test-macsec_status from run-tests so the local aggregate executes it as well as building it. Check any still-pending CI before landing; approval here does not claim physical MACsec qualification.
+
+Reviewed HEAD:5c45e5df3363d59a45c5d43333d8f1af254e58e0. Full three-independent-general plus separate-SME source review and coordinator grounding. No compiler/native C tests, MACsec/DUT/SAI, build or runtime qualification executed by this review. Existing hosted unit-test success is external evidence. Check current CI and replies before submission. Report: https://github.com/yxieca/sonic-review-reports/pull/59.
+
+
+## Earlier prepared drafts — historical
+
 # Reader drafts: sonic-wpa-supplicant148
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/59
