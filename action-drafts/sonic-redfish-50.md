@@ -1,22 +1,51 @@
-> **Feedback already submitted:** https://github.com/sonic-net/sonic-redfish/pull/50#pullrequestreview-6063995981. Retained drafts are historical; do not repost identical text. Awaiting author response.
+# Self-contained reader drafts
 
-# Human-operated feedback drafts
+Report: https://github.com/yxieca/sonic-review-reports/pull/31
 
-## Questions
-
-Could you fix the newly identified R2/R3? R1 was withdrawn: authoritative Git blob has the correct NUL expectation; the apparent mismatch was retrieval-related. R2: recordCompleted takes/resets the suppressed-read count and places it in detail, then overwrites detail with buildDetail before emitting; could the count be merged after route detail? R3: HTTP/1 handleContentLengthError sends an early401 for a logged-out body above4096 but below the global limit before handle/router, bypassing both new audit hooks; could that boundary be audited without copying raw target/header data? Separately, pinned HTTP/2 DEBUG still logs raw header values before auth. That sink is inherited, but the new CONFIG_DB DEBUG path enables it, so safe audit JSON does not make all DEBUG logs credential-safe. Please remove/constrain it before making that guarantee. Failed-account proposed UserName remains an explicit privacy-policy clarification, not an authorization-bypass claim.
-
-Full source review at 8e26302ff30e0ee986add3bb2dae0a0ce28d394b: three independent general lenses, separate SME and coordinator grounding. No native C++ test, credentials, HTTP/syslog/Redis/D-Bus/service or BMC runtime operation was performed. Report: https://github.com/yxieca/sonic-review-reports/pull/31. Source conclusions and reported samples do not certify deployed behavior. Check current revision/replies/CI before use; nothing submits automatically.
-
-## Request changes
-
-Please correct R2/R3 before relying on the new audit verification/accounting: preserve suppressed-read counts through final detail construction; and cover the early HTTP/1 content-length401 exit with one redacted denied record. Add hook-level serialized suppression and early-refusal regressions, not only limiter or ordinary-auth mocks. The existing HTTP/2 raw-header DEBUG logger also requires removal/redaction or decoupling from safe read-audit enablement before advertising credential-safe DEBUG. Source controls were static/effect-closed; no actual credentials or network requests were tested. Keep the nonblocking failed-account input policy and sampling/upgrade completeness notes distinct from new runtime vulnerabilities.
-
-Full source review at 8e26302ff30e0ee986add3bb2dae0a0ce28d394b: three independent general lenses, separate SME and coordinator grounding. No native C++ test, credentials, HTTP/syslog/Redis/D-Bus/service or BMC runtime operation was performed. Report: https://github.com/yxieca/sonic-review-reports/pull/31. Source conclusions and reported samples do not certify deployed behavior. Check current revision/replies/CI before use; nothing submits automatically.
+Reviewed target head: `8e26302ff30e0ee986add3bb2dae0a0ce28d394b`. Existing issue dispositions, coverage limits and target-feedback receipts remain unchanged. This presentation update submits no target feedback.
 
 
-### 2026-11-25 13:30 UTC — Author-reported combined-image test results
 
-The target description now reports 142 passed, 0 failed, 0 errors and 0 skipped on a combined Redfish41/50 image identified by short revision 9d65f76 and build 351066, including seven audit-log cases. The current reviewed target head is unchanged. The reported generic audit cases do not specifically establish corrected suppressed-read accounting R2 or the early HTTP/1 oversized unauthenticated refusal R3. Those source-grounded concerns remain open; R1 remains withdrawn. The description acknowledges 500 rather than 503 bridge-down responses, leaving Retry-After unexercised. Results are author-reported, not independently run or exact-head-bound; the “202008 msft branch” heading does not verify requested 202608 applicability. No verdict change or duplicate target feedback.
+## Questions without verdict
 
-[Observed target description](https://github.com/sonic-net/sonic-redfish/pull/50) at `8e26302ff30e0ee986add3bb2dae0a0ce28d394b`.
+Questions for correction or explanation; no formal verdict.
+
+**R2 — admitted read discards suppressed-read accounting (P2).** `redfish-audit/bmcweb/redfish_audit_hook.hpp::recordCompleted` (548–627) takes/resets the rate limiter count into record.detail, then overwrites it with buildDetail for ordinary reads. After exceeding50 DEBUG reads/second, the later admitted Systems GET loses detail.suppressed; suppressed reads never reached Sink, so its sequence cannot reconstruct them. Merge the count after final route-detail construction and cover hook-to-serialized output, not just the limiter. This is source-derived new accounting loss, not executed syslog evidence.
+
+**R3 — early HTTP/1 oversized logged-out401 bypasses audit (P2).** The pinned HTTP/1 handleContentLengthError (http/http_connection.hpp:543–660) returns401 for logged-out content length>4096 below the global limit, outside the100-continue branch, before later handle/router audit hooks added by patches/0012-Record-an-audit-trail-of-Redfish-requests.patch. The denied response has no audit record/suppression accounting. Instrument that early boundary with parsed method and a constant unauthenticated marker, retaining raw-target/header redaction; cover exactly-one-record behavior. This is audit omission, not authentication bypass or permission to log rejected content.
+
+**Q1 — inherited credential-log claim boundary:** the pinned HTTP/2 header callback (http/http2_connection.hpp:457–467) logs raw header values before authentication. New CONFIG_DB read-audit DEBUG also raises general bmcweb DEBUG. Remove/redact the ordinary sink or decouple enablement before claiming universally credential-safe DEBUG; safe audit JSON alone does not sanitize other logging. This is inherited sink/new enablement qualification, not a newly proven exploit. Failed-account UserName policy and sampling/upgrade completeness remain nonblocking. R1 remains withdrawn as a source-retrieval artifact; do not revive it. Author-reported combined-image tests do not specifically establish R2/R3 repair.
+
+Source: https://github.com/sonic-net/sonic-redfish/blob/8e26302ff30e0ee986add3bb2dae0a0ce28d394b/redfish-audit/bmcweb/redfish_audit_hook.hpp#L548-L627
+Pinned HTTP/1: https://github.com/openbmc/bmcweb/blob/6926d43047446a1f08d4b157d48a30221ae8f87e/http/http_connection.hpp#L543-L660
+Pinned HTTP/2: https://github.com/openbmc/bmcweb/blob/6926d43047446a1f08d4b157d48a30221ae8f87e/http/http2_connection.hpp#L457-L467
+
+Reviewed target head: `8e26302ff30e0ee986add3bb2dae0a0ce28d394b`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/31.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
+
+## Request changes with comment
+
+Request-changes reader draft for the retained findings below.
+
+**R2 — admitted read discards suppressed-read accounting (P2).** `redfish-audit/bmcweb/redfish_audit_hook.hpp::recordCompleted` (548–627) takes/resets the rate limiter count into record.detail, then overwrites it with buildDetail for ordinary reads. After exceeding50 DEBUG reads/second, the later admitted Systems GET loses detail.suppressed; suppressed reads never reached Sink, so its sequence cannot reconstruct them. Merge the count after final route-detail construction and cover hook-to-serialized output, not just the limiter. This is source-derived new accounting loss, not executed syslog evidence.
+
+**R3 — early HTTP/1 oversized logged-out401 bypasses audit (P2).** The pinned HTTP/1 handleContentLengthError (http/http_connection.hpp:543–660) returns401 for logged-out content length>4096 below the global limit, outside the100-continue branch, before later handle/router audit hooks added by patches/0012-Record-an-audit-trail-of-Redfish-requests.patch. The denied response has no audit record/suppression accounting. Instrument that early boundary with parsed method and a constant unauthenticated marker, retaining raw-target/header redaction; cover exactly-one-record behavior. This is audit omission, not authentication bypass or permission to log rejected content.
+
+**Q1 — inherited credential-log claim boundary:** the pinned HTTP/2 header callback (http/http2_connection.hpp:457–467) logs raw header values before authentication. New CONFIG_DB read-audit DEBUG also raises general bmcweb DEBUG. Remove/redact the ordinary sink or decouple enablement before claiming universally credential-safe DEBUG; safe audit JSON alone does not sanitize other logging. This is inherited sink/new enablement qualification, not a newly proven exploit. Failed-account UserName policy and sampling/upgrade completeness remain nonblocking. R1 remains withdrawn as a source-retrieval artifact; do not revive it. Author-reported combined-image tests do not specifically establish R2/R3 repair.
+
+Source: https://github.com/sonic-net/sonic-redfish/blob/8e26302ff30e0ee986add3bb2dae0a0ce28d394b/redfish-audit/bmcweb/redfish_audit_hook.hpp#L548-L627
+Pinned HTTP/1: https://github.com/openbmc/bmcweb/blob/6926d43047446a1f08d4b157d48a30221ae8f87e/http/http_connection.hpp#L543-L660
+Pinned HTTP/2: https://github.com/openbmc/bmcweb/blob/6926d43047446a1f08d4b157d48a30221ae8f87e/http/http2_connection.hpp#L457-L467
+
+Reviewed target head: `8e26302ff30e0ee986add3bb2dae0a0ce28d394b`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/31.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
+
+## Prior draft history
+
+The prior wording is preserved in the preceding report commit. This update expands author-facing explanations only; it does not change findings, severity, source coverage, target verdict or submission state.
