@@ -1,3 +1,6 @@
+> **Target approval submitted:** [verified review](https://github.com/sonic-net/sonic-mgmt/pull/28369#pullrequestreview-6049714573) at `f445237b36b18c0db54d4cd669399f3dbcb4281d`, authorized by [Ying’s approved decision](https://github.com/yxieca/sonic-review-reports/pull/15#issuecomment-7147901721). Do not duplicate this feedback. The target remains open awaiting the target repository landing decision; no additional approval requirement is inferred.
+> Drafts below are retained historical reading/copy references, not a request for another assistant approval.
+
 # Editable target feedback drafts
 
 Report PR: https://github.com/yxieca/sonic-review-reports/pull/15
