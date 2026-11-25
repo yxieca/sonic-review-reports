@@ -1,5 +1,7 @@
 # Human-operated feedback drafts
 
+**Approval already submitted:** https://github.com/sonic-net/sonic-buildimage/pull/30835#pullrequestreview-6060582047 at `098c206073f16c8ed0bbd177f09c8a8e1ce74eb4`. Retained drafts are historical; do not resubmit the same feedback. Source acceptance does not certify boot/hardware validation or a202608 backport. The existing requested-branch evidence question remains for author clarification.
+
 Full source review at 098c206073f16c8ed0bbd177f09c8a8e1ce74eb4: three independent general lenses, separate SME and coordinator grounding. Native C++/BMC/Redis/D-Bus tests were not run. Report: https://github.com/yxieca/sonic-review-reports/pull/27. Existing inherited follow-ups remain tracked; check current head/replies and review gates before use. Actual PR targets master;202608 applicability is separate. Nothing is submitted automatically.
 
 ## Comment
