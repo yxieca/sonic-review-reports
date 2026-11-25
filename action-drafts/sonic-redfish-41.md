@@ -1,5 +1,7 @@
 # Human-operated feedback drafts
 
+**Approval already submitted:** https://github.com/sonic-net/sonic-redfish/pull/41#pullrequestreview-6052337907 at `2248d794ffa1989d3c86ae5c88c57d2a9a5fa25b`. Retained drafts are historical; do not resubmit the same feedback. Q1/Q2 follow-ups remain nonblocking and await tracking/explanation. This does not certify native/BMC validation or202608 release applicability.
+
 Full source review at 2248d794ffa1989d3c86ae5c88c57d2a9a5fa25b: three independent general lenses, separate SME and coordinator grounding. Native C++/BMC/Redis/D-Bus tests were not run. Report: https://github.com/yxieca/sonic-review-reports/pull/25. Existing inherited follow-ups remain tracked; check current head/replies and review gates before use. Actual PR targets master;202608 applicability is separate. Nothing is submitted automatically.
 
 ## Comment
