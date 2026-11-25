@@ -6,7 +6,7 @@ Source review observations: Could E3-04 specify per-CoS queue deltas or unequal 
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: a8b9d1a0191ad78a0f030ae1849cd496c826668d
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/33
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Questions without verdict
@@ -15,6 +15,6 @@ Could you review the following grounded questions? Could E3-04 specify per-CoS q
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: a8b9d1a0191ad78a0f030ae1849cd496c826668d
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/33
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
