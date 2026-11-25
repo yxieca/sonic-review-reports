@@ -6,7 +6,7 @@ Source review observations: The route-convergence barrier improves standby prepa
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 447b544ea1648555a7a0ed243a86e7b1af0499ea
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/53
 Existing target feedback/decision is already verified; do not duplicate it or cast an approval automatically. Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Approve with comment
@@ -15,6 +15,6 @@ Source approval draft, subject to independent reader review and current gates: T
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: 447b544ea1648555a7a0ed243a86e7b1af0499ea
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/53
 Existing target feedback/decision is already verified; do not duplicate it or cast an approval automatically. Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
