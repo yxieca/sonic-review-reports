@@ -1,16 +1,39 @@
-# Human-operated feedback drafts: sonic-platform-daemons #944
+# Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/55
-Reviewed head: `fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036`
+
+Reviewed target head: `fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036`. Existing issue dispositions, coverage limits and target-feedback receipts remain unchanged. This presentation update submits no target feedback.
+
+
 
 ## Questions without verdict
 
-Could configuration removal revoke an existing port actor's control path without requiring a TRANSCEIVER_INFO event? At this revision, deleting CONFIG_DB MUX_CABLE for an initialized port leaves cached `self.cable`/driver state active; a queued or later toggle still reaches the vendor API. Python rechecks membership at dispatch. Could request/telemetry admission revalidate configuration, or receive ordered actor invalidation, with a regression deleting MUX_CABLE while leaving TRANSCEIVER_INFO unchanged? See R3 in the linked report. The existing TLS and runtime-replay concerns are already raised in the earlier review; please address those in their existing discussion rather than duplicating feedback.
+Questions for correction or explanation; no formal verdict.
 
-Reviewed source: `fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036`. Source-only review; no tests/builds, native imports or hardware/service validation performed. Report: https://github.com/yxieca/sonic-review-reports/pull/55. R1/R2 already have existing target feedback; this draft does not request duplicate comments. Check current head and author replies before submitting with your own account.
+**R3 — configuration removal does not revoke cached actor control (P2).** `sonic-ycabled-rs/src/actor/mod.rs::handle_request` (368–388) dispatches from cached self.cable; refresh occurs on TRANSCEIVER_INFO SET (410–452), not MUX_CABLE deletion. Initialize an active-standby mux port, then delete CONFIG_DB MUX_CABLE without a transceiver/presence event: queued or later HW_MUX_CABLE_TABLE toggles still reach the vendor API through standby helpers, and periodic telemetry remains admitted. Python dispatch rechecks membership and skips the missing row. Revalidate mux membership at actionable request/telemetry dispatch or deliver ordered invalidation, and cover removal without TRANSCEIVER_INFO change with no-driver/RPC controls. This is the configuration-removal boundary, not a claim all reconfiguration is wrong. Existing TLS/readiness and runtime replay R1/R2 are already raised in the earlier review; resolve them there without duplicate feedback.
+
+Source: https://github.com/sonic-net/sonic-platform-daemons/blob/fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036/sonic-ycabled-rs/src/actor/mod.rs#L368-L388
+
+Reviewed target head: `fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/55.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
 
 ## Request changes with comment
 
-Please ensure configuration removal revokes an existing mux actor's hardware-control path before accepting this implementation. After MUX_CABLE is deleted without a transceiver event, cached classification still admits a later toggle and telemetry. Revalidate membership at actionable dispatch/telemetry or deliver ordered configuration invalidation; add a regression requiring no driver/RPC call after removal. This is R3 in the report. R1/R2 (TLS establishment/readiness and runtime command replay) are already raised in the existing review and should be resolved there; no duplicate repost is requested. The syslog backpressure note is nonblocking.
+Request-changes reader draft for the retained findings below.
 
-Reviewed source: `fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036`. Source-only review; no tests/builds, native imports or hardware/service validation performed. Report: https://github.com/yxieca/sonic-review-reports/pull/55. R1/R2 already have existing target feedback; this draft does not request duplicate comments. Check current head and author replies before submitting with your own account.
+**R3 — configuration removal does not revoke cached actor control (P2).** `sonic-ycabled-rs/src/actor/mod.rs::handle_request` (368–388) dispatches from cached self.cable; refresh occurs on TRANSCEIVER_INFO SET (410–452), not MUX_CABLE deletion. Initialize an active-standby mux port, then delete CONFIG_DB MUX_CABLE without a transceiver/presence event: queued or later HW_MUX_CABLE_TABLE toggles still reach the vendor API through standby helpers, and periodic telemetry remains admitted. Python dispatch rechecks membership and skips the missing row. Revalidate mux membership at actionable request/telemetry dispatch or deliver ordered invalidation, and cover removal without TRANSCEIVER_INFO change with no-driver/RPC controls. This is the configuration-removal boundary, not a claim all reconfiguration is wrong. Existing TLS/readiness and runtime replay R1/R2 are already raised in the earlier review; resolve them there without duplicate feedback.
+
+Source: https://github.com/sonic-net/sonic-platform-daemons/blob/fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036/sonic-ycabled-rs/src/actor/mod.rs#L368-L388
+
+Reviewed target head: `fe17f2eb76d6574ef6bcdb4bb3f1a5a20f1b4036`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/55.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
+
+## Prior draft history
+
+The prior wording is preserved in the preceding report commit. This update expands author-facing explanations only; it does not change findings, severity, source coverage, target verdict or submission state.
