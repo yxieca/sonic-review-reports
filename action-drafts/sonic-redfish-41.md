@@ -20,3 +20,10 @@ Full source review at 2248d794ffa1989d3c86ae5c88c57d2a9a5fa25b: three independen
 ## 2026-11-25 — Reader freshness / conversation note
 
 The current-head repository bot reports 0 of 33 changed files have qualified approval. The previously submitted source approval remains verified, but does not satisfy the repository's qualified-approval gate. Additional qualified reviewer coverage is now the explicit remaining external review condition. Q1/Q2 remain inherited nonblocking follow-ups, not newly introduced blockers. This is the bot's reported policy result; its mapping/scores were not independently recomputed. No duplicate approval, target merge or CI retry. [Discussion](https://github.com/sonic-net/sonic-redfish/pull/41#issuecomment-7153889601).
+
+
+### 2026-11-25 13:30 UTC — Author-reported combined-image test results
+
+The target description now reports 142 passed, 0 failed, 0 errors and 0 skipped for the Redfish suite, including seven audit-log cases, on a combined Redfish41/50 image identified by short revision 9d65f76 and build 351066. The description also says bridge-down requests returned 500 rather than 503, so Retry-After was not exercised. These are author-reported results, not independently executed or an exact binding to this reviewed target head. The section is titled “202008 msft branch”; it does not verify the original 202608 release request. Current source head is unchanged. Q1/Q2, the verified existing approval and the qualified-review gate remain unchanged; no duplicate approval or new source clearance.
+
+[Observed target description](https://github.com/sonic-net/sonic-redfish/pull/41) at `2248d794ffa1989d3c86ae5c88c57d2a9a5fa25b`.
