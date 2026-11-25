@@ -1,18 +1,43 @@
-> **Feedback already submitted:** https://github.com/sonic-net/sonic-swss/pull/5100#issuecomment-7175239897. The original revision-bound drafts below are retained as history; do not repost identical feedback.
-
-# Reader drafts: sonic-swss #5100
+# Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/56
-Reviewed HEAD: `ebb7de7807ecf97dc17c79f2aeeea3512087da9a`. No automatic target feedback.
+
+Reviewed target head: `ebb7de7807ecf97dc17c79f2aeeea3512087da9a`. Existing issue dispositions, coverage limits and target-feedback receipts remain unchanged. This presentation update submits no target feedback.
+
+
 
 ## Questions without verdict
 
-Could R1 be addressed in the hardware removed-TC teardown path? With TCs3+4 monitored and TC3 stormed, an accepted PORT_QOS_MAP SET changes pfcwd_sw_enable to4; a subsequent PFC_WD SET then skips TC3 in the current-mask storm guard. Successful old-mapping cleanup closes counters and erases queue identity without interrupting history, and reinitialization visits TC4 only. Could each successfully disabled tracked queue be marked interrupted before its saved alias/TC mapping is erased, including removed TCs, with a regression and disable-failure/unchanged-mask/DELETE controls? Later TC3 registration interrupts the old record, but too late to recover the actual teardown timestamp. This is new-history correctness, not a demonstrated forwarding outage. Nonblocking N1: document last-event state/optional prior fields/reset lifetimes. Nonblocking N2: make the duration unit test deterministic rather than requiring a roughly300ms scheduling allowance.
+Questions for correction or explanation; no formal verdict.
 
-Reviewed HEAD: ebb7de7807ecf97dc17c79f2aeeea3512087da9a. Full independent three-general-plus-separate-SME source review and coordinator grounding; no tests, compiler, native/live Redis/SAI/DUT or hardware validation executed. Report: https://github.com/yxieca/sonic-review-reports/pull/56. Verify current revision and discussion before submission. The earlier initialized-TC warm-history correction is credited; this concerns a different teardown boundary.
+**R1 — hardware retirement must terminate removed-TC history (P2).** In `orchagent/pfcwdhworch.cpp` reconfiguration/current-mask guard (468–490,1170–1210), a valid PORT_QOS_MAP SET changes pfcwd_sw_enable3,4→4 while TC3 is stormed; a subsequent valid PFC_WD SET skips TC3 in the guard. Successful old-mapping teardown (909–995) closes counters and erases its saved alias/TC mapping without interrupting history; initialization (1116–1150) visits TC4 only. The retired TC3 row retains storm_N_detected without restored/interrupted or the actual terminal timestamp. Later TC3 registration interrupts it late, so no inevitable future-storm merge or forwarding outage is claimed. After each successful tracked-queue disable, interrupt history using saved alias/TC before erasing the mapping, covering both teardown loops. Preserve open tracking on disable failure; retain warm-start interruption and add removed-TC SET, unchanged-mask, DELETE and RECOVERED-first controls. The earlier warm-history fix is credited, not reopened.
+
+**N1/N2 — nonblocking:** document last-event/optional-prior/reset semantics in doc/swss-schema.md; make tests/mock_tests/pfcwd_history_ut.cpp's duration check deterministic instead of a real-clock roughly300ms scheduling allowance. No live/C++ execution was performed.
+
+Source: https://github.com/sonic-net/sonic-swss/blob/ebb7de7807ecf97dc17c79f2aeeea3512087da9a/orchagent/pfcwdhworch.cpp#L909-L995
+
+Reviewed target head: `ebb7de7807ecf97dc17c79f2aeeea3512087da9a`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/56.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
 
 ## Request changes with comment
 
-Please correct R1 before accepting the new history feature: interrupt each successfully disabled tracked hardware queue before erasing its saved alias/TC mapping, including TCs absent from the current watchdog mask. A valid mask SET3,4→4 followed by watchdog SET can otherwise retire stormed TC3 while leaving its history without restored/interrupted; initialization visits only TC4. Later TC3 registration closes the row late, not at the actual retirement boundary. Preserve open tracking when disable fails and add removed-TC reconfiguration plus unchanged-mask/DELETE/failure controls. This is a P2 diagnostic-history defect, not an observed forwarding failure. Nonblocking N1: document schema and last-event/reset semantics. Nonblocking N2: remove the duration unit test real-clock scheduling deadline.
+Request-changes reader draft for the retained findings below.
 
-Reviewed HEAD: ebb7de7807ecf97dc17c79f2aeeea3512087da9a. Full independent three-general-plus-separate-SME source review and coordinator grounding; no tests, compiler, native/live Redis/SAI/DUT or hardware validation executed. Report: https://github.com/yxieca/sonic-review-reports/pull/56. Verify current revision and discussion before submission. The earlier initialized-TC warm-history correction is credited; this concerns a different teardown boundary.
+**R1 — hardware retirement must terminate removed-TC history (P2).** In `orchagent/pfcwdhworch.cpp` reconfiguration/current-mask guard (468–490,1170–1210), a valid PORT_QOS_MAP SET changes pfcwd_sw_enable3,4→4 while TC3 is stormed; a subsequent valid PFC_WD SET skips TC3 in the guard. Successful old-mapping teardown (909–995) closes counters and erases its saved alias/TC mapping without interrupting history; initialization (1116–1150) visits TC4 only. The retired TC3 row retains storm_N_detected without restored/interrupted or the actual terminal timestamp. Later TC3 registration interrupts it late, so no inevitable future-storm merge or forwarding outage is claimed. After each successful tracked-queue disable, interrupt history using saved alias/TC before erasing the mapping, covering both teardown loops. Preserve open tracking on disable failure; retain warm-start interruption and add removed-TC SET, unchanged-mask, DELETE and RECOVERED-first controls. The earlier warm-history fix is credited, not reopened.
+
+**N1/N2 — nonblocking:** document last-event/optional-prior/reset semantics in doc/swss-schema.md; make tests/mock_tests/pfcwd_history_ut.cpp's duration check deterministic instead of a real-clock roughly300ms scheduling allowance. No live/C++ execution was performed.
+
+Source: https://github.com/sonic-net/sonic-swss/blob/ebb7de7807ecf97dc17c79f2aeeea3512087da9a/orchagent/pfcwdhworch.cpp#L909-L995
+
+Reviewed target head: `ebb7de7807ecf97dc17c79f2aeeea3512087da9a`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/56.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
+
+## Prior draft history
+
+The prior wording is preserved in the preceding report commit. This update expands author-facing explanations only; it does not change findings, severity, source coverage, target verdict or submission state.
