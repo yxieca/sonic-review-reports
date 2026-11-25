@@ -1,6 +1,6 @@
 # Reader drafts: sonic-dbsyncd #101
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/61
 
 ## Comment
 
@@ -12,7 +12,7 @@ Nonblocking test cleanup — retain Redis ownership across outer probe timeout. 
 
 Existing nonblocking README version and future canonical test-fixture source threads are already raised at https://github.com/sonic-net/sonic-dbsyncd/pull/101#discussion_r4694416620 and #discussion_r4694519381; respond there rather than duplicating them. The installed fixture borrows declared dependencies and uses an LLDP JSON input; it does not establish full image closure or live lldpd/daemon execution.
 
-Reviewed HEAD:8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer Bazel/compiler/native imports, Redis/LLDP test, install or payload probe. Current hosted unit/installed targets reused cached results, not newly executed test bodies. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+Reviewed HEAD:8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer Bazel/compiler/native imports, Redis/LLDP test, install or payload probe. Current hosted unit/installed targets reused cached results, not newly executed test bodies. Report: https://github.com/yxieca/sonic-review-reports/pull/61. Check current revision, CI and replies before submission.
 
 ## Approve
 
@@ -24,4 +24,4 @@ Nonblocking test cleanup — retain Redis ownership across outer probe timeout. 
 
 Existing nonblocking README version and future canonical test-fixture source threads are already raised at https://github.com/sonic-net/sonic-dbsyncd/pull/101#discussion_r4694416620 and #discussion_r4694519381; respond there rather than duplicating them. The installed fixture borrows declared dependencies and uses an LLDP JSON input; it does not establish full image closure or live lldpd/daemon execution.
 
-Reviewed HEAD:8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer Bazel/compiler/native imports, Redis/LLDP test, install or payload probe. Current hosted unit/installed targets reused cached results, not newly executed test bodies. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+Reviewed HEAD:8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer Bazel/compiler/native imports, Redis/LLDP test, install or payload probe. Current hosted unit/installed targets reused cached results, not newly executed test bodies. Report: https://github.com/yxieca/sonic-review-reports/pull/61. Check current revision, CI and replies before submission.
