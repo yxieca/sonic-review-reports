@@ -1,0 +1,15 @@
+# Human-operated feedback drafts
+
+Full source review at fd89b24453140055e437b989b41396df56c77730: three independent general roles, separate SME and coordinator grounding. Explicit common/buildimage compatibility sources are not deployed-version assertions. Closed inert controls only; no native/image/HW/Redis/device validation. Report: https://github.com/yxieca/sonic-review-reports/pull/24. Existing concerns await author response; do not duplicate feedback. Check current head/replies; no automatic submission or approval.
+
+## Questions
+
+The existing multi-bank VDM and metadata-retry discussions remain open. Could the integration require/select a raw VDM reader whose descriptor, value, threshold and flag offsets follow each OE bank, with a composed reader-to-publication regression rather than per-port mocks? The inspected compatibility source still uses bank0 offsets for later-bank objects. Separately, could supported-but-missing post-power-up information be retried without withholding READY or redoing datapath initialization? Existing threads: https://github.com/sonic-net/sonic-platform-daemons/pull/937#discussion_r4679064931 and https://github.com/sonic-net/sonic-platform-daemons/pull/937#discussion_r4679064951. This draft references existing feedback; no new duplicate comment is requested.
+
+Full source review at fd89b24453140055e437b989b41396df56c77730: three independent general roles, separate SME and coordinator grounding. Explicit common/buildimage compatibility sources are not deployed-version assertions. Closed inert controls only; no native/image/HW/Redis/device validation. Report: https://github.com/yxieca/sonic-review-reports/pull/24. Existing concerns await author response; do not duplicate feedback. Check current head/replies; no automatic submission or approval.
+
+## Request changes
+
+Please resolve the already-raised banked VDM compatibility concern before enabling this CPO path: require/select correct bank-aware descriptor/value/threshold/flag reads and compose them with per-bank publisher outputs. Preserve bank0 pluggable behavior. Existing discussion: https://github.com/sonic-net/sonic-platform-daemons/pull/937#discussion_r4679064931. The metadata retry gap is nonblocking: supported-but-incomplete post-power-up information should gain a bounded retry without delaying link bring-up. Its existing thread is https://github.com/sonic-net/sonic-platform-daemons/pull/937#discussion_r4679064951. This is retained feedback, not a request to duplicate target posts. Current conflict and declared prerequisite904 closure remain separate integration gates.
+
+Full source review at fd89b24453140055e437b989b41396df56c77730: three independent general roles, separate SME and coordinator grounding. Explicit common/buildimage compatibility sources are not deployed-version assertions. Closed inert controls only; no native/image/HW/Redis/device validation. Report: https://github.com/yxieca/sonic-review-reports/pull/24. Existing concerns await author response; do not duplicate feedback. Check current head/replies; no automatic submission or approval.
