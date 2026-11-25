@@ -6,7 +6,7 @@ Could you review the following grounded questions? Could the backup-read failure
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: aeb2f1ca6f02a5315f44a56ebb72d0c101a8bf8a
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/47
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Request changes with comment
@@ -15,6 +15,6 @@ Please address the retained blocking source concerns: Could the backup-read fail
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: aeb2f1ca6f02a5315f44a56ebb72d0c101a8bf8a
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/47
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
