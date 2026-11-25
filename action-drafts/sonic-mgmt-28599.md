@@ -1,41 +1,39 @@
-# Editable target feedback drafts
+# Self-contained reader drafts
 
-Report PR: https://github.com/yxieca/sonic-review-reports/pull/14
-Target: https://github.com/sonic-net/sonic-mgmt/pull/28599
-Reviewed head: `9a4ae5ec6499fd408bcb26de50a1f63e283122ea`
+Report: https://github.com/yxieca/sonic-review-reports/pull/14
 
-## comment
+Reviewed target head: `9a4ae5ec6499fd408bcb26de50a1f63e283122ea`. Existing issue dispositions, coverage limits and target-feedback receipts remain unchanged. This presentation update submits no target feedback.
 
-```text
-AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/14
 
-Source acceptable; no new demonstrated code blocker.
 
-Q1 is an existing nonblocking support-boundary question, already posted: https://github.com/sonic-net/sonic-mgmt/pull/28599#issuecomment-7147301649. Waiting for the author’s explanation or fix; do not repost that question. No target approval or Changes Requested verdict has been submitted for Q1. Existing source acceptance is separate from this open question.
+## Comment without approval
 
-The four edits in `tests/bgp/test_bgp_dual_asn.py:176–177,184–185` exclude both inclusive endpoints from each IPv4 speaker's random range. The two ranges are child subnets generated from the selected primary VLAN. Excluding each child's boundaries is coherent: PTF interface configuration uses that child's prefix, not the larger parent VLAN prefix.
+Comment without a formal verdict.
 
-Reviewed target revision: 9a4ae5ec6499fd408bcb26de50a1f63e283122ea. Retained source review and bounded validation were reused, not rerun. No independent hardware qualification is claimed.
+**Q1 — tiny VLAN prefix support (nonblocking).** In `tests/bgp/test_bgp_dual_asn.py` speaker address selection (176–177,184–185), parent /30 or /31 yields child /31 or /32; excluding both endpoints leaves an empty randint range. Should the helper use prefix-aware usable-address rules or reject insufficient subnets clearly? Standard inspected topologies use larger prefixes, so no failure on those supported inputs is claimed. The endpoint correction remains source-favorable. This question was already posted; do not duplicate it.
 
-Please check existing target feedback and avoid duplicate comments or approvals.
+Source: https://github.com/sonic-net/sonic-mgmt/blob/9a4ae5ec6499fd408bcb26de50a1f63e283122ea/tests/bgp/test_bgp_dual_asn.py#L176-L185
 
-Any submission reflects the reader’s own review and judgment; this comment is not an approval.
-```
+Reviewed target head: `9a4ae5ec6499fd408bcb26de50a1f63e283122ea`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/14.
 
-## approve
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
 
-```text
-AI-assisted review report: https://github.com/yxieca/sonic-review-reports/pull/14
 
-Source acceptable; no new demonstrated code blocker.
 
-Q1 is an existing nonblocking support-boundary question, already posted: https://github.com/sonic-net/sonic-mgmt/pull/28599#issuecomment-7147301649. Waiting for the author’s explanation or fix; do not repost that question. No target approval or Changes Requested verdict has been submitted for Q1. Existing source acceptance is separate from this open question.
+## Approve with comment
 
-The four edits in `tests/bgp/test_bgp_dual_asn.py:176–177,184–185` exclude both inclusive endpoints from each IPv4 speaker's random range. The two ranges are child subnets generated from the selected primary VLAN. Excluding each child's boundaries is coherent: PTF interface configuration uses that child's prefix, not the larger parent VLAN prefix.
+Source-favorable approval reader draft; nonblocking questions below do not become approval conditions.
 
-Reviewed target revision: 9a4ae5ec6499fd408bcb26de50a1f63e283122ea. Retained source review and bounded validation were reused, not rerun. No independent hardware qualification is claimed.
+**Q1 — tiny VLAN prefix support (nonblocking).** In `tests/bgp/test_bgp_dual_asn.py` speaker address selection (176–177,184–185), parent /30 or /31 yields child /31 or /32; excluding both endpoints leaves an empty randint range. Should the helper use prefix-aware usable-address rules or reject insufficient subnets clearly? Standard inspected topologies use larger prefixes, so no failure on those supported inputs is claimed. The endpoint correction remains source-favorable. This question was already posted; do not duplicate it.
 
-Please check existing target feedback and avoid duplicate comments or approvals.
+Source: https://github.com/sonic-net/sonic-mgmt/blob/9a4ae5ec6499fd408bcb26de50a1f63e283122ea/tests/bgp/test_bgp_dual_asn.py#L176-L185
 
-Any approval must reflect the submitting reviewer’s own judgment and permissions; this saved draft is not a claim that anyone has approved it.
-```
+Reviewed target head: `9a4ae5ec6499fd408bcb26de50a1f63e283122ea`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/14.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
+
+## Prior draft history
+
+The prior wording is preserved in the preceding report commit. This update expands author-facing explanations only; it does not change findings, severity, source coverage, target verdict or submission state.
