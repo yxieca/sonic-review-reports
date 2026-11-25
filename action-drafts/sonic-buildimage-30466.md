@@ -1,3 +1,7 @@
+> **Needs Report Update — revision hold.** The target advanced from fc8c24f01c4c3c3706957103226d0a7cd5ac3b73 to e56223e79414ce82472c4c09126db22f915738ac. The author reports moving consumer preflight before every marker write, new whole-main no-write tests, private-directory behavior, and a rebase containing daemons943/kernel650 prerequisites. These corrections and dependency ancestry are reported, not yet source-verified. R1/Q1/Q2/Q3 and the original full review remain history until changed-scope reconciliation. The earlier question was already posted; do not repeat it or use stale drafts.
+
+The following drafts are preserved historical text, not authorized current-head feedback.
+
 # Human-operated feedback drafts
 
 Full current-source review at fc8c24f01c4c3c3706957103226d0a7cd5ac3b73: three independent general lenses, separate SME and coordinator grounding. No GPIO/leak injection/native/HW/Redis/service operation was executed. Report: https://github.com/yxieca/sonic-review-reports/pull/29. Current branchmaster; original main request preserved. Explicit selected/merged sources do not prove installed image versions. Check current head/replies and dependencies; no automatic action.
