@@ -1,3 +1,5 @@
+> **Feedback already submitted:** https://github.com/sonic-net/sonic-buildimage/pull/30859#pullrequestreview-6063810197. These retained drafts are historical feedback; do not repost identical text. Awaiting author response.
+
 # Current feedback drafts — R1 clarification required
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/30
