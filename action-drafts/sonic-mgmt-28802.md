@@ -6,7 +6,7 @@ Source review observations: Mapped Q3D command expectations agree with the inspe
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: a1e3638edf58aa0ee97444b7eddf39e5e9094e76
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/50
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
 ## Approve with comment
@@ -15,6 +15,6 @@ Source approval draft, subject to independent reader review and current gates: M
 
 Completed three-general plus separate SME source review and coordinator grounding are reused at the same head. No new source panel/test or DUT/HW operation is performed by this publication.
 Reviewed HEAD: a1e3638edf58aa0ee97444b7eddf39e5e9094e76
-Report: https://github.com/yxieca/sonic-review-reports
+Report: https://github.com/yxieca/sonic-review-reports/pull/50
 Check the current target head/replies before using this edited draft. Nothing is submitted automatically.
 
