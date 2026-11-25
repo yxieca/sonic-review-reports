@@ -1,26 +1,41 @@
-> **Feedback already submitted:** https://github.com/sonic-net/sonic-buildimage/pull/30859#pullrequestreview-6063810197. These retained drafts are historical feedback; do not repost identical text. Awaiting author response.
-
-# Current feedback drafts — R1 clarification required
+# Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/30
-Reviewed head: `7d9e0caac5be00833b484fa69e41d1873a83f89a`
 
-The earlier Comment/Approve drafts are superseded and retained in commit history. No approval draft is currently offered. These are editable, human-operated drafts; nothing is submitted automatically.
+Reviewed target head: `7d9e0caac5be00833b484fa69e41d1873a83f89a`. Existing issue dispositions, coverage limits and target-feedback receipts remain unchanged. This presentation update submits no target feedback.
 
-## Questions
 
-Could you clarify the consequences of masking the entire switch-platform-init.service on BMC images? Its executed main path also publishes image/build metadata in CHASSIS_INFO, software/kernel information in SW_COMP_INFO, syslog-server state and SWITCH_PLATFORM_INIT readiness. Which of these outputs are required by BMC consumers, and what existing producer compensates for their omission?
 
-The DMI/CPU-port assumptions explain why this initializer cannot run unchanged, but do not establish that all its outputs are unnecessary. The separate ASPEED sonic-platform-init service installs wheels and the platform symlink; it does not publish equivalent metadata. If required outputs lack replacements, could the shared responsibilities be preserved through a BMC-compatible path?
+## Questions — metadata consequences
 
-R1 and source details: https://github.com/yxieca/sonic-review-reports/pull/30. Reviewed target head: 7d9e0caac5be00833b484fa69e41d1873a83f89a. This is a scope/coverage question, not a claim that every BMC telemetry path is broken. No live boot or device validation was performed.
+Questions for correction or explanation; no formal verdict.
 
-## Request changes
+**R1 — account for required BMC publications omitted by the whole-service mask (before-approval scope clarification).** `files/build_scripts/aspeed_bmc_filter_services.py` masks switch-platform-init.service. The selected `scripts/switch_platform_init.py` main also publishes CHASSIS_INFO image/build metadata, SW_COMP_INFO software/kernel information, syslog-server state and SWITCH_PLATFORM_INIT readiness. If a BMC consumer requires those rows/state and no other producer supplies them, masking removes the data/readiness it relies on; which concrete consumers and replacement producers apply? Preserve any required publications through a BMC-compatible initializer or split incompatible CPU/DMI operations instead of disabling all responsibilities. The separate ASPEED platform-init installs wheels/symlink and does not establish equivalent metadata publication. The boot-failure/masking rationale is credited. No supported consumer failure, universal telemetry break or live boot regression was established; this remains a scope/compensation question, not a manufactured runtime blocker.
 
-Please clarify and account for the BMC-relevant publications lost by masking the entire switch-platform-init.service before landing this change (R1).
+Source: https://github.com/sonic-net/sonic-buildimage/blob/7d9e0caac5be00833b484fa69e41d1873a83f89a/files/build_scripts/aspeed_bmc_filter_services.py#L22-L35
+Selected initializer: https://github.com/sonic-net/sonic-host-services/blob/7f82db29696ff4d6967a5067b92444da737f2bb8/scripts/switch_platform_init.py
 
-Its main path publishes CHASSIS_INFO image/build metadata, SW_COMP_INFO software/kernel information, syslog-server state and SWITCH_PLATFORM_INIT readiness as well as hardware-specific operations. Please identify required BMC consumers, the consequence of omission, and the actual replacement producers. If needed outputs have no compensation, preserve them through a BMC-compatible initializer or split unsupported portions instead of disabling all responsibilities.
+Reviewed target head: `7d9e0caac5be00833b484fa69e41d1873a83f89a`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/30.
 
-The separate ASPEED platform-init service is not evidence of equivalent metadata publication. The masking implementation and boot-failure rationale are acknowledged; the earlier source approval recommendation is withdrawn pending this scope clarification. No universal telemetry failure or live hardware regression is asserted.
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
 
-Review report: https://github.com/yxieca/sonic-review-reports/pull/30. Reviewed target head: 7d9e0caac5be00833b484fa69e41d1873a83f89a. AI-assisted report; this submission reflects the submitting reviewer's own judgment.
+
+
+## Request changes — clarify R1
+
+Request-changes reader draft for the retained findings below.
+
+**R1 — account for required BMC publications omitted by the whole-service mask (before-approval scope clarification).** `files/build_scripts/aspeed_bmc_filter_services.py` masks switch-platform-init.service. The selected `scripts/switch_platform_init.py` main also publishes CHASSIS_INFO image/build metadata, SW_COMP_INFO software/kernel information, syslog-server state and SWITCH_PLATFORM_INIT readiness. If a BMC consumer requires those rows/state and no other producer supplies them, masking removes the data/readiness it relies on; which concrete consumers and replacement producers apply? Preserve any required publications through a BMC-compatible initializer or split incompatible CPU/DMI operations instead of disabling all responsibilities. The separate ASPEED platform-init installs wheels/symlink and does not establish equivalent metadata publication. The boot-failure/masking rationale is credited. No supported consumer failure, universal telemetry break or live boot regression was established; this remains a scope/compensation question, not a manufactured runtime blocker.
+
+Source: https://github.com/sonic-net/sonic-buildimage/blob/7d9e0caac5be00833b484fa69e41d1873a83f89a/files/build_scripts/aspeed_bmc_filter_services.py#L22-L35
+Selected initializer: https://github.com/sonic-net/sonic-host-services/blob/7f82db29696ff4d6967a5067b92444da737f2bb8/scripts/switch_platform_init.py
+
+Reviewed target head: `7d9e0caac5be00833b484fa69e41d1873a83f89a`. Retained source evidence and its stated scope/coverage are reused; this audit executed no candidate code, native tests, build, device, service or network payload validation. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/30.
+
+Check current revision and replies, and avoid duplicating existing feedback. This editable draft does not submit anything automatically.
+
+
+
+## Prior draft history
+
+The prior wording is preserved in the preceding report commit. This update expands author-facing explanations only; it does not change findings, severity, source coverage, target verdict or submission state.
