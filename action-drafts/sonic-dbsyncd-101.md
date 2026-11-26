@@ -1,0 +1,17 @@
+# Current DBSyncd source-fix drafts
+
+## Comment
+N3/Q1 source corrections verified. README.md now matches rules_distroless0.9.4.sonic.26 selected by both roots. tests/bazel/MODULE.bazel::git_override now uses canonical https://github.com/sonic-net/sonic-buildimage.git at unchangedc743d7521e80fc1733e5cc0ffc24889b08f78444. Canonical commit identity is available and verified; fresh-fetch execution is author-reported, not replayed here. No archive digest claim is inferred from a Git override. Do not repeat the corrected documentation/origin requests.
+
+N1/N2 remain explicitly deferred until after target merge. N1: BUILD.bazel wheel and installed metadata assertion omit maintainer fields supported by the selected wheel rule; preserve setup metadata or document an intentional omission. N2: tests/bazel/installed_wheel_probe.py outer timeout can kill the native probe before its finally cleans the private Redis grandchild; a post-merge follow-up should own cleanup from a surviving parent/process group. Neither is changed by this delta, neither is a revived approval condition, and no duplicate issue should be opened before the agreed trigger.
+
+HEADa863f23da3ed361491e3c7dd17cb1576847c467e, previousfull8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Original full panel carries unchanged source; new independent general/SME doc/Git-origin checks and coordinator grounding, not a matrix rerun. No reviewer build/Bazel/compiler/native imports/tests/Redis/LLDP/install/device/network/archive probe. Report:https://github.com/yxieca/sonic-review-reports/pull/61. Check current source/CI/effective review state before manual submission.
+
+## Approve
+Source approval: required N3/Q1 corrections are fixed; N1/N2 retain their accepted post-merge deferral.
+
+N3/Q1 source corrections verified. README.md now matches rules_distroless0.9.4.sonic.26 selected by both roots. tests/bazel/MODULE.bazel::git_override now uses canonical https://github.com/sonic-net/sonic-buildimage.git at unchangedc743d7521e80fc1733e5cc0ffc24889b08f78444. Canonical commit identity is available and verified; fresh-fetch execution is author-reported, not replayed here. No archive digest claim is inferred from a Git override. Do not repeat the corrected documentation/origin requests.
+
+N1/N2 remain explicitly deferred until after target merge. N1: BUILD.bazel wheel and installed metadata assertion omit maintainer fields supported by the selected wheel rule; preserve setup metadata or document an intentional omission. N2: tests/bazel/installed_wheel_probe.py outer timeout can kill the native probe before its finally cleans the private Redis grandchild; a post-merge follow-up should own cleanup from a surviving parent/process group. Neither is changed by this delta, neither is a revived approval condition, and no duplicate issue should be opened before the agreed trigger.
+
+HEADa863f23da3ed361491e3c7dd17cb1576847c467e, previousfull8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Original full panel carries unchanged source; new independent general/SME doc/Git-origin checks and coordinator grounding, not a matrix rerun. No reviewer build/Bazel/compiler/native imports/tests/Redis/LLDP/install/device/network/archive probe. Report:https://github.com/yxieca/sonic-review-reports/pull/61. Check current source/CI/effective review state before manual submission.
