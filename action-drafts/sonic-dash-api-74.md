@@ -1,0 +1,17 @@
+# Current source-correction drafts: DASH API #74
+
+## Comment
+R1 source origin corrected. MODULE.bazel::dash_ha_schema now uses the canonical sonic-net codeload URL at unchanged18a29c1, with identicalSHA38b8f846fb6191f9315da3df8ea7285881726c1507dc26d0d73a78c17fbf96c3/strip/type/overlay. Exact source comparison and canonical commit availability are verified. The author reports byte-identical downloaded archives and successful HA descriptor/hash/field-order testing. Those archive/test results are attributed, not independently downloaded or executed by this review; accept that evidence separately before approval. Do not repeat the resolved personal-origin request.
+
+Unchanged optional notes: bazel/README.md names Distroless.20/four tests though MODULE/workflow select.26/five; update those descriptions. BUILD.bazel runtime controls infer ELF requirements, not Python/Click/Python-Protobuf dependencies; identify their owning consumer layer. Separately source-built Protobuf runtime uses APT reference metadata; document its intended equivalence or use the deployed metadata provider. No supported runtime/ABI mismatch was demonstrated; these can follow separately.
+
+HEAD7c4a1984fcd72f0eff65973671a429c00642dc9a, previousfull4753c843f9459ec93051f5f5dd76350a41452cd1. Original full panel carries unchanged bytes; new independent general/SME URL-only checks and coordinator grounding. No reviewer archive download/rehash, build/Bazel/protoc/native/HA/device/network operation. Report:https://github.com/yxieca/sonic-review-reports/pull/60. Check current head, CI and replies; nothing submits automatically.
+
+## Approve after evidence acceptance
+After accepting the attributed archive/test validation, source approval with nonblocking notes.
+
+R1 source origin corrected. MODULE.bazel::dash_ha_schema now uses the canonical sonic-net codeload URL at unchanged18a29c1, with identicalSHA38b8f846fb6191f9315da3df8ea7285881726c1507dc26d0d73a78c17fbf96c3/strip/type/overlay. Exact source comparison and canonical commit availability are verified. The author reports byte-identical downloaded archives and successful HA descriptor/hash/field-order testing. Those archive/test results are attributed, not independently downloaded or executed by this review; accept that evidence separately before approval. Do not repeat the resolved personal-origin request.
+
+Unchanged optional notes: bazel/README.md names Distroless.20/four tests though MODULE/workflow select.26/five; update those descriptions. BUILD.bazel runtime controls infer ELF requirements, not Python/Click/Python-Protobuf dependencies; identify their owning consumer layer. Separately source-built Protobuf runtime uses APT reference metadata; document its intended equivalence or use the deployed metadata provider. No supported runtime/ABI mismatch was demonstrated; these can follow separately.
+
+HEAD7c4a1984fcd72f0eff65973671a429c00642dc9a, previousfull4753c843f9459ec93051f5f5dd76350a41452cd1. Original full panel carries unchanged bytes; new independent general/SME URL-only checks and coordinator grounding. No reviewer archive download/rehash, build/Bazel/protoc/native/HA/device/network operation. Report:https://github.com/yxieca/sonic-review-reports/pull/60. Check current head, CI and replies; nothing submits automatically.
