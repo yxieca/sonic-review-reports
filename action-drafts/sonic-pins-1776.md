@@ -1,3 +1,7 @@
+<!-- verified-target-approval-6069034361 -->
+
+**Target source approval submitted and verified.** [Approval receipt](https://github.com/sonic-net/sonic-pins/pull/1776#pullrequestreview-6069034361) at `a19f75089872524643c4a58eecbfe074458cd1fc`. Optional cleanup/compiler-test follow-ups and all source/validation limits remain unchanged. Existing discussion resolution and repository readiness policy remain separate: the observed target merge state is BLOCKED despite successful technical checks, DCO and required EasyCLA. No additional approval or target merge is implied.
+
 # Reader drafts: sonic-pins #1776
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/67
