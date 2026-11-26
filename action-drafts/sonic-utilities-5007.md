@@ -1,56 +1,21 @@
-> **Needs Report Update / Coverage Incomplete — 2026-11-25.** Target advanced to `ba3451bfaabedf9ae3a5341033788a3cb710aea3`. The author reports repeated-signal/SIG_IGN/terminal-output corrections and revised progress messaging, and acknowledges a separate platform-common firmware verification follow-up. Replies: https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4702974721, https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4702974937, https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4702975116. These corrections are credited as author-reported; their source effect and external test claims are not yet independently verified at this revision. Current source acceptance and all submission drafts are HELD until changed-scope evidence is complete. Original full-review coverage remains historical evidence, not current-head clearance. No target feedback was submitted.
-
-## Preserved previous drafts — do not submit at the new revision
-
-> **HELD — new external signal/terminal scope not reconciled.** New external review at unchanged target `9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f` raises repeated-SIGHUP abort interruption, closed-terminal EIO and replacement of inherited SIG_IGN/nohup behavior ([discussion](https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4700551385), [review](https://github.com/sonic-net/sonic-utilities/pull/5007#pullrequestreview-6064597767)). The reviewer reports subprocess/fake-CDB controls; these results have not been independently executed or source-adjudicated here. Earlier R1/N1/N2 source fixes and Q1 follow-up remain credited. Current action drafts are held for bounded independent source reconciliation of this newly material scope; this is not a confirmed new code blocker or a completed review.
-
-## Preserved previously prepared drafts — not current submission clearance
-
-# Current-head human-operated drafts
-
-Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
+# Current reader drafts: sonic-utilities #5007
 
 ## Comment
+Source corrections accepted: cpoutil/main.py::_interrupt_on_termination preserves inherited SIG_IGN and ignores recorded TERM/HUP signals during the first termination unwind; HUP-first detaches output before KeyboardInterrupt. _transfer_firmware closes its generator across download and the run/commit tail; the phase announcement precedes completion, and late errors retain bytes. Prior R1/N1/N2 fixes remain intact; do not repost them.
 
-Current source resolves R1/N1/N2: unavailable targets fail inside each per-target boundary while healthy targets run, empty fwversion records fail, and late unsupported exceptions retain progress context. Invalid indices remain fatal. SIGTERM/SIGHUP handling closes interrupted iterators and restores handlers; only fake-handler source controls were executed. The remaining Q1 new-image-before-commit verification belongs to the selected platform hook and has an acknowledged follow-up; do not duplicate the existing discussion or assume it is already installed.
+Optional signal hardening: handler installation/bookkeeping occurs before the restoration try/finally, so an interrupt during setup can leave a partial handler state; use transactional setup/restoration if strengthening that boundary. _detach_output can raise before KeyboardInterrupt or close FD1/2 if os.open reused an already closed standard descriptor; retain abort classification on redirection failure and close only a non-destination temporary FD. These extra preconditions were not reproduced and are not blocking device-failure claims. TERM-first/HUP-later and SIGINT orderings, plus output sites outside progress.update, remain qualification cases. Describe nohup as inherited ignored SIGHUP remaining ignored, not ordinary TERM immunity.
 
-Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
+Q1 linked platform-common polling before commit is inspected at a pinned revision; image/endpoint selection and hardware verification remain separate. Do not treat a linked correction as deployed or repeat the acknowledged dependency question.
 
-## Approval with comment
+ReviewedHEAD:ba3451bfaabedf9ae3a5341033788a3cb710aea3. Original full panel and earlier increment preserved; new independent general/SME behavioral checks plus linked-hook source checks. No reviewer firmware/native/PTY/tests/device operations. Linked dependency source is not proof of image/endpoint installation or hardware outcome. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current revision/replies/effective review state.
 
-Source follow-up is favorable at the current head: R1/N1/N2 are resolved, with the previous full-panel coverage carried for verified unchanged scope and a bounded independent delta cross-check completed. Q1 remains an acknowledged nonblocking platform-common image-switch verification follow-up; source acceptance does not establish hardware upgrade success. Review current evidence/head and existing gates before selecting approval. No automatic submission is performed.
+## Approve
+Source approval within the reported contract; optional follow-ups can follow separately.
 
-Incremental source follow-up at 9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f; prior full panel at8fb199d6 carried for unchanged scope, coordinator delta review and one independent restricted cross-check newly completed. No native firmware/device test or real signals executed. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current head/replies. Q1 platform image-switch verification remains an acknowledged nonblocking follow-up; no installed version or hardware result is implied.
+Source corrections accepted: cpoutil/main.py::_interrupt_on_termination preserves inherited SIG_IGN and ignores recorded TERM/HUP signals during the first termination unwind; HUP-first detaches output before KeyboardInterrupt. _transfer_firmware closes its generator across download and the run/commit tail; the phase announcement precedes completion, and late errors retain bytes. Prior R1/N1/N2 fixes remain intact; do not repost them.
 
-## Preserved historical drafts — superseded, not for submission
+Optional signal hardening: handler installation/bookkeeping occurs before the restoration try/finally, so an interrupt during setup can leave a partial handler state; use transactional setup/restoration if strengthening that boundary. _detach_output can raise before KeyboardInterrupt or close FD1/2 if os.open reused an already closed standard descriptor; retain abort classification on redirection failure and close only a non-destination temporary FD. These extra preconditions were not reproduced and are not blocking device-failure claims. TERM-first/HUP-later and SIGINT orderings, plus output sites outside progress.update, remain qualification cases. Describe nohup as inherited ignored SIGHUP remaining ignored, not ordinary TERM immunity.
 
-# Current-head feedback hold — 2026-11-24
+Q1 linked platform-common polling before commit is inspected at a pinned revision; image/endpoint selection and hardware verification remain separate. Do not treat a linked correction as deployed or repeat the acknowledged dependency question.
 
-Report: https://github.com/yxieca/sonic-review-reports/pull/18
-Target: https://github.com/sonic-net/sonic-utilities/pull/5007
-Observed current head: `9d777d3ef609e3bd5d9abb8040e12fe6e7f49c8f`
-Historical full-review head: `8fb199d6da3e909fea0cf2261ef4afd23f8e373a`
-
-R1/N1/N2 source corrections are verified in a bounded delta check. Q1 has a downstream follow-up acknowledgment, not deployed validation. Required current-head independent changed-scope coverage is pending. No current actionable question/request-changes/approval draft is prepared. Historical drafts below must not be submitted as current feedback; they refer to corrected code and are preserved only for history.
-
----
-
-## Preserved historical drafts (superseded; not current feedback)
-
-# Human-operated feedback drafts
-
-Report: https://github.com/yxieca/sonic-review-reports/pull/18
-Reviewed SHA: `8fb199d6da3e909fea0cf2261ef4afd23f8e373a`
-Coverage: completed three independent general passes, separate SME and coordinator grounding.
-
-## Questions
-
-For reviewed SHA 8fb199d6da3e909fea0cf2261ef4afd23f8e373a, could you clarify/fix the declared-but-unavailable CPO handling in the existing availability-isolation thread (https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4679062681)? The resolver runs before the per-target loop, so a healthy later endpoint is not processed.
-
-Full batch review report: https://github.com/yxieca/sonic-review-reports/pull/18. Three independent general passes and the separate SME are completed and grounded. No hardware or firmware validation was executed. This is a question without approval or a formal verdict; check current head and replies and avoid duplicating already answered feedback.
-
-## Request changes
-
-At reviewed SHA 8fb199d6da3e909fea0cf2261ef4afd23f8e373a, the full batch source review in https://github.com/yxieca/sonic-review-reports/pull/18 identifies R1: the all-target resolver can abort before healthy declared endpoints are processed. Please address the existing availability-isolation thread (https://github.com/sonic-net/sonic-utilities/pull/5007#discussion_r4679062681), preserving invalid-index rejection and adding the missing-CPO/healthy-target case. This references existing feedback rather than adding a duplicate finding.
-
-Three independent general passes and separate SME are complete; no hardware or firmware validation was executed for this assessment. Check the current head, author replies and report before submitting. This draft does not assert anyone else's approval.
+ReviewedHEAD:ba3451bfaabedf9ae3a5341033788a3cb710aea3. Original full panel and earlier increment preserved; new independent general/SME behavioral checks plus linked-hook source checks. No reviewer firmware/native/PTY/tests/device operations. Linked dependency source is not proof of image/endpoint installation or hardware outcome. Report: https://github.com/yxieca/sonic-review-reports/pull/18. Check current revision/replies/effective review state.
