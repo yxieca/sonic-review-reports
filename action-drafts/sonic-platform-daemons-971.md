@@ -1,3 +1,22 @@
+# Archived source review — target MERGED
+
+<!-- terminal-archive-report76-20261126 -->
+Target: https://github.com/sonic-net/sonic-platform-daemons/pull/971 · Report: https://github.com/yxieca/sonic-review-reports/pull/76
+
+The target merged at `2026-11-26T21:15:31Z` with [merge commit `0ca41544c73a1f1775f5a707e8e9e4f224064c01`](https://github.com/sonic-net/sonic-platform-daemons/commit/0ca41544c73a1f1775f5a707e8e9e4f224064c01). Reviewed/terminal head: `ee544e7495a0f1a97c6e46e31193b8d5af53c0fa`. [Source approval with nonblocking notes](https://github.com/sonic-net/sonic-platform-daemons/pull/971#pullrequestreview-6080533114) was submitted before the merge. This monitor did not merge or submit feedback to the target. Temporary action pages are retired; prior drafts and waiting-state prose below are historical, not current submission instructions.
+
+## Terminal finding outcomes
+
+| ID | Outcome |
+|---|---|
+| N1 | Nonblocking validation-description scope correction remains a recorded recommendation; merge does not prove the documentation was corrected. |
+| N2 | Nonblocking partial-diagnostics robustness recommendation retained; merge does not prove the collector was changed. |
+
+The completed three-general-plus-separate-SME source coverage, dissent, source limits and discussion remain intact. No fresh source review, build, native test, install or hardware probe was performed for archival.
+
+
+## Historical reader drafts — not actionable
+
 # Human-operated target drafts
 
 Target: https://github.com/sonic-net/sonic-platform-daemons/pull/971
