@@ -2,7 +2,7 @@
 
 Target: https://github.com/sonic-net/sonic-sairedis/pull/2233
 Reviewed head: `4ea34ffd1a6cf91fa4e86a80529224e7e7698f5e`
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/75
 
 ## Request changes
 
@@ -12,7 +12,7 @@ Report: REPORT_PR_URL
 
 Reviewed revision: `4ea34ffd1a6cf91fa4e86a80529224e7e7698f5e`. Static source assessment; no reviewer builds, tests, installation, native imports, or hardware/runtime probes were performed.
 
-Full report: REPORT_PR_URL
+Full report: https://github.com/yxieca/sonic-review-reports/pull/75
 
 ## Questions without a verdict
 
@@ -22,4 +22,4 @@ Full report: REPORT_PR_URL
 
 Reviewed revision: `4ea34ffd1a6cf91fa4e86a80529224e7e7698f5e`. Questions only, without a formal verdict. Static source assessment; no reviewer builds, tests, installation, native imports, or hardware/runtime probes were performed.
 
-Full report: REPORT_PR_URL
+Full report: https://github.com/yxieca/sonic-review-reports/pull/75
