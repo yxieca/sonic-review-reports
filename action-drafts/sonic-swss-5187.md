@@ -1,3 +1,9 @@
+<!-- current-source-hold-886f51251fd660b83975c7d3c3ce65c65dbe7806 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `886f51251fd660b83975c7d3c3ce65c65dbe7806` after the completed source assessment at `78dff8c93e747e4e1d9ae44a691f81b4bbfe4c8d`. The latest source changes and author replies require changed-scope verification. Previously fixed, retained and newly identified findings remain visible as historical conclusions, not current-revision clearance. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 # Current SWSS5187 source-provider drafts
 
 ## Comment
