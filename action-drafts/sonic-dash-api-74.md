@@ -1,3 +1,5 @@
+> **Current disposition:** R1 is a blocking source-acceptance condition until the existing canonical HA-origin/checksum request is resolved or explicitly accepted by the maintainer. It is already raised; waiting author response, not duplicate feedback. No runtime/integrity-bypass defect is asserted.
+
 # Reader drafts: sonic-dash-api74
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/60
