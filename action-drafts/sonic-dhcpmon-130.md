@@ -1,6 +1,6 @@
 # Reader drafts: sonic-dhcpmon #130
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/63
 
 ## Comment
 
@@ -14,7 +14,7 @@ Optional checker coverage — add focused rejection controls for .github/scripts
 
 Provider-verification scope question: the metadata checker matches Depends package names/control architecture and library basenames against DT_NEEDED; it does not independently establish provider ELF machine/SONAME/versioned-alternative ABI. Please keep its claim at provider-name consistency or add separately scoped strengthening if a complete provider-ABI proof is intended. The underlying metadata generator is stronger; this is nonblocking, not a proved dependency bug.
 
-Reviewed HEAD:65b99647b87eb0955009310c531d0fadcb840c60, BASE3e7160d9b89ad7c701a0827af80367ab1b206ccf. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer compiler/Bazel/native utility test, DB/Redis/DHCP traffic, install or payload probe. Existing hosted native AMD64/ARM64 utility and artifact/metadata checks succeeded externally. Report: REPORT_PR_URL. Verify current revision, CI and replies before using this draft.
+Reviewed HEAD:65b99647b87eb0955009310c531d0fadcb840c60, BASE3e7160d9b89ad7c701a0827af80367ab1b206ccf. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer compiler/Bazel/native utility test, DB/Redis/DHCP traffic, install or payload probe. Existing hosted native AMD64/ARM64 utility and artifact/metadata checks succeeded externally. Report: https://github.com/yxieca/sonic-review-reports/pull/63. Verify current revision, CI and replies before using this draft.
 
 ## Approve
 
@@ -28,4 +28,4 @@ Optional checker coverage — add focused rejection controls for .github/scripts
 
 Provider-verification scope question: the metadata checker matches Depends package names/control architecture and library basenames against DT_NEEDED; it does not independently establish provider ELF machine/SONAME/versioned-alternative ABI. Please keep its claim at provider-name consistency or add separately scoped strengthening if a complete provider-ABI proof is intended. The underlying metadata generator is stronger; this is nonblocking, not a proved dependency bug.
 
-Reviewed HEAD:65b99647b87eb0955009310c531d0fadcb840c60, BASE3e7160d9b89ad7c701a0827af80367ab1b206ccf. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer compiler/Bazel/native utility test, DB/Redis/DHCP traffic, install or payload probe. Existing hosted native AMD64/ARM64 utility and artifact/metadata checks succeeded externally. Report: REPORT_PR_URL. Verify current revision, CI and replies before using this draft.
+Reviewed HEAD:65b99647b87eb0955009310c531d0fadcb840c60, BASE3e7160d9b89ad7c701a0827af80367ab1b206ccf. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer compiler/Bazel/native utility test, DB/Redis/DHCP traffic, install or payload probe. Existing hosted native AMD64/ARM64 utility and artifact/metadata checks succeeded externally. Report: https://github.com/yxieca/sonic-review-reports/pull/63. Verify current revision, CI and replies before using this draft.
