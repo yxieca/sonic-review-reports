@@ -1,3 +1,9 @@
+<!-- current-source-hold-dcafc3e4da1abad8a94918c2fd2253a261142d56 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced again to `dcafc3e4da1abad8a94918c2fd2253a261142d56` while the prior repin was awaiting source qualification. The latest target/base/dependency scope needs verification. Earlier full coverage and source approval remain historical receipts, not current-head clearance. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 <!-- current-source-hold-10c4850bf50082af8011da369c5370f440aac837 -->
 
 **Historical drafts — not actionable at the current head.**
