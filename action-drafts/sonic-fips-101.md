@@ -1,3 +1,7 @@
+# Historical drafts — actions retired
+
+The target merged on 2026-11-25. These unchanged drafts are retained as historical evidence only, not actionable submission text. Approval receipt: https://github.com/sonic-net/sonic-fips/pull/101#pullrequestreview-6068803706. No decision was replayed during archival.
+
 # Reader drafts: sonic-fips #101
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/64
