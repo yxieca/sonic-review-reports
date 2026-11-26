@@ -2,7 +2,7 @@
 
 Target: https://github.com/sonic-net/sonic-dash-ha/pull/251
 Reviewed HEAD: `b69043a63d339e8f81b5bc9eb57f2f16612deaf1`
-Report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-dash-ha-251/reports/sonic-dash-ha/251.md
+Report: https://github.com/yxieca/sonic-review-reports/pull/79
 
 ## Request changes / continue existing concerns
 
@@ -12,7 +12,7 @@ This explicitly requested static review was performed while the target remains a
 
 **Clarify the canonical dependency contract.** The [existing dependency-selection question](https://github.com/sonic-net/sonic-dash-ha/pull/251#discussion_r4713886917) remains unanswered. The new Bazel graph consumes the shared owner's lock rather than this workspace's `Cargo.lock`: examples are file-rotate **0.7.6 versus 0.8.0**, signal-hook **0.3.17 versus 0.4.6**, Tokio **1.38.2 versus 1.51.6**, and a different Common source revision. Could the selected versions/features be aligned with the canonical workspace requirements, or could the deliberate differences and their supported API/lifecycle acceptance be documented and reviewed explicitly? These are material producer selections, but version inequality alone is not evidence of a second runtime defect. The inspected file-rotate caller passes `None`, which is accepted by both constructor variants, and the scoped blocking-task adapter is present in both inspected Common revisions. Keep the release-logging correction above separate from that broader contract question.
 
-The dependency item is a question, not a demonstrated additional runtime blocker. Both topics are already raised in the linked target threads; prefer continuing those discussions rather than reposting duplicate findings. Reviewed HEAD: `b69043a63d339e8f81b5bc9eb57f2f16612deaf1`. Full report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-dash-ha-251/reports/sonic-dash-ha/251.md. Reviewer native builds, tests, imports, HA/loopback/network operations, installation and hardware probes were not performed.
+The dependency item is a question, not a demonstrated additional runtime blocker. Both topics are already raised in the linked target threads; prefer continuing those discussions rather than reposting duplicate findings. Reviewed HEAD: `b69043a63d339e8f81b5bc9eb57f2f16612deaf1`. Full report: https://github.com/yxieca/sonic-review-reports/pull/79. Reviewer native builds, tests, imports, HA/loopback/network operations, installation and hardware probes were not performed.
 
 ## Ask questions without a verdict
 
@@ -22,4 +22,4 @@ This explicitly requested static review was performed while the target remains a
 
 **Clarify the canonical dependency contract.** The [existing dependency-selection question](https://github.com/sonic-net/sonic-dash-ha/pull/251#discussion_r4713886917) remains unanswered. The new Bazel graph consumes the shared owner's lock rather than this workspace's `Cargo.lock`: examples are file-rotate **0.7.6 versus 0.8.0**, signal-hook **0.3.17 versus 0.4.6**, Tokio **1.38.2 versus 1.51.6**, and a different Common source revision. Could the selected versions/features be aligned with the canonical workspace requirements, or could the deliberate differences and their supported API/lifecycle acceptance be documented and reviewed explicitly? These are material producer selections, but version inequality alone is not evidence of a second runtime defect. The inspected file-rotate caller passes `None`, which is accepted by both constructor variants, and the scoped blocking-task adapter is present in both inspected Common revisions. Keep the release-logging correction above separate from that broader contract question.
 
-The dependency item is a question, not a demonstrated additional runtime blocker. Both topics are already raised in the linked target threads; prefer continuing those discussions rather than reposting duplicate findings. Reviewed HEAD: `b69043a63d339e8f81b5bc9eb57f2f16612deaf1`. Full report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-dash-ha-251/reports/sonic-dash-ha/251.md. Reviewer native builds, tests, imports, HA/loopback/network operations, installation and hardware probes were not performed.
+The dependency item is a question, not a demonstrated additional runtime blocker. Both topics are already raised in the linked target threads; prefer continuing those discussions rather than reposting duplicate findings. Reviewed HEAD: `b69043a63d339e8f81b5bc9eb57f2f16612deaf1`. Full report: https://github.com/yxieca/sonic-review-reports/pull/79. Reviewer native builds, tests, imports, HA/loopback/network operations, installation and hardware probes were not performed.
