@@ -1,3 +1,9 @@
+<!-- source-evidence-hold-0830-571496d20d6de6aef24884ae69cb54003c3b7998 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced from the covered revision `8e26302ff30e0ee986add3bb2dae0a0ce28d394b` to `571496d20d6de6aef24884ae69cb54003c3b7998`. Changed source and its reached dependency contracts require independent reconciliation. Prior completed full-panel and bounded follow-up evidence remain preserved; historical findings are not current-head qualification. The author reports the earlier concerns are fixed; those corrections require source verification, not acceptance by assertion. Our earlier Changes Requested review remains a historical/current review receipt, not permission to submit another action. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/31
