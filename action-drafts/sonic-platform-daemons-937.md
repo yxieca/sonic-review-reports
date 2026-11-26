@@ -1,3 +1,9 @@
+<!-- current-source-hold-8ae91709d7b8c3844bae11f981ea31dd05e6d8c2 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced from the covered revision `fd89b24453140055e437b989b41396df56c77730` to `8ae91709d7b8c3844bae11f981ea31dd05e6d8c2`. Changed source and its reached dependency contracts require independent reconciliation. Prior completed full-panel and bounded follow-up evidence remain preserved; historical findings are not current-head qualification. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
+
 # Current report24 material-claim drafts
 
 ## Questions
