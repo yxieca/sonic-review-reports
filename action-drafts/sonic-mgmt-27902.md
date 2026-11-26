@@ -1,3 +1,7 @@
+> **STALE — not for submission.** Needs Report Update: target advanced to `af0fa70af966032f46d90f0173411142e5d0e25a`. The author reports corrections to the remap oracle, counter windows, TTL origin and label repetition. Those claims are not yet source-verified; prior findings/coverage are historical and drafts are stale.
+
+## Historical drafts
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/33
