@@ -1,0 +1,23 @@
+# Reader drafts: SWSS #5187
+
+Report: REPORT_PR_URL
+
+## Comment
+Source-favorable review of the additive SWSS Bazel/native-contract design, with no confirmed introduced blocking implementation defect. Current default build acceptance is NOT established: selected Common.9 is unpublished and native checks fail at module resolution before compilation. Source approval does not clear that dependency/CI gate.
+
+Nonblocking N1 — align dependency-resolution and validation documentation. bazel/README.md describes a root-only SAIRedis archive override and libteam.1, while MODULE.bazel uses registry SAIRedis and libteam.2. bazel/external-module.md retains an old Common fork-source description. The PR body says27programs and SAI1.18; current declarations identify29C++ programs plus Rust countersyncd and SAI1.19.2 provider ownership. Readers can follow a stale resolution model or mistake older passes for current validation. Update these descriptions together against current declarations, distinguishing proposed/open releases and historical runs. This can follow separately; no runtime/ABI defect is inferred from prose alone.
+
+Observed Q1 — current native run45776975871 fails because sonic-swss-common0.0.9-e06d5157 cannot be resolved from maintained registry main/BCR. Required registry17/29 releases are open and author-coupled. Publish/select the compatible releases and obtain current-head native/extraction results through their owners. No build/CI retry occurred here. Current64helper-unit cases passed externally before module resolution; these are not the original functional/daemon suites or successful native SWSS builds.
+
+HEAD0956d33da9e83549ead1101c72ec651d3628a073 BASE4f838f925cbb04fa8e551274071fae6110b93a77. Full cumulative three-independent-general plus separate-SME source review and coordinator grounding, only missing direct/dependency source supplemented. Cargo lock and unchanged transitive algorithms bounded. No reviewer Bazel/compiler/native imports/tests/Redis/SAI/DUT/services/network/install/archive payload probes. Runtime/debug/provider checks are authored source predicates, not independent ABI/image certification. Report: REPORT_PR_URL. Check current source/releases/CI/reviewer state before manual feedback.
+
+## Source approval
+Source approval within the stated boundaries, not build/merge clearance.
+
+Source-favorable review of the additive SWSS Bazel/native-contract design, with no confirmed introduced blocking implementation defect. Current default build acceptance is NOT established: selected Common.9 is unpublished and native checks fail at module resolution before compilation. Source approval does not clear that dependency/CI gate.
+
+Nonblocking N1 — align dependency-resolution and validation documentation. bazel/README.md describes a root-only SAIRedis archive override and libteam.1, while MODULE.bazel uses registry SAIRedis and libteam.2. bazel/external-module.md retains an old Common fork-source description. The PR body says27programs and SAI1.18; current declarations identify29C++ programs plus Rust countersyncd and SAI1.19.2 provider ownership. Readers can follow a stale resolution model or mistake older passes for current validation. Update these descriptions together against current declarations, distinguishing proposed/open releases and historical runs. This can follow separately; no runtime/ABI defect is inferred from prose alone.
+
+Observed Q1 — current native run45776975871 fails because sonic-swss-common0.0.9-e06d5157 cannot be resolved from maintained registry main/BCR. Required registry17/29 releases are open and author-coupled. Publish/select the compatible releases and obtain current-head native/extraction results through their owners. No build/CI retry occurred here. Current64helper-unit cases passed externally before module resolution; these are not the original functional/daemon suites or successful native SWSS builds.
+
+HEAD0956d33da9e83549ead1101c72ec651d3628a073 BASE4f838f925cbb04fa8e551274071fae6110b93a77. Full cumulative three-independent-general plus separate-SME source review and coordinator grounding, only missing direct/dependency source supplemented. Cargo lock and unchanged transitive algorithms bounded. No reviewer Bazel/compiler/native imports/tests/Redis/SAI/DUT/services/network/install/archive payload probes. Runtime/debug/provider checks are authored source predicates, not independent ABI/image certification. Report: REPORT_PR_URL. Check current source/releases/CI/reviewer state before manual feedback.
