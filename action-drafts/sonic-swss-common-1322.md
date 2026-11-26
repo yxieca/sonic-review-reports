@@ -1,3 +1,9 @@
+<!-- source-evidence-hold-1030-27b1ac06249a76c481728d396356131ce1f8632c -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced from the covered revision `766d9b117023cd2c1edab74158e96098d3f96069` to `27b1ac06249a76c481728d396356131ce1f8632c`. Changed source and its reached dependency contracts require independent reconciliation. Prior completed full-panel and bounded follow-up evidence remain preserved; historical findings are not current-head qualification. The author explains the downstream gNMI Lua-loader dependency and proposes isolating that scope in a dedicated commit (https://github.com/sonic-net/sonic-swss-common/pull/1322#issuecomment-7200324467). The prior approval is now dismissed; it does not qualify the new head. Reported tests remain author-reported, not reviewer execution. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
+
 **Current follow-up: Q3 split question already posted; do not repeat unchanged feedback. Existing target approval remains submitted.**
 
 # Reader drafts: Common #1322
