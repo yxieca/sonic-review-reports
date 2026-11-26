@@ -1,3 +1,7 @@
+<!-- approval-gate-reconciliation-20261126-0130-report71 -->
+
+**Current remaining gate — Waiting CI.** Source approval remains verified at the covered head. ms_conflict is still failed and Azure builds remain incomplete. The qualified-approval bot additionally reports 0/5 changed files qualified; source approval does not satisfy that separate mapped-review gate. CI and qualified external review remain distinct outstanding gates. No CI retry or merge was performed. [External evidence](https://github.com/sonic-net/sonic-buildimage/pull/31108#issuecomment-7186773954).
+
 # Reader drafts: buildimage #31108
 
 Report:https://github.com/yxieca/sonic-review-reports/pull/71
