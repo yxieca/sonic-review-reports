@@ -1,6 +1,6 @@
 # Reader drafts: sonic-linkmgrd #362
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/65
 
 ## Comment
 
@@ -14,7 +14,7 @@ Optional test guards — extend tools/bazel/evidence_test.py and validate.py::co
 
 Optional logging regression — src/common/SwssLogBackend.cpp::send now correctly uses Logger::write(priority,"%s",message). Existing logger fixtures do not protect literal-percent messages through that backend; add a small isolated format-capture case to preserve the fix. No Redis/service/new framework is required.
 
-Reviewed HEAD:5a4563b1ccd21bfbc915f4e165f778e49ea269a7, BASE926040f8a26c1affca07831a1b613be7291372bb. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer C++/Bazel/native/package/Redis/network/DUT execution or payload probe. Current hosted native results are external: two of three test targets executed, source-contract result cached. Source approval is not deployment/ABI certification. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+Reviewed HEAD:5a4563b1ccd21bfbc915f4e165f778e49ea269a7, BASE926040f8a26c1affca07831a1b613be7291372bb. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer C++/Bazel/native/package/Redis/network/DUT execution or payload probe. Current hosted native results are external: two of three test targets executed, source-contract result cached. Source approval is not deployment/ABI certification. Report: https://github.com/yxieca/sonic-review-reports/pull/65. Check current revision, CI and replies before submission.
 
 ## Approve
 
@@ -28,4 +28,4 @@ Optional test guards — extend tools/bazel/evidence_test.py and validate.py::co
 
 Optional logging regression — src/common/SwssLogBackend.cpp::send now correctly uses Logger::write(priority,"%s",message). Existing logger fixtures do not protect literal-percent messages through that backend; add a small isolated format-capture case to preserve the fix. No Redis/service/new framework is required.
 
-Reviewed HEAD:5a4563b1ccd21bfbc915f4e165f778e49ea269a7, BASE926040f8a26c1affca07831a1b613be7291372bb. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer C++/Bazel/native/package/Redis/network/DUT execution or payload probe. Current hosted native results are external: two of three test targets executed, source-contract result cached. Source approval is not deployment/ABI certification. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+Reviewed HEAD:5a4563b1ccd21bfbc915f4e165f778e49ea269a7, BASE926040f8a26c1affca07831a1b613be7291372bb. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer C++/Bazel/native/package/Redis/network/DUT execution or payload probe. Current hosted native results are external: two of three test targets executed, source-contract result cached. Source approval is not deployment/ABI certification. Report: https://github.com/yxieca/sonic-review-reports/pull/65. Check current revision, CI and replies before submission.
