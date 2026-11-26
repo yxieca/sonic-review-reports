@@ -1,3 +1,9 @@
+<!-- current-source-hold-85661d61bfde1285ce38e062317cc65606fb8cca -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced again to `85661d61bfde1285ce38e062317cc65606fb8cca` while the earlier support-boundary correction was awaiting source qualification. The latest revision requires changed-scope verification. The author-reported /30, /31 and /32 skip remains a claim pending verification, not a confirmed fix or new blocker. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 <!-- current-source-hold-c0c426a115c85fa70e94acdba27092516cead3d5 -->
 
 **Historical drafts — not actionable at the current head.**
