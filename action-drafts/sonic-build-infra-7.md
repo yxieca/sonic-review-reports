@@ -1,51 +1,21 @@
-> **HELD — target revision changed. Do not submit the prior drafts.** Target source advanced from `57f537b9ec9cedc797a19ffade867b3b285a3a9f` to `5bc1832245d8e6885adf7e44bef90d5ef81b2e16`. The author reports correcting R1 by selecting published rules_distroless .26, regenerating the production APT lock and adding an AMD64 default-updater fixture. Claimed 2,719-package/99-collection refresh, empty-cache hash reproduction and CI results are author-reported, not independently executed or current source clearance. The actual changed updater/lock/CI scope requires independent source reconciliation. Original full review and R1/R2/R3 severity history remain retained; no current blocker or fix is inferred solely from the description. Earlier target Changes Requested receipt remains historical at the old head, not current-head verification.
-
-## Historical revision-bound drafts — not current feedback clearance
-
-> **Feedback already submitted — historical drafts.** Verified target CHANGES_REQUESTED review at `57f537b9ec9cedc797a19ffade867b3b285a3a9f`: https://github.com/sonic-net/sonic-build-infra/pull/7#pullrequestreview-6065748013. R1 remains the only P2 blocker; author explanation or fix is next. R2/R3 remain optional P3 input-contract hardening. Identical feedback has already been submitted; saved drafts below are historical and must not be reposted.
-
-## Verified submitted feedback — retained receipt, do not repost
-
-Please address the default APT updater's registry/version mismatch before landing.
-
-**Must fix — default APT update cannot resolve its selected resolver (R1).**
-`apt/lock.py` still defaults `RESOLVER_VERSION` to `0.9.4.sonic.20`. Its `resolve()` path creates a separate root MODULE, and this PR changes that root's default registry to the canonical SONiC registry followed by BCR. The documented command in `apt/README.md`:
-
-`"$BOOTSTRAP_PYTHON" apt/lock.py update --bazel /path/to/bazel-8.5.1`
-
-provides no version or registry override. At the reviewed registry snapshot, SONiC publishes `.26`, not `.20`, and BCR also lacks `.20`; the former registry does contain `.20`. Consequently this default maintenance command fails during dependency resolution before producing an updated lock. The normal root's `.26` and successful locked-build CI do not cover this separately generated updater root.
-
-Please either publish the compatible `.20` recipe in the selected registry or deliberately migrate the updater default and lock-input provenance to an available resolver. Changing the constant alone needs care because `_inputs` records the resolver version/digest. Add a default-route regression without overrides masking the mismatch.
-
-Source: https://github.com/sonic-net/sonic-build-infra/blob/57f537b9ec9cedc797a19ffade867b3b285a3a9f/apt/lock.py#L548-L593
-
-**Optional follow-ups — not approval conditions:**
-- Missing final newline (R2): `deb/mtree.py::summarize_mtree()` includes the final record via Python `splitlines()`, but the selected libarchive 3.7.4 mtree reader drops an unterminated final record. Reject or normalize it so checksums/control metadata cannot describe a file omitted from the archive.
-- Ambiguous bare names (R3): a directory `a` followed by bare file `f` is summarized as root `f`, while libarchive's hierarchical interpretation emits `a/f`. Clarify/enforce explicit flat `./...` names or canonicalize once for both readers.
-
-These mtree examples were accepted by the Python parser, but no supported production caller emitting them was established. They remain nonblocking input-contract hardening. Archive behavior was inspected in source, not reproduced by building a DEB. Preserve the streaming improvement and default TAR compatibility.
-
-Supporting review and detailed evidence: https://github.com/yxieca/sonic-review-reports/pull/58
-Reviewed target head: `57f537b9ec9cedc797a19ffade867b3b285a3a9f`.
-
-## Earlier prepared drafts — historical
-
-# Reader drafts: sonic-build-infra #7
+# Current reader drafts: build-infra #7
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/58
 
-## Questions
+## Comment
 
-Could you reconcile R1 before landing? The documented default APT update still selects rules_distroless .20, absent from the newly selected canonical registry and BCR. Its generated root is separate from the normal .26 root. Please preserve or deliberately migrate the resolver/default and lock-input provenance together.
+Default APT update fix verified in source. apt/lock.py now selects published rules_distroless0.9.4.sonic.26 through main→resolve→resolve_partition’s separate generated MODULE, retaining canonical SONiC+BCR defaults. apt/apt.lock.json records matching resolver/input digest; all2,719package records,99collections and source definitions remain unchanged. The new AMD64 fixture invokes update/check without registry/resolver/pre-resolved-lock overrides and logs a successful single-package export. This closes the earlier R1 default-route mismatch; no new delta blocker was found. The previous change-request text is superseded, not repeated here.
 
-Nonblocking R2/R3: could you clarify the restricted mtree grammar and reject or normalize missing final LF and ambiguous bare hierarchical names? Metadata and archive interpretation can differ for those forms, but no supported production caller emitting them was established. These guardrails can be addressed separately; default TAR callers are not claimed broken.
+Optional input-contract follow-ups remain nonblocking: deb/mtree.py::summarize_mtree counts an unterminated final record that libarchive3.7.4 can omit, and accepts bare flat names that the backend can interpret hierarchically. If those spellings are supported, reject or normalize them once so summary/conffiles and emitted payload agree; this update changes no such producer and does not revive them as approval conditions. Prior documentation/host-process XML notes are also optional.
 
-Full review and severity history: https://github.com/yxieca/sonic-review-reports/pull/58. No real DEB assembly or archive payload probe was executed by this review.
+Reviewed current HEAD:5bc1832245d8e6885adf7e44bef90d5ef81b2e16, BASE20725f7f7545909c09073ab7030928b0883a1bb7. Prior full panel at57f537b9 retained for unchanged bytes; new independent general and separate-SME delta source checks plus coordinator grounding. No reviewer APT/Bazel/native/build/DEB/payload execution. Current hosted single-package updater fixture succeeded externally; full production/empty-cache refresh remains author-reported. Report: https://github.com/yxieca/sonic-review-reports/pull/58. Check current revision, replies and effective review state before submission.
 
-## Request changes
+## Approve
 
-Please resolve R1 before landing: the endpoint migration leaves the documented default APT updater requesting a resolver version unavailable in its selected registries. Reconcile compatible publication or deliberately migrate the generated-root default and recorded lock-input contract.
+Source review supports approval of this update.
 
-R2/R3 are nonblocking input-contract hardening, not acceptance conditions: clarify/enforce the flat mtree grammar and normalization to prevent metadata/archive disagreement for unsupported or malformed forms. N1/N2 and parent ordering also remain optional. Preserve the streaming improvement.
+Default APT update fix verified in source. apt/lock.py now selects published rules_distroless0.9.4.sonic.26 through main→resolve→resolve_partition’s separate generated MODULE, retaining canonical SONiC+BCR defaults. apt/apt.lock.json records matching resolver/input digest; all2,719package records,99collections and source definitions remain unchanged. The new AMD64 fixture invokes update/check without registry/resolver/pre-resolved-lock overrides and logs a successful single-package export. This closes the earlier R1 default-route mismatch; no new delta blocker was found. The previous change-request text is superseded, not repeated here.
 
-Review: https://github.com/yxieca/sonic-review-reports/pull/58. This feedback reflects the submitting reviewer's judgment; no executed package-corruption result is claimed.
+Optional input-contract follow-ups remain nonblocking: deb/mtree.py::summarize_mtree counts an unterminated final record that libarchive3.7.4 can omit, and accepts bare flat names that the backend can interpret hierarchically. If those spellings are supported, reject or normalize them once so summary/conffiles and emitted payload agree; this update changes no such producer and does not revive them as approval conditions. Prior documentation/host-process XML notes are also optional.
+
+Reviewed current HEAD:5bc1832245d8e6885adf7e44bef90d5ef81b2e16, BASE20725f7f7545909c09073ab7030928b0883a1bb7. Prior full panel at57f537b9 retained for unchanged bytes; new independent general and separate-SME delta source checks plus coordinator grounding. No reviewer APT/Bazel/native/build/DEB/payload execution. Current hosted single-package updater fixture succeeded externally; full production/empty-cache refresh remains author-reported. Report: https://github.com/yxieca/sonic-review-reports/pull/58. Check current revision, replies and effective review state before submission.
