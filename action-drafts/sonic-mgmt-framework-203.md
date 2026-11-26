@@ -2,7 +2,7 @@
 
 Target: https://github.com/sonic-net/sonic-mgmt-framework/pull/203
 Reviewed HEAD: `b86870c041c672e1b3cc131d4718cc251c7322c5`
-Report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-mgmt-framework-203/reports/sonic-mgmt-framework/203.md
+Report: https://github.com/yxieca/sonic-review-reports/pull/80
 
 ## Request changes with comments
 
@@ -14,7 +14,7 @@ The source review supports the REST/CLI producer and owner runtime/debug separat
 
 **Nonblocking: update the selected-dependency prose.** [tools/bazel/README.md's Review dependencies](https://github.com/sonic-net/sonic-mgmt-framework/blob/b86870c041c672e1b3cc131d4718cc251c7322c5/tools/bazel/README.md#L24-L36) still names Management Common `1.0.1-05f83d…` and Infra `0.0.28`; [CLI/bazel/README.md](https://github.com/sonic-net/sonic-mgmt-framework/blob/b86870c041c672e1b3cc131d4718cc251c7322c5/CLI/bazel/README.md#L1-L85) also refers to an older selected Infra lock. [MODULE.bazel](https://github.com/sonic-net/sonic-mgmt-framework/blob/b86870c041c672e1b3cc131d4718cc251c7322c5/MODULE.bazel#L9-L15) actually selects Common `1.0.2-68bfd75…` and Infra `0.0.45-77ef625…`. Please update the durable guidance or mark those references historical, so readers inspect the correct source/tool/package contracts. Build labels use the actual module declarations, limiting this to documentation accuracy.
 
-The CLI isolation and documentation notes are nonblocking. Reviewed HEAD: `b86870c041c672e1b3cc131d4718cc251c7322c5`. Full report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-mgmt-framework-203/reports/sonic-mgmt-framework/203.md. Reviewer native imports/builds/Bazel/compiler/test suites, Redis/services/network, archive-payload probes, installation and hardware checks were not performed. Source acceptance, native/image qualification and target submission remain separate.
+The CLI isolation and documentation notes are nonblocking. Reviewed HEAD: `b86870c041c672e1b3cc131d4718cc251c7322c5`. Full report: https://github.com/yxieca/sonic-review-reports/pull/80. Reviewer native imports/builds/Bazel/compiler/test suites, Redis/services/network, archive-payload probes, installation and hardware checks were not performed. Source acceptance, native/image qualification and target submission remain separate.
 
 ## Ask questions without a verdict
 
@@ -26,4 +26,4 @@ The source review supports the REST/CLI producer and owner runtime/debug separat
 
 **Nonblocking: update the selected-dependency prose.** [tools/bazel/README.md's Review dependencies](https://github.com/sonic-net/sonic-mgmt-framework/blob/b86870c041c672e1b3cc131d4718cc251c7322c5/tools/bazel/README.md#L24-L36) still names Management Common `1.0.1-05f83d…` and Infra `0.0.28`; [CLI/bazel/README.md](https://github.com/sonic-net/sonic-mgmt-framework/blob/b86870c041c672e1b3cc131d4718cc251c7322c5/CLI/bazel/README.md#L1-L85) also refers to an older selected Infra lock. [MODULE.bazel](https://github.com/sonic-net/sonic-mgmt-framework/blob/b86870c041c672e1b3cc131d4718cc251c7322c5/MODULE.bazel#L9-L15) actually selects Common `1.0.2-68bfd75…` and Infra `0.0.45-77ef625…`. Please update the durable guidance or mark those references historical, so readers inspect the correct source/tool/package contracts. Build labels use the actual module declarations, limiting this to documentation accuracy.
 
-The CLI isolation and documentation notes are nonblocking. Reviewed HEAD: `b86870c041c672e1b3cc131d4718cc251c7322c5`. Full report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-mgmt-framework-203/reports/sonic-mgmt-framework/203.md. Reviewer native imports/builds/Bazel/compiler/test suites, Redis/services/network, archive-payload probes, installation and hardware checks were not performed. Source acceptance, native/image qualification and target submission remain separate.
+The CLI isolation and documentation notes are nonblocking. Reviewed HEAD: `b86870c041c672e1b3cc131d4718cc251c7322c5`. Full report: https://github.com/yxieca/sonic-review-reports/pull/80. Reviewer native imports/builds/Bazel/compiler/test suites, Redis/services/network, archive-payload probes, installation and hardware checks were not performed. Source acceptance, native/image qualification and target submission remain separate.
