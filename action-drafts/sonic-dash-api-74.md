@@ -1,23 +1,17 @@
-<!-- current-source-hold-7c4a1984fcd72f0eff65973671a429c00642dc9a -->
+# Current source-correction drafts: DASH API #74
 
-**Historical drafts — not current actionable feedback.**
+## Comment
+R1 source origin corrected. MODULE.bazel::dash_ha_schema now uses the canonical sonic-net codeload URL at unchanged18a29c1, with identicalSHA38b8f846fb6191f9315da3df8ea7285881726c1507dc26d0d73a78c17fbf96c3/strip/type/overlay. Exact source comparison and canonical commit availability are verified. The author reports byte-identical downloaded archives and successful HA descriptor/hash/field-order testing. Those archive/test results are attributed, not independently downloaded or executed by this review; accept that evidence separately before approval. Do not repeat the resolved personal-origin request.
 
-**Needs Report Update — current revision not yet qualified.** Target advanced to `7c4a1984fcd72f0eff65973671a429c00642dc9a`. The author reports moving the HA schema archive to the canonical repository at the same pinned commit, with matching hashes and a successful descriptor test. These are author-reported results; source origin, immutable bytes and scope applicability still require independent verification. Original R1/N1/Q1/Q2 history is preserved. Historical drafts must not be submitted; this coverage gap is not a newly confirmed code blocker.
+Unchanged optional notes: bazel/README.md names Distroless.20/four tests though MODULE/workflow select.26/five; update those descriptions. BUILD.bazel runtime controls infer ELF requirements, not Python/Click/Python-Protobuf dependencies; identify their owning consumer layer. Separately source-built Protobuf runtime uses APT reference metadata; document its intended equivalence or use the deployed metadata provider. No supported runtime/ABI mismatch was demonstrated; these can follow separately.
 
-> **Current disposition:** R1 is a blocking source-acceptance condition until the existing canonical HA-origin/checksum request is resolved or explicitly accepted by the maintainer. It is already raised; waiting author response, not duplicate feedback. No runtime/integrity-bypass defect is asserted.
+HEAD7c4a1984fcd72f0eff65973671a429c00642dc9a, previousfull4753c843f9459ec93051f5f5dd76350a41452cd1. Original full panel carries unchanged bytes; new independent general/SME URL-only checks and coordinator grounding. No reviewer archive download/rehash, build/Bazel/protoc/native/HA/device/network operation. Report:https://github.com/yxieca/sonic-review-reports/pull/60. Check current head, CI and replies; nothing submits automatically.
 
-# Reader drafts: sonic-dash-api74
+## Approve after evidence acceptance
+After accepting the attributed archive/test validation, source approval with nonblocking notes.
 
-Report: https://github.com/yxieca/sonic-review-reports/pull/60
+R1 source origin corrected. MODULE.bazel::dash_ha_schema now uses the canonical sonic-net codeload URL at unchanged18a29c1, with identicalSHA38b8f846fb6191f9315da3df8ea7285881726c1507dc26d0d73a78c17fbf96c3/strip/type/overlay. Exact source comparison and canonical commit availability are verified. The author reports byte-identical downloaded archives and successful HA descriptor/hash/field-order testing. Those archive/test results are attributed, not independently downloaded or executed by this review; accept that evidence separately before approval. Do not repeat the resolved personal-origin request.
 
-## Questions
+Unchanged optional notes: bazel/README.md names Distroless.20/four tests though MODULE/workflow select.26/five; update those descriptions. BUILD.bazel runtime controls infer ELF requirements, not Python/Click/Python-Protobuf dependencies; identify their owning consumer layer. Separately source-built Protobuf runtime uses APT reference metadata; document its intended equivalence or use the deployed metadata provider. No supported runtime/ABI mismatch was demonstrated; these can follow separately.
 
-R1 is already raised: https://github.com/sonic-net/sonic-dash-api/pull/74#issuecomment-7166319673. Prefer responding there instead of repeating the request. Has the canonical HA-origin/checksum request been resolved, preserving18a29c and its distinct wire schema, or has the maintainer accepted the existing endpoint? Source review otherwise supports the additive design within its limits. Nonblocking N1: align README Distroless version and five-test count. Optional Q1/Q2: clarify Python/Click/Python-Protobuf dependency ownership and whether APT Protobuf metadata is intentionally authoritative for the deployed source-built runtime.
-
-ReviewedHEAD:4753c843f9459ec93051f5f5dd76350a41452cd1. Full independent three-general-plus-separate-SME source review and coordinator grounding; no compiler/Bazel/native tests/archive payload replay executed here. Historical external native runs cover identical source trees, not fresh current-head execution. Report: https://github.com/yxieca/sonic-review-reports/pull/60. Check current source, CI and replies before using this draft.
-
-## Request changes
-
-The full source review is complete, but existing R1 remains unresolved: https://github.com/sonic-net/sonic-dash-api/pull/74#issuecomment-7166319673. Resolve the canonical HA-origin/checksum request while retaining exact18a29c, or obtain maintainer acceptance of the current origin. This is an ownership/availability acceptance gate, not a demonstrated checksum bypass or new runtime defect. Do not repost the same finding. N1 documentation and Q1/Q2 metadata ownership questions are nonblocking. No broader root-extraction/registry/BEP code blocker was substantiated.
-
-ReviewedHEAD:4753c843f9459ec93051f5f5dd76350a41452cd1. Full independent three-general-plus-separate-SME source review and coordinator grounding; no compiler/Bazel/native tests/archive payload replay executed here. Historical external native runs cover identical source trees, not fresh current-head execution. Report: https://github.com/yxieca/sonic-review-reports/pull/60. Check current source, CI and replies before using this draft.
+HEAD7c4a1984fcd72f0eff65973671a429c00642dc9a, previousfull4753c843f9459ec93051f5f5dd76350a41452cd1. Original full panel carries unchanged bytes; new independent general/SME URL-only checks and coordinator grounding. No reviewer archive download/rehash, build/Bazel/protoc/native/HA/device/network operation. Report:https://github.com/yxieca/sonic-review-reports/pull/60. Check current head, CI and replies; nothing submits automatically.
