@@ -1,3 +1,9 @@
+<!-- source-followup-4704241578 -->
+
+**HISTORICAL DRAFTS — DO NOT SUBMIT UNTIL CURRENT FOLLOW-UP IS VERIFIED.**
+
+**Needs Report Update — current source acceptance and submission drafts held.** Target advanced to `f236f5baaa12511a4368116deca8c50a53eaa0f1`. The author reports replacing the stale selected-version comment in response to the existing reviewer discussion. That source correction and unchanged-scope applicability require independent bounded verification; prior findings and review history are preserved. Current coverage is incomplete for this follow-up, not a new confirmed code blocker.
+
 # Reader drafts: sonic-linkmgrd #362
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/65
