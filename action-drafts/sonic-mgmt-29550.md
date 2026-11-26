@@ -1,3 +1,7 @@
+<!-- target-approval-receipt-6069550492 -->
+
+**Target approval already submitted — Ready to Merge.** [Verified approval](https://github.com/sonic-net/sonic-mgmt/pull/29550#pullrequestreview-6069550492) at `e8a6af88b51c52d007b3979f3ba68c78538ac2d0`. Current-head source approval and required CI are verified, with no effective Changes Requested, unresolved discussion or known blocking source/dependency gate. This describes target readiness only; no target merge is authorized or performed. Historical reader drafts below must not be resubmitted as duplicate feedback.
+
 # Reader drafts: sonic-mgmt #29550
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/68
