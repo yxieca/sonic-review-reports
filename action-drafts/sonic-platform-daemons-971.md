@@ -2,7 +2,7 @@
 
 Target: https://github.com/sonic-net/sonic-platform-daemons/pull/971
 Reviewed HEAD: `ee544e7495a0f1a97c6e46e31193b8d5af53c0fa`
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/76
 
 ## Comment without approval
 
@@ -12,7 +12,7 @@ The reviewed source preserves the existing setup.py-owned distribution contracts
 
 **Nonblocking: retain available evidence when collection itself fails.** [The always-run evidence step](https://github.com/sonic-net/sonic-platform-daemons/blob/ee544e7495a0f1a97c6e46e31193b8d5af53c0fa/.github/workflows/bazel.yml#L73-L86) calls [collect_evidence.py::main](https://github.com/sonic-net/sonic-platform-daemons/blob/ee544e7495a0f1a97c6e46e31193b8d5af53c0fa/tests/bazel/collect_evidence.py#L38-L99). Its early `info`/`cquery` calls and artifact `read_bytes()` are not caught; a build that failed before producing a wheel/TAR can make collection exit before copying later test logs or writing `provenance.json`. Missing or malformed receipt archives can do the same. Please collect independent artifact/test sections under bounded exception handling, append errors, write a partial provenance record in a finalization path, and then return failure. The original failed build remains failed; this suggestion is about preserving diagnostics, not a demonstrated false-green workflow.
 
-Both notes are nonblocking. Reviewer builds, tests, native imports, installation and hardware/runtime probes were not performed. Reviewed HEAD: `ee544e7495a0f1a97c6e46e31193b8d5af53c0fa`. Full report: REPORT_PR_URL
+Both notes are nonblocking. Reviewer builds, tests, native imports, installation and hardware/runtime probes were not performed. Reviewed HEAD: `ee544e7495a0f1a97c6e46e31193b8d5af53c0fa`. Full report: https://github.com/yxieca/sonic-review-reports/pull/76
 
 ## Approve with nonblocking comments
 
@@ -22,4 +22,4 @@ The reviewed source preserves the existing setup.py-owned distribution contracts
 
 **Nonblocking: retain available evidence when collection itself fails.** [The always-run evidence step](https://github.com/sonic-net/sonic-platform-daemons/blob/ee544e7495a0f1a97c6e46e31193b8d5af53c0fa/.github/workflows/bazel.yml#L73-L86) calls [collect_evidence.py::main](https://github.com/sonic-net/sonic-platform-daemons/blob/ee544e7495a0f1a97c6e46e31193b8d5af53c0fa/tests/bazel/collect_evidence.py#L38-L99). Its early `info`/`cquery` calls and artifact `read_bytes()` are not caught; a build that failed before producing a wheel/TAR can make collection exit before copying later test logs or writing `provenance.json`. Missing or malformed receipt archives can do the same. Please collect independent artifact/test sections under bounded exception handling, append errors, write a partial provenance record in a finalization path, and then return failure. The original failed build remains failed; this suggestion is about preserving diagnostics, not a demonstrated false-green workflow.
 
-Both notes are nonblocking. Reviewer builds, tests, native imports, installation and hardware/runtime probes were not performed. Reviewed HEAD: `ee544e7495a0f1a97c6e46e31193b8d5af53c0fa`. Full report: REPORT_PR_URL
+Both notes are nonblocking. Reviewer builds, tests, native imports, installation and hardware/runtime probes were not performed. Reviewed HEAD: `ee544e7495a0f1a97c6e46e31193b8d5af53c0fa`. Full report: https://github.com/yxieca/sonic-review-reports/pull/76
