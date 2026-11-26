@@ -1,3 +1,9 @@
+<!-- current-source-hold-10c4850bf50082af8011da369c5370f440aac837 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `10c4850bf50082af8011da369c5370f440aac837` after the completed review and prior source approval. Current revision scope and its CI/policy applicability require changed-scope verification. The previous approval remains a historical receipt, not approval of this new head. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 <!-- target-approval-receipt-6069532769 -->
 
 **Target approval already submitted — Waiting CI.** [Verified approval](https://github.com/sonic-net/sonic-linkmgrd/pull/362#pullrequestreview-6069532769) at `19e0b9c2c0082c1022c8f179f4dbb7499259e953`. Source approval is verified at the covered revision; remaining Azure CI is not yet green. Optional notes are not approval conditions. No target merge was performed. Historical reader drafts below must not be resubmitted as duplicate feedback.
