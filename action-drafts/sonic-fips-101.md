@@ -1,0 +1,27 @@
+# Reader drafts: sonic-fips #101
+
+Report: REPORT_PR_URL
+
+## Comment
+
+Source review supports the parallel native source/package path within its stated bounds; no newly introduced blocker was established.
+
+Nonblocking documentation — align delivered integration and selected tool versions. openssl/README.md says full SymCrypt provider-suite integration remains pending and names older Distroless/Build Infra versions, while MODULE.bazel selects.26/.45 and openssl/integration:openssl_symcrypt_test plus its workflow are delivered. tools/bazel/ci.py::full_openssl_provider_suite should describe not run by this job/covered separately, not an unavailable producer. symcrypt/README.md should identify the current Binutils selection, fixed SOURCE_DATE_EPOCH and separate random integrity-key postprocessor rather than attributing the key to the generated version/debug include. These inaccurate descriptions can mislead reproduction/coverage readers; correct prose and receipts without claiming freshly executed or certified results. This can follow separately.
+
+Nonblocking evidence retention — keep the resolution files actually hashed. tools/bazel/ci.py::retain_resolution copies .bazelrc/.bazelversion and records their digests. Four bazel-{krb5,openssh,openssl,openssl-symcrypt}.yml uploads exclude hidden files by default, while the SymCrypt workflow includes them; the corresponding artifact misses those original files despite their listed hashes. Nonhidden configuration receipts mitigate the gap. Rename those curated copies consistently or enable hidden-file retention only after inspecting the artifact directory—not arbitrary credentials/workspace hidden files. This can follow separately.
+
+Optional selected-input qualifications: openssl/sources.bzl::_apply_debian_patch should retain an outcome receipt against the actual selected Debian Git-copy sections/preambles/modes before claiming exact Make/quilt equality; no selected-input failure was demonstrated here. openssl/integration/ci.py checks the activation file, while the inherited patch also recognizes boot fips=1/sonic_fips=1; document the hosted ordinary-mode assumption or check effective conditions without changing host state.
+
+Reviewed HEAD:b95dbbabb54c49f08a7630d9434df5ef4a4e39e7, BASE6c0b667107763ecd5ea06db689944fedae90a1c8. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer builds/compiler/crypto binaries/native tests/archive probes/package install or FIPS state change. Five historical native fork workflows passed on an independently verified identical source tree; not fresh current-head execution or FIPS certification. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+
+## Approve
+
+Source approval with optional/nonblocking follow-ups. This is not native-build certification, proof of pristine vendor coverage or approval of a cryptographic certification boundary.
+
+Nonblocking documentation — align delivered integration and selected tool versions. openssl/README.md says full SymCrypt provider-suite integration remains pending and names older Distroless/Build Infra versions, while MODULE.bazel selects.26/.45 and openssl/integration:openssl_symcrypt_test plus its workflow are delivered. tools/bazel/ci.py::full_openssl_provider_suite should describe not run by this job/covered separately, not an unavailable producer. symcrypt/README.md should identify the current Binutils selection, fixed SOURCE_DATE_EPOCH and separate random integrity-key postprocessor rather than attributing the key to the generated version/debug include. These inaccurate descriptions can mislead reproduction/coverage readers; correct prose and receipts without claiming freshly executed or certified results. This can follow separately.
+
+Nonblocking evidence retention — keep the resolution files actually hashed. tools/bazel/ci.py::retain_resolution copies .bazelrc/.bazelversion and records their digests. Four bazel-{krb5,openssh,openssl,openssl-symcrypt}.yml uploads exclude hidden files by default, while the SymCrypt workflow includes them; the corresponding artifact misses those original files despite their listed hashes. Nonhidden configuration receipts mitigate the gap. Rename those curated copies consistently or enable hidden-file retention only after inspecting the artifact directory—not arbitrary credentials/workspace hidden files. This can follow separately.
+
+Optional selected-input qualifications: openssl/sources.bzl::_apply_debian_patch should retain an outcome receipt against the actual selected Debian Git-copy sections/preambles/modes before claiming exact Make/quilt equality; no selected-input failure was demonstrated here. openssl/integration/ci.py checks the activation file, while the inherited patch also recognizes boot fips=1/sonic_fips=1; document the hosted ordinary-mode assumption or check effective conditions without changing host state.
+
+Reviewed HEAD:b95dbbabb54c49f08a7630d9434df5ef4a4e39e7, BASE6c0b667107763ecd5ea06db689944fedae90a1c8. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer builds/compiler/crypto binaries/native tests/archive probes/package install or FIPS state change. Five historical native fork workflows passed on an independently verified identical source tree; not fresh current-head execution or FIPS certification. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
