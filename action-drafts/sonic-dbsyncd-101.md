@@ -1,3 +1,5 @@
+> **Follow-up disposition:** The retained nonblocking N1/N2/N3/Q1 follow-ups are deferred to one deduplicated issue in sonic-net/sonic-dbsyncd after this target PR merges. No issue has been opened yet, and this disposition is not a target approval or merge instruction.
+
 # Reader drafts: sonic-dbsyncd #101
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/61
