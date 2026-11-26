@@ -1,6 +1,6 @@
 # Reader drafts: SWSS #5187
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/72
 
 ## Comment
 Source-favorable review of the additive SWSS Bazel/native-contract design, with no confirmed introduced blocking implementation defect. Current default build acceptance is NOT established: selected Common.9 is unpublished and native checks fail at module resolution before compilation. Source approval does not clear that dependency/CI gate.
@@ -9,7 +9,7 @@ Nonblocking N1 — align dependency-resolution and validation documentation. baz
 
 Observed Q1 — current native run45776975871 fails because sonic-swss-common0.0.9-e06d5157 cannot be resolved from maintained registry main/BCR. Required registry17/29 releases are open and author-coupled. Publish/select the compatible releases and obtain current-head native/extraction results through their owners. No build/CI retry occurred here. Current64helper-unit cases passed externally before module resolution; these are not the original functional/daemon suites or successful native SWSS builds.
 
-HEAD0956d33da9e83549ead1101c72ec651d3628a073 BASE4f838f925cbb04fa8e551274071fae6110b93a77. Full cumulative three-independent-general plus separate-SME source review and coordinator grounding, only missing direct/dependency source supplemented. Cargo lock and unchanged transitive algorithms bounded. No reviewer Bazel/compiler/native imports/tests/Redis/SAI/DUT/services/network/install/archive payload probes. Runtime/debug/provider checks are authored source predicates, not independent ABI/image certification. Report: REPORT_PR_URL. Check current source/releases/CI/reviewer state before manual feedback.
+HEAD0956d33da9e83549ead1101c72ec651d3628a073 BASE4f838f925cbb04fa8e551274071fae6110b93a77. Full cumulative three-independent-general plus separate-SME source review and coordinator grounding, only missing direct/dependency source supplemented. Cargo lock and unchanged transitive algorithms bounded. No reviewer Bazel/compiler/native imports/tests/Redis/SAI/DUT/services/network/install/archive payload probes. Runtime/debug/provider checks are authored source predicates, not independent ABI/image certification. Report: https://github.com/yxieca/sonic-review-reports/pull/72. Check current source/releases/CI/reviewer state before manual feedback.
 
 ## Source approval
 Source approval within the stated boundaries, not build/merge clearance.
@@ -20,4 +20,4 @@ Nonblocking N1 — align dependency-resolution and validation documentation. baz
 
 Observed Q1 — current native run45776975871 fails because sonic-swss-common0.0.9-e06d5157 cannot be resolved from maintained registry main/BCR. Required registry17/29 releases are open and author-coupled. Publish/select the compatible releases and obtain current-head native/extraction results through their owners. No build/CI retry occurred here. Current64helper-unit cases passed externally before module resolution; these are not the original functional/daemon suites or successful native SWSS builds.
 
-HEAD0956d33da9e83549ead1101c72ec651d3628a073 BASE4f838f925cbb04fa8e551274071fae6110b93a77. Full cumulative three-independent-general plus separate-SME source review and coordinator grounding, only missing direct/dependency source supplemented. Cargo lock and unchanged transitive algorithms bounded. No reviewer Bazel/compiler/native imports/tests/Redis/SAI/DUT/services/network/install/archive payload probes. Runtime/debug/provider checks are authored source predicates, not independent ABI/image certification. Report: REPORT_PR_URL. Check current source/releases/CI/reviewer state before manual feedback.
+HEAD0956d33da9e83549ead1101c72ec651d3628a073 BASE4f838f925cbb04fa8e551274071fae6110b93a77. Full cumulative three-independent-general plus separate-SME source review and coordinator grounding, only missing direct/dependency source supplemented. Cargo lock and unchanged transitive algorithms bounded. No reviewer Bazel/compiler/native imports/tests/Redis/SAI/DUT/services/network/install/archive payload probes. Runtime/debug/provider checks are authored source predicates, not independent ABI/image certification. Report: https://github.com/yxieca/sonic-review-reports/pull/72. Check current source/releases/CI/reviewer state before manual feedback.
