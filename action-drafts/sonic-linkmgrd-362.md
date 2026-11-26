@@ -1,3 +1,7 @@
+<!-- target-approval-receipt-6069532769 -->
+
+**Target approval already submitted — Waiting CI.** [Verified approval](https://github.com/sonic-net/sonic-linkmgrd/pull/362#pullrequestreview-6069532769) at `19e0b9c2c0082c1022c8f179f4dbb7499259e953`. Source approval is verified at the covered revision; remaining Azure CI is not yet green. Optional notes are not approval conditions. No target merge was performed. Historical reader drafts below must not be resubmitted as duplicate feedback.
+
 # Current reader drafts: sonic-linkmgrd #362
 
 ## Comment
