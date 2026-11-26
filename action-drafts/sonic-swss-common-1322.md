@@ -1,7 +1,7 @@
 # Current binding/split update
 
 ## comment
-Current update removes Python naturalvar/Go explicit getters and related SWIG documentation; five C++ constants remain, automatic binding generation now owns them. No supported compile/member failure established, but Q4 asks focused exported-name/accessor/value assertions because smoke tests do not cover allfive. Q3 human prerequisite-PR request is only partially addressed: Lua override/tests/wiring isolated in the immediate-parent commit, not a separate prerequisite PR. Source split proof is not permission to waive that request. Reconcile it before approval; do not repeat already-posted human question.
+Current update removes Python naturalvar/Go explicit getters and related SWIG documentation; five C++ constants remain, automatic binding generation now owns them. No supported compile/member failure established, but Q4 asks focused exported-name/accessor/value assertions because smoke tests do not cover allfive. Q3 organizational rationale is accepted: a separate prerequisite PR is no longer an acceptance condition. The opt-in Lua override supports the chosen private runtime layout and preserves installed lookup when unset or empty. Keep shared-consumer compatibility and validation limits explicit. The accepted rationale does not certify every generated API or deployed image.
 
 Source approval within the reviewed Common library/binding/package contracts; no confirmed introduced blocker. Shared source/SONAME/header/native dependency ownership and Lua override compatibility are source-supported. Generated output/ABI, every original authentication case and installed image acceptance remain separate.
 
@@ -12,7 +12,7 @@ HEAD27b1ac06249a76c481728d396356131ce1f8632c BASE54f2f0e9ce455b37aeffc5b4e08b522
 Currentnative45876520765 succeedsmerge0930a91f; differsonlyCargo.lock/CodeQL source comparedHEAD, no binding/header delta. Native/generatorpayloadnotindependentlyverified. Originalunchangedsourcepanelcarried; newindependentgeneral/SMEupdate only.
 
 ## approve
-Current update removes Python naturalvar/Go explicit getters and related SWIG documentation; five C++ constants remain, automatic binding generation now owns them. No supported compile/member failure established, but Q4 asks focused exported-name/accessor/value assertions because smoke tests do not cover allfive. Q3 human prerequisite-PR request is only partially addressed: Lua override/tests/wiring isolated in the immediate-parent commit, not a separate prerequisite PR. Source split proof is not permission to waive that request. Reconcile it before approval; do not repeat already-posted human question.
+Current update removes Python naturalvar/Go explicit getters and related SWIG documentation; five C++ constants remain, automatic binding generation now owns them. No supported compile/member failure established, but Q4 asks focused exported-name/accessor/value assertions because smoke tests do not cover allfive. Q3 organizational rationale is accepted: a separate prerequisite PR is no longer an acceptance condition. The opt-in Lua override supports the chosen private runtime layout and preserves installed lookup when unset or empty. Keep shared-consumer compatibility and validation limits explicit. The accepted rationale does not certify every generated API or deployed image.
 
 Source approval with a nonblocking documentation follow-up.
 
