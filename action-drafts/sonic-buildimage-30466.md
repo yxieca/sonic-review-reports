@@ -1,3 +1,9 @@
+<!-- source-evidence-hold-0830-e56223e79414ce82472c4c09126db22f915738ac -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** New human discussion raises fail-safe classification for blank/unknown liquid-cooled product names and unreadable leak sensors. These claims at the unchanged reviewed revision require independent source reconciliation against existing findings and consumers. Prior full-panel coverage and original finding IDs/history remain retained. Human discussion is not a confirmed new code blocker. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
+
 # Current report29 correction drafts
 
 ## Comment
