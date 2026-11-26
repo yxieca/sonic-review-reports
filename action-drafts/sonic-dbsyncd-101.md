@@ -1,22 +1,17 @@
-<!-- current-source-hold-a863f23da3ed361491e3c7dd17cb1576847c467e -->
+# Current DBSyncd source-fix drafts
 
-**Historical drafts — not current actionable feedback.**
+## Comment
+N3/Q1 source corrections verified. README.md now matches rules_distroless0.9.4.sonic.26 selected by both roots. tests/bazel/MODULE.bazel::git_override now uses canonical https://github.com/sonic-net/sonic-buildimage.git at unchangedc743d7521e80fc1733e5cc0ffc24889b08f78444. Canonical commit identity is available and verified; fresh-fetch execution is author-reported, not replayed here. No archive digest claim is inferred from a Git override. Do not repeat the corrected documentation/origin requests.
 
-**Needs Report Update — current revision not yet qualified.** Target advanced to `a863f23da3ed361491e3c7dd17cb1576847c467e`. The author reports correcting the README resolver version and moving the buildimage fixture to its canonical repository. These source and immutable-commit claims require independent verification; N3/Q1 and previously deferred N1/N2 retain their history. Claimed fetch/test outcomes are not monitor execution. Historical drafts must not be submitted; this coverage gap is not a newly confirmed code blocker.
+N1/N2 remain explicitly deferred until after target merge. N1: BUILD.bazel wheel and installed metadata assertion omit maintainer fields supported by the selected wheel rule; preserve setup metadata or document an intentional omission. N2: tests/bazel/installed_wheel_probe.py outer timeout can kill the native probe before its finally cleans the private Redis grandchild; a post-merge follow-up should own cleanup from a surviving parent/process group. Neither is changed by this delta, neither is a revived approval condition, and no duplicate issue should be opened before the agreed trigger.
 
-# Current reader drafts
+HEADa863f23da3ed361491e3c7dd17cb1576847c467e, previousfull8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Original full panel carries unchanged source; new independent general/SME doc/Git-origin checks and coordinator grounding, not a matrix rerun. No reviewer build/Bazel/compiler/native imports/tests/Redis/LLDP/install/device/network/archive probe. Report:https://github.com/yxieca/sonic-review-reports/pull/61. Check current source/CI/effective review state before manual submission.
 
-Report: https://github.com/yxieca/sonic-review-reports/pull/61
-N3/Q1 blocking; N1/N2 deferred. Existing target threads already cover the requests; avoid duplicate posts. Prior approval drafts remain in history only.
+## Approve
+Source approval: required N3/Q1 corrections are fixed; N1/N2 retain their accepted post-merge deferral.
 
-## Questions
+N3/Q1 source corrections verified. README.md now matches rules_distroless0.9.4.sonic.26 selected by both roots. tests/bazel/MODULE.bazel::git_override now uses canonical https://github.com/sonic-net/sonic-buildimage.git at unchangedc743d7521e80fc1733e5cc0ffc24889b08f78444. Canonical commit identity is available and verified; fresh-fetch execution is author-reported, not replayed here. No archive digest claim is inferred from a Git override. Do not repeat the corrected documentation/origin requests.
 
-Could you address the existing dependency-description and fixture-source requests before landing? README.bazel.md names Distroless .25, while the owner and fixture MODULE.bazel select .26 (N3). Please make the documented version match actual selection. The test-only fixture git_override still uses a personal buildimage fork (Q1); please switch to the canonical repository origin and verify equivalent pinned source rather than assuming endpoint changes preserve archive/source identity.
+N1/N2 remain explicitly deferred until after target merge. N1: BUILD.bazel wheel and installed metadata assertion omit maintainer fields supported by the selected wheel rule; preserve setup metadata or document an intentional omission. N2: tests/bazel/installed_wheel_probe.py outer timeout can kill the native probe before its finally cleans the private Redis grandchild; a post-merge follow-up should own cleanup from a surviving parent/process group. Neither is changed by this delta, neither is a revived approval condition, and no duplicate issue should be opened before the agreed trigger.
 
-Existing discussions: https://github.com/sonic-net/sonic-dbsyncd/pull/101#discussion_r4694416620 and https://github.com/sonic-net/sonic-dbsyncd/pull/101#discussion_r4694519381 . These are before-approval traceability/ownership requirements, not allegations of current production failure. N1 wheel Maintainer metadata and N2 timeout cleanup are deferred follow-ups. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/61. Reviewed head: 8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. No native tests executed by this review.
-
-## Request changes
-
-Please address the existing dependency-description and fixture-source requests before landing? README.bazel.md names Distroless .25, while the owner and fixture MODULE.bazel select .26 (N3). Please make the documented version match actual selection. The test-only fixture git_override still uses a personal buildimage fork (Q1); please switch to the canonical repository origin and verify equivalent pinned source rather than assuming endpoint changes preserve archive/source identity.
-
-Existing discussions: https://github.com/sonic-net/sonic-dbsyncd/pull/101#discussion_r4694416620 and https://github.com/sonic-net/sonic-dbsyncd/pull/101#discussion_r4694519381 . These are before-approval traceability/ownership requirements, not allegations of current production failure. N1 wheel Maintainer metadata and N2 timeout cleanup are deferred follow-ups. Supporting report: https://github.com/yxieca/sonic-review-reports/pull/61. Reviewed head: 8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. No native tests executed by this review.
+HEADa863f23da3ed361491e3c7dd17cb1576847c467e, previousfull8a7eb9f3da4ea3e350c35dcc25635ee4c0b0a413. Original full panel carries unchanged source; new independent general/SME doc/Git-origin checks and coordinator grounding, not a matrix rerun. No reviewer build/Bazel/compiler/native imports/tests/Redis/LLDP/install/device/network/archive probe. Report:https://github.com/yxieca/sonic-review-reports/pull/61. Check current source/CI/effective review state before manual submission.
