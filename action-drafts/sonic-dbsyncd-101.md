@@ -1,3 +1,9 @@
+<!-- current-source-hold-a863f23da3ed361491e3c7dd17cb1576847c467e -->
+
+**Historical drafts — not current actionable feedback.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `a863f23da3ed361491e3c7dd17cb1576847c467e`. The author reports correcting the README resolver version and moving the buildimage fixture to its canonical repository. These source and immutable-commit claims require independent verification; N3/Q1 and previously deferred N1/N2 retain their history. Claimed fetch/test outcomes are not monitor execution. Historical drafts must not be submitted; this coverage gap is not a newly confirmed code blocker.
+
 # Current reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/61
