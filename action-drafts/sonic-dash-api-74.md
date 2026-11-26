@@ -1,3 +1,9 @@
+<!-- current-source-hold-7c4a1984fcd72f0eff65973671a429c00642dc9a -->
+
+**Historical drafts — not current actionable feedback.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `7c4a1984fcd72f0eff65973671a429c00642dc9a`. The author reports moving the HA schema archive to the canonical repository at the same pinned commit, with matching hashes and a successful descriptor test. These are author-reported results; source origin, immutable bytes and scope applicability still require independent verification. Original R1/N1/Q1/Q2 history is preserved. Historical drafts must not be submitted; this coverage gap is not a newly confirmed code blocker.
+
 > **Current disposition:** R1 is a blocking source-acceptance condition until the existing canonical HA-origin/checksum request is resolved or explicitly accepted by the maintainer. It is already raised; waiting author response, not duplicate feedback. No runtime/integrity-bypass defect is asserted.
 
 # Reader drafts: sonic-dash-api74
