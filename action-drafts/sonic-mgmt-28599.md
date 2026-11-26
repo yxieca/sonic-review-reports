@@ -1,3 +1,9 @@
+<!-- current-source-hold-c0c426a115c85fa70e94acdba27092516cead3d5 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced again to `c0c426a115c85fa70e94acdba27092516cead3d5` after the earlier /29 support-boundary correction claim. The author reports an explicit skip for unsupported /30, /31 and /32 prefixes; the subsequent revision and claim require source qualification. This is an author-reported correction of the previously posted support-boundary question, not an independently verified fix or new blocker. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/14
