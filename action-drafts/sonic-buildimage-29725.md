@@ -1,3 +1,9 @@
+<!-- current-source-hold-17b40cf1d4c29cf2901b8531b2c45ce6989703d6 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `17b40cf1d4c29cf2901b8531b2c45ce6989703d6` after the completed material-claims reconciliation at 8f306a0. The author reports a correction in this revision and states i2c_path is unused. Neither the claimed correction nor current finding applicability has been independently verified at this new head. Completed original and material-claims reviews remain historical, not current source clearance. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 # Current report22 claim drafts
 
 ## Questions
