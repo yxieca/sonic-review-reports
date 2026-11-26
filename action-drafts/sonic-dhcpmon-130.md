@@ -1,27 +1,27 @@
-> **Needs Report Update / Coverage Incomplete — 2026-11-25.** Target advanced to `117d0bf25a73128fb6b96a6e2ee691e2fa15b2c3`. The target has new commits after the completed review and retained reviewer disposition. Prior N1/N2/N3/Q1 history and the reviewer decision are preserved; neither a fix nor a new blocker is inferred from the head change alone. Current source acceptance and all submission drafts are HELD until changed-scope evidence is complete. Original full-review coverage remains historical evidence, not current-head clearance. No target feedback was submitted.
+# Updated reader drafts: sonic-dhcpmon #130
 
-## Preserved previous drafts — do not submit at the new revision
+## Comment
+Source review supports the additive build/package path: ten production translation units retained, paired JsonCpp include correction, real util.cpp-linked test with correctly typed shared-mutex fixture, and declared runtime/debug/metadata ownership. No introduced blocker found.
 
-# Current feedback drafts
+Required registry documentation correction verified. README.bazel.md now names and links sonic-net/sonic-bazel-registry and BCR, matching the unchanged .bazelrc. This fixes N1’s before-approval condition; do not repost the former-registry request. Only README changed; no new runtime/test behavior was introduced.
 
-Report: https://github.com/yxieca/sonic-review-reports/pull/63
+Optional utility coverage — explicitly exercise an unaligned byte accumulator input. tests/util_behavior_test.cpp sweeps lengths0..65 at one bytes.data() address; it does not deliberately set unaligned starting alignment. Add an alignas backing buffer and data()+1 case to checksum_accumulate_words, compared with its reference. The production function already reads bytes and no alignment defect was found; do not create misaligned iphdr pointers. This can follow separately.
 
-N1 is blocking; previous approval drafts are superseded and preserved in history.
+Optional checker coverage — add focused rejection controls for .github/scripts/check_dhcpmon_artifacts.py::verify/copy_payload and check_dhcpmon_metadata.py::verify. Current hosted CI exercises the positive CLI path, but no dedicated owner regression tests reject extra/wrong/nonregular payloads, wrong owner/mode/machine, mismatched build ID/debuglink CRC, wrong payload/control hash or missing target provider. Use the existing helpers with inert fixtures, not another daemon/native campaign. No current false acceptance was demonstrated.
 
-## Questions
+Provider-verification scope question: the metadata checker matches Depends package names/control architecture and library basenames against DT_NEEDED; it does not independently establish provider ELF machine/SONAME/versioned-alternative ABI. Please keep its claim at provider-name consistency or add separately scoped strengthening if a complete provider-ABI proof is intended. The underlying metadata generator is stronger; this is nonblocking, not a proved dependency bug.
 
-Could you correct the canonical registry description before approval (N1)? README.bazel.md says “canonical securely1g registry”, but .bazelrc selects sonic-net/sonic-bazel-registry/main. The reader-facing source ownership/reference must match the configured canonical source. This is a documentation requirement, not a runtime wrong-registry claim.
+Reviewed HEAD:117d0bf25a73128fb6b96a6e2ee691e2fa15b2c3, BASE3e7160d9b89ad7c701a0827af80367ab1b206ccf. Original full three-general-plus-separate-SME coverage at65b99647 retained for unchanged bytes; new independent general/SME documentation-delta checks and coordinator grounding. No reviewer compiler/Bazel/native utility test, DB/Redis/DHCP traffic, install or payload probe. Existing hosted native AMD64/ARM64 utility and artifact/metadata checks succeeded externally. Report: https://github.com/yxieca/sonic-review-reports/pull/63. Verify current revision, CI and replies before using this draft.
 
-Documentation: https://github.com/sonic-net/sonic-dhcpmon/blob/65b99647b87eb0955009310c531d0fadcb840c60/README.bazel.md#L1-L8
-Configuration: https://github.com/sonic-net/sonic-dhcpmon/blob/65b99647b87eb0955009310c531d0fadcb840c60/.bazelrc#L1-L7
+## Approve
+Source review supports approval; the notes below are optional/nonblocking and can follow separately. Approval does not claim daemon health, DB/dual-ToR or live forwarding qualification.
 
-N2/N3 checker/unaligned-input regression suggestions and Q1 provider-verification scope remain nonblocking. Full source review and history: https://github.com/yxieca/sonic-review-reports/pull/63. Reviewed head: 65b99647b87eb0955009310c531d0fadcb840c60. No native builds or runtime tests were executed by this review.
+Required registry documentation correction verified. README.bazel.md now names and links sonic-net/sonic-bazel-registry and BCR, matching the unchanged .bazelrc. This fixes N1’s before-approval condition; do not repost the former-registry request. Only README changed; no new runtime/test behavior was introduced.
 
-## Request changes
+Optional utility coverage — explicitly exercise an unaligned byte accumulator input. tests/util_behavior_test.cpp sweeps lengths0..65 at one bytes.data() address; it does not deliberately set unaligned starting alignment. Add an alignas backing buffer and data()+1 case to checksum_accumulate_words, compared with its reference. The production function already reads bytes and no alignment defect was found; do not create misaligned iphdr pointers. This can follow separately.
 
-Please correct the canonical registry description before landing (N1, blocking). README.bazel.md says “canonical securely1g registry”, but .bazelrc selects sonic-net/sonic-bazel-registry/main. The reader-facing source ownership/reference must match the configured canonical source. This is a documentation requirement, not a runtime wrong-registry claim.
+Optional checker coverage — add focused rejection controls for .github/scripts/check_dhcpmon_artifacts.py::verify/copy_payload and check_dhcpmon_metadata.py::verify. Current hosted CI exercises the positive CLI path, but no dedicated owner regression tests reject extra/wrong/nonregular payloads, wrong owner/mode/machine, mismatched build ID/debuglink CRC, wrong payload/control hash or missing target provider. Use the existing helpers with inert fixtures, not another daemon/native campaign. No current false acceptance was demonstrated.
 
-Documentation: https://github.com/sonic-net/sonic-dhcpmon/blob/65b99647b87eb0955009310c531d0fadcb840c60/README.bazel.md#L1-L8
-Configuration: https://github.com/sonic-net/sonic-dhcpmon/blob/65b99647b87eb0955009310c531d0fadcb840c60/.bazelrc#L1-L7
+Provider-verification scope question: the metadata checker matches Depends package names/control architecture and library basenames against DT_NEEDED; it does not independently establish provider ELF machine/SONAME/versioned-alternative ABI. Please keep its claim at provider-name consistency or add separately scoped strengthening if a complete provider-ABI proof is intended. The underlying metadata generator is stronger; this is nonblocking, not a proved dependency bug.
 
-N2/N3 checker/unaligned-input regression suggestions and Q1 provider-verification scope remain nonblocking. Full source review and history: https://github.com/yxieca/sonic-review-reports/pull/63. Reviewed head: 65b99647b87eb0955009310c531d0fadcb840c60. No native builds or runtime tests were executed by this review.
+Reviewed HEAD:117d0bf25a73128fb6b96a6e2ee691e2fa15b2c3, BASE3e7160d9b89ad7c701a0827af80367ab1b206ccf. Original full three-general-plus-separate-SME coverage at65b99647 retained for unchanged bytes; new independent general/SME documentation-delta checks and coordinator grounding. No reviewer compiler/Bazel/native utility test, DB/Redis/DHCP traffic, install or payload probe. Existing hosted native AMD64/ARM64 utility and artifact/metadata checks succeeded externally. Report: https://github.com/yxieca/sonic-review-reports/pull/63. Verify current revision, CI and replies before using this draft.
