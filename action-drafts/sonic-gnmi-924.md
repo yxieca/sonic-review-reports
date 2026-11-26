@@ -2,7 +2,7 @@
 
 Target: https://github.com/sonic-net/sonic-gnmi/pull/924
 Reviewed HEAD: `913d4ae3380417c593a4224e79ab84589181dc38`
-Report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-gnmi-924/reports/sonic-gnmi/924.md
+Report: https://github.com/yxieca/sonic-review-reports/pull/78
 
 ## Request changes with comments
 
@@ -12,7 +12,7 @@ The source review supports the overall native build, owner runtime/debug/source 
 
 **Nonblocking: preserve filenames as data when honoring `TMPDIR`.** [getMixedDbWorkPath](https://github.com/sonic-net/sonic-gnmi/blob/913d4ae3380417c593a4224e79ab84589181dc38/sonic_data_client/mixed_db_client.go#L75-L81) now accepts any nonempty process `TMPDIR`, whereas BASE used the fixed `/tmp`. [SetFullConfig](https://github.com/sonic-net/sonic-gnmi/blob/913d4ae3380417c593a4224e79ab84589181dc38/sonic_data_client/mixed_db_client.go#L1584-L1603) inserts the resulting filename into [PyCodeForYang's double-quoted Python source literal](https://github.com/sonic-net/sonic-gnmi/blob/913d4ae3380417c593a4224e79ab84589181dc38/sonic_data_client/mixed_db_client.go#L1392-L1407) without escaping it. A valid directory name containing a double quote makes that generated source invalid; a backslash sequence can make it refer to a different filename. Please pass the filename as data or serialize a lossless quoted literal instead of substituting it into code. AST-only string/literal controls confirm those serialization outcomes; no Go, embedded Python import, service or validation execution was performed. The process environment is trusted here—this is a narrow path-handling nit, not a reproduced remote-authentication or code-execution vulnerability.
 
-The filename note is nonblocking. Reviewed HEAD: `913d4ae3380417c593a4224e79ab84589181dc38`. Full report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-gnmi-924/reports/sonic-gnmi/924.md. Reviewer builds, imports, native/TLS/service/network tests, installation and hardware probes were not performed; source acceptance and CI/containing-image qualification are separate.
+The filename note is nonblocking. Reviewed HEAD: `913d4ae3380417c593a4224e79ab84589181dc38`. Full report: https://github.com/yxieca/sonic-review-reports/pull/78. Reviewer builds, imports, native/TLS/service/network tests, installation and hardware probes were not performed; source acceptance and CI/containing-image qualification are separate.
 
 ## Ask questions without a verdict
 
@@ -22,4 +22,4 @@ The source review supports the overall native build, owner runtime/debug/source 
 
 **Nonblocking: preserve filenames as data when honoring `TMPDIR`.** [getMixedDbWorkPath](https://github.com/sonic-net/sonic-gnmi/blob/913d4ae3380417c593a4224e79ab84589181dc38/sonic_data_client/mixed_db_client.go#L75-L81) now accepts any nonempty process `TMPDIR`, whereas BASE used the fixed `/tmp`. [SetFullConfig](https://github.com/sonic-net/sonic-gnmi/blob/913d4ae3380417c593a4224e79ab84589181dc38/sonic_data_client/mixed_db_client.go#L1584-L1603) inserts the resulting filename into [PyCodeForYang's double-quoted Python source literal](https://github.com/sonic-net/sonic-gnmi/blob/913d4ae3380417c593a4224e79ab84589181dc38/sonic_data_client/mixed_db_client.go#L1392-L1407) without escaping it. A valid directory name containing a double quote makes that generated source invalid; a backslash sequence can make it refer to a different filename. Could the filename be passed as data or serialized as a lossless quoted literal rather than substituted into code? AST-only string/literal controls confirm those serialization outcomes; no Go, embedded Python import, service or validation execution was performed. The process environment is trusted here—this is a narrow path-handling nit, not a reproduced remote-authentication or code-execution vulnerability.
 
-The filename note is nonblocking. Reviewed HEAD: `913d4ae3380417c593a4224e79ab84589181dc38`. Full report: https://github.com/yxieca/sonic-review-reports/blob/review/sonic-gnmi-924/reports/sonic-gnmi/924.md. Reviewer builds, imports, native/TLS/service/network tests, installation and hardware probes were not performed; source acceptance and CI/containing-image qualification are separate.
+The filename note is nonblocking. Reviewed HEAD: `913d4ae3380417c593a4224e79ab84589181dc38`. Full report: https://github.com/yxieca/sonic-review-reports/pull/78. Reviewer builds, imports, native/TLS/service/network tests, installation and hardware probes were not performed; source acceptance and CI/containing-image qualification are separate.
