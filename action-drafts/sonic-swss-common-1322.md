@@ -1,10 +1,16 @@
+## Current Q3 disposition — keep-together rationale accepted
+
+A separate prerequisite PR is no longer requested as an acceptance condition. The Lua override is an opt-in shared-runtime adaptation needed by the chosen private gNMI test layout, preserving legacy loading when unset/empty. The SWIG directives address the selected generator's const-correctness issue in an existing shared interface. Keeping them with Bazel enablement is reasonable with explicit shared-consumer compatibility and validation limits.
+
+[Clarification posted](https://github.com/sonic-net/sonic-swss-common/pull/1322#issuecomment-7201132831). This accepts the organizational rationale, not a new-head build/ABI or source-equivalence result. Current-head independent reconciliation remains pending; historical drafts stay disabled. Earlier split requests and approvals remain historical, not current requirements or live approval receipts.
+
 <!-- source-evidence-hold-1030-27b1ac06249a76c481728d396356131ce1f8632c -->
 
 **Historical drafts — not actionable at the current head.**
 
 **Needs Report Update — current revision not yet qualified.** Target advanced from the covered revision `766d9b117023cd2c1edab74158e96098d3f96069` to `27b1ac06249a76c481728d396356131ce1f8632c`. Changed source and its reached dependency contracts require independent reconciliation. Prior completed full-panel and bounded follow-up evidence remain preserved; historical findings are not current-head qualification. The author explains the downstream gNMI Lua-loader dependency and proposes isolating that scope in a dedicated commit (https://github.com/sonic-net/sonic-swss-common/pull/1322#issuecomment-7200324467). The prior approval is now dismissed; it does not qualify the new head. Reported tests remain author-reported, not reviewer execution. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
 
-**Current follow-up: Q3 split question already posted; do not repeat unchanged feedback. Existing target approval remains submitted.**
+**Current Q3 disposition: keep-together rationale accepted; separate-PR split is no longer requested. Prior approval is dismissed and these historical drafts are not actionable at the new head.**
 
 # Reader drafts: Common #1322
 
