@@ -1,6 +1,6 @@
 # Reader drafts: sonic-mgmt-common #297
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/66
 
 ## Questions
 
@@ -12,7 +12,7 @@ Must-fix public-example API — migrate or exclude the stale subscription caller
 
 Nonblocking cleanup: cvl/cvl_test.go::clearDb calls os.Exit on Redis Keys/Del error, bypassing its defer and TestMain’s cleanup/possible legacy self-started Redis stop. Return the error and attempt owner cleanup before final exit; the Bazel parent still owns its private Redis. Existing consumer version/glog/registry and libyang-parity threads are already raised; respond there rather than duplicating them. The reported libyang UAF trigger was not shown reachable through CVL’s inspected parser flags, so no runtime crash claim is added.
 
-Reviewed HEAD:06d2ac7a12fe89e96e6da16621a2ef89aa92e6fd, BASE84d42b19765d146197a9aceef276fea46f10aaf5. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer Go/Bazel/native tests, Redis/service/install or payload probe. Current hosted selected tests were cached; they do not build these public examples. Report: REPORT_PR_URL. Verify current source, CI and replies before submission.
+Reviewed HEAD:06d2ac7a12fe89e96e6da16621a2ef89aa92e6fd, BASE84d42b19765d146197a9aceef276fea46f10aaf5. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer Go/Bazel/native tests, Redis/service/install or payload probe. Current hosted selected tests were cached; they do not build these public examples. Report: https://github.com/yxieca/sonic-review-reports/pull/66. Verify current source, CI and replies before submission.
 
 ## Request changes
 
@@ -24,4 +24,4 @@ Must-fix public-example API — migrate or exclude the stale subscription caller
 
 Nonblocking cleanup: cvl/cvl_test.go::clearDb calls os.Exit on Redis Keys/Del error, bypassing its defer and TestMain’s cleanup/possible legacy self-started Redis stop. Return the error and attempt owner cleanup before final exit; the Bazel parent still owns its private Redis. Existing consumer version/glog/registry and libyang-parity threads are already raised; respond there rather than duplicating them. The reported libyang UAF trigger was not shown reachable through CVL’s inspected parser flags, so no runtime crash claim is added.
 
-Reviewed HEAD:06d2ac7a12fe89e96e6da16621a2ef89aa92e6fd, BASE84d42b19765d146197a9aceef276fea46f10aaf5. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer Go/Bazel/native tests, Redis/service/install or payload probe. Current hosted selected tests were cached; they do not build these public examples. Report: REPORT_PR_URL. Verify current source, CI and replies before submission.
+Reviewed HEAD:06d2ac7a12fe89e96e6da16621a2ef89aa92e6fd, BASE84d42b19765d146197a9aceef276fea46f10aaf5. Full three-independent-general plus separate-SME source review and coordinator grounding. No reviewer Go/Bazel/native tests, Redis/service/install or payload probe. Current hosted selected tests were cached; they do not build these public examples. Report: https://github.com/yxieca/sonic-review-reports/pull/66. Verify current source, CI and replies before submission.
