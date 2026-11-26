@@ -1,12 +1,8 @@
-<!-- source-evidence-hold-0830-e56223e79414ce82472c4c09126db22f915738ac -->
+# Current fail-safe discussion
 
-**Historical drafts — not actionable at the current head.**
+## comment
+Current human Q4: cooling.py::resolve_is_liquid_cooled returns False/default on unrecognized product without explicit declaration; chassis logs uncertainty and consumer skips liquid monitoring. Should unknown enable conservative monitoring or block operation? Shared BMC air/liquid role and prior false default mean no universal hardware failure or new blocker is inferred. Q3: unreadable GPIO reports Fault/N/A; thermalctld aggregates only healthy samples, so fault telemetry is not a confirmed leak classification. Clarify preserving last-critical/current power-on gating or Fault inhibition in the consumer; no mitigation policy is silently chosen. These questions are already raised; avoid duplicate posts.
 
-**Needs Report Update — current revision not yet qualified.** New human discussion raises fail-safe classification for blank/unknown liquid-cooled product names and unreadable leak sensors. These claims at the unchanged reviewed revision require independent source reconciliation against existing findings and consumers. Prior full-panel coverage and original finding IDs/history remain retained. Human discussion is not a confirmed new code blocker. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
-
-# Current report29 correction drafts
-
-## Comment
 R1 correction verified: common/scripts/test_leak_injection_sim.py::main now checks compatible published consumer provenance before any shared marker mutation, --force clear, contract/sensor/CLI/DB injection or final cleanup. It applies without --verify-db and to explicit aliases resolving to the shared directory. Missing imports/connection/rows/fields refuse first; genuinely private unwatched directories skip DB verification but still read GPIO during normal sensor checks. No live injection occurred here.
 
 Q1/Q2 source propagation verified: selected daemon49e2a1 is12commits ahead of merged943 and kernelca71e2c is4ahead of merged650, with zero behind. This is selected source ancestry, not installed image or hardware proof. Selected thermal/BMC implementations mark test provenance and exclude test-only mitigation while real-leak precedence remains. Existing formal Changes Requested5863351073 is unchanged; reconcile its outstanding gate before considering approval. No review was edited/dismissed by this source follow-up.
@@ -15,7 +11,11 @@ Q3 remains consumer policy: a prior confirmed CRITICAL leak followed by Fault mu
 
 HEADe56223e79414ce82472c4c09126db22f915738ac OLDfc8c24f01c4c3c3706957103226d0a7cd5ac3b73. Original full panel carries verified unchanged scope; new independent general/SME delta checks and own missing consumer-source closures complete. Rebase history separated from actual12PRpaths. Source-only main-record controls, no nativeimports/tests/GPIO/leakmarkers/Redis/services/DUT/build/install/network. Report:https://github.com/yxieca/sonic-review-reports/pull/29. Check current source, reviewer gate and runtime/image evidence before manual feedback.
 
-## Approve after gate reconciliation
+Bounded independent source discussion checks, original full/incremental scope retained; no GPIO/native/Redis/device tests. Existing formal review gate unchanged.
+
+## approve
+Current human Q4: cooling.py::resolve_is_liquid_cooled returns False/default on unrecognized product without explicit declaration; chassis logs uncertainty and consumer skips liquid monitoring. Should unknown enable conservative monitoring or block operation? Shared BMC air/liquid role and prior false default mean no universal hardware failure or new blocker is inferred. Q3: unreadable GPIO reports Fault/N/A; thermalctld aggregates only healthy samples, so fault telemetry is not a confirmed leak classification. Clarify preserving last-critical/current power-on gating or Fault inhibition in the consumer; no mitigation policy is silently chosen. These questions are already raised; avoid duplicate posts.
+
 After separately reconciling the existing reviewer gate, source-favorable correction with qualified runtime scope.
 
 R1 correction verified: common/scripts/test_leak_injection_sim.py::main now checks compatible published consumer provenance before any shared marker mutation, --force clear, contract/sensor/CLI/DB injection or final cleanup. It applies without --verify-db and to explicit aliases resolving to the shared directory. Missing imports/connection/rows/fields refuse first; genuinely private unwatched directories skip DB verification but still read GPIO during normal sensor checks. No live injection occurred here.
@@ -25,3 +25,5 @@ Q1/Q2 source propagation verified: selected daemon49e2a1 is12commits ahead of me
 Q3 remains consumer policy: a prior confirmed CRITICAL leak followed by Fault must not be mistaken for a newly proved dry/wet physical outcome; define last-known-leak power-on gating in the consumer. Optional N2: connect_compatible_consumer catches connection failures but get_all exceptions propagate before mutation, rather than universally returning2. Narrow the README exit-code claim or normalize those exceptions if a uniform refusal contract is wanted. This does not reopen R1; N1 sample/parser test-scope qualifications remain.
 
 HEADe56223e79414ce82472c4c09126db22f915738ac OLDfc8c24f01c4c3c3706957103226d0a7cd5ac3b73. Original full panel carries verified unchanged scope; new independent general/SME delta checks and own missing consumer-source closures complete. Rebase history separated from actual12PRpaths. Source-only main-record controls, no nativeimports/tests/GPIO/leakmarkers/Redis/services/DUT/build/install/network. Report:https://github.com/yxieca/sonic-review-reports/pull/29. Check current source, reviewer gate and runtime/image evidence before manual feedback.
+
+Bounded independent source discussion checks, original full/incremental scope retained; no GPIO/native/Redis/device tests. Existing formal review gate unchanged.
