@@ -1,3 +1,9 @@
+<!-- source-followup-7183073461 -->
+
+**HISTORICAL DRAFTS — DO NOT SUBMIT UNTIL CURRENT FOLLOW-UP IS VERIFIED.**
+
+**Needs Report Update — current source acceptance and submission drafts held.** At unchanged target `7d9e0caac5be00833b484fa69e41d1873a83f89a`, the author explains that BMC initialization currently fails before most publication writes, and identifies the component-data consumer and possible BMC-specific initializer scope. These material source/consumer claims require independent reconciliation before updating the recommendation; the explanation is not treated as proven merely by being posted. Original findings and prior feedback remain historical evidence. Current coverage is incomplete for this follow-up, not a new confirmed code blocker.
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/30
