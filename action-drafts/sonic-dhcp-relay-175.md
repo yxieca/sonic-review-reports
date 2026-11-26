@@ -1,6 +1,6 @@
 # Reader drafts: sonic-dhcp-relay #175
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/62
 
 ## Questions
 
@@ -10,7 +10,7 @@ CI completeness guard — protect the actual DHCPv4 counter suite. In tools/baze
 
 Nonblocking documentation/fixture follow-ups: (1) README.bazel.md and dhcp4relay/test/README.bazel.md should name actual MODULE versions,74DHCPv4 cases, and the native loader-based runner—not Docker/UID65534/read-only/no-network properties the selected workflow does not implement. (2) dhcp6relay/test/run_tests_test.py contains private Redis failure/interruption regressions, but tools/bazel/ci.sh discovers only tools/bazel tests and no selected Bazel target runs those helper cases; wire a declared target using the existing Redis tool. (3) dhcp4relay/test/socket_seam.cpp::PacketSocketCleanup::OnTestEnd omits DHCPv4_RELAY_MUX_STATE_UPDATE: process_mux_cable_notification releases an owned mux_state_config after a full pipe write, and a leftover event falls through without deletion. Add its typed delete/disposer control. Current mux tests consume their events, so this is conditional fixture robustness, not a reproduced leak. These nits can follow separately.
 
-Reviewed HEAD:f82137c1b97532789bfcaf081d1f126276df325e. Full three-independent-general plus separate-SME source review and coordinator grounding. No compiler/Bazel/GTest/Redis/packet/install or payload probe executed by this review. Existing hosted source CI executed four targets and reported126cases; those are external results. Report: REPORT_PR_URL. Verify current revision, CI and replies before using this draft.
+Reviewed HEAD:f82137c1b97532789bfcaf081d1f126276df325e. Full three-independent-general plus separate-SME source review and coordinator grounding. No compiler/Bazel/GTest/Redis/packet/install or payload probe executed by this review. Existing hosted source CI executed four targets and reported126cases; those are external results. Report: https://github.com/yxieca/sonic-review-reports/pull/62. Verify current revision, CI and replies before using this draft.
 
 ## Request changes
 
@@ -20,4 +20,4 @@ CI completeness guard — protect the actual DHCPv4 counter suite. In tools/baze
 
 Nonblocking documentation/fixture follow-ups: (1) README.bazel.md and dhcp4relay/test/README.bazel.md should name actual MODULE versions,74DHCPv4 cases, and the native loader-based runner—not Docker/UID65534/read-only/no-network properties the selected workflow does not implement. (2) dhcp6relay/test/run_tests_test.py contains private Redis failure/interruption regressions, but tools/bazel/ci.sh discovers only tools/bazel tests and no selected Bazel target runs those helper cases; wire a declared target using the existing Redis tool. (3) dhcp4relay/test/socket_seam.cpp::PacketSocketCleanup::OnTestEnd omits DHCPv4_RELAY_MUX_STATE_UPDATE: process_mux_cable_notification releases an owned mux_state_config after a full pipe write, and a leftover event falls through without deletion. Add its typed delete/disposer control. Current mux tests consume their events, so this is conditional fixture robustness, not a reproduced leak. These nits can follow separately.
 
-Reviewed HEAD:f82137c1b97532789bfcaf081d1f126276df325e. Full three-independent-general plus separate-SME source review and coordinator grounding. No compiler/Bazel/GTest/Redis/packet/install or payload probe executed by this review. Existing hosted source CI executed four targets and reported126cases; those are external results. Report: REPORT_PR_URL. Verify current revision, CI and replies before using this draft.
+Reviewed HEAD:f82137c1b97532789bfcaf081d1f126276df325e. Full three-independent-general plus separate-SME source review and coordinator grounding. No compiler/Bazel/GTest/Redis/packet/install or payload probe executed by this review. Existing hosted source CI executed four targets and reported126cases; those are external results. Report: https://github.com/yxieca/sonic-review-reports/pull/62. Verify current revision, CI and replies before using this draft.
