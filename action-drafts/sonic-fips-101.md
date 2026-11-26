@@ -1,6 +1,6 @@
 # Reader drafts: sonic-fips #101
 
-Report: REPORT_PR_URL
+Report: https://github.com/yxieca/sonic-review-reports/pull/64
 
 ## Comment
 
@@ -12,7 +12,7 @@ Nonblocking evidence retention — keep the resolution files actually hashed. to
 
 Optional selected-input qualifications: openssl/sources.bzl::_apply_debian_patch should retain an outcome receipt against the actual selected Debian Git-copy sections/preambles/modes before claiming exact Make/quilt equality; no selected-input failure was demonstrated here. openssl/integration/ci.py checks the activation file, while the inherited patch also recognizes boot fips=1/sonic_fips=1; document the hosted ordinary-mode assumption or check effective conditions without changing host state.
 
-Reviewed HEAD:b95dbbabb54c49f08a7630d9434df5ef4a4e39e7, BASE6c0b667107763ecd5ea06db689944fedae90a1c8. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer builds/compiler/crypto binaries/native tests/archive probes/package install or FIPS state change. Five historical native fork workflows passed on an independently verified identical source tree; not fresh current-head execution or FIPS certification. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+Reviewed HEAD:b95dbbabb54c49f08a7630d9434df5ef4a4e39e7, BASE6c0b667107763ecd5ea06db689944fedae90a1c8. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer builds/compiler/crypto binaries/native tests/archive probes/package install or FIPS state change. Five historical native fork workflows passed on an independently verified identical source tree; not fresh current-head execution or FIPS certification. Report: https://github.com/yxieca/sonic-review-reports/pull/64. Check current revision, CI and replies before submission.
 
 ## Approve
 
@@ -24,4 +24,4 @@ Nonblocking evidence retention — keep the resolution files actually hashed. to
 
 Optional selected-input qualifications: openssl/sources.bzl::_apply_debian_patch should retain an outcome receipt against the actual selected Debian Git-copy sections/preambles/modes before claiming exact Make/quilt equality; no selected-input failure was demonstrated here. openssl/integration/ci.py checks the activation file, while the inherited patch also recognizes boot fips=1/sonic_fips=1; document the hosted ordinary-mode assumption or check effective conditions without changing host state.
 
-Reviewed HEAD:b95dbbabb54c49f08a7630d9434df5ef4a4e39e7, BASE6c0b667107763ecd5ea06db689944fedae90a1c8. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer builds/compiler/crypto binaries/native tests/archive probes/package install or FIPS state change. Five historical native fork workflows passed on an independently verified identical source tree; not fresh current-head execution or FIPS certification. Report: REPORT_PR_URL. Check current revision, CI and replies before submission.
+Reviewed HEAD:b95dbbabb54c49f08a7630d9434df5ef4a4e39e7, BASE6c0b667107763ecd5ea06db689944fedae90a1c8. Full independent three-general-plus-separate-SME source review and coordinator grounding. No reviewer builds/compiler/crypto binaries/native tests/archive probes/package install or FIPS state change. Five historical native fork workflows passed on an independently verified identical source tree; not fresh current-head execution or FIPS certification. Report: https://github.com/yxieca/sonic-review-reports/pull/64. Check current revision, CI and replies before submission.
