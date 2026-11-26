@@ -1,3 +1,9 @@
+<!-- current-source-hold-0ec5b497061d867ca92d7ca96389453ff8a3d4b6 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `0ec5b497061d867ca92d7ca96389453ff8a3d4b6` after the completed source assessment at `17b40cf1d4c29cf2901b8531b2c45ce6989703d6`. The latest source changes and author replies require changed-scope verification. Previously fixed, retained and newly identified findings remain visible as historical conclusions, not current-revision clearance. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 # Current report22 correction drafts
 
 ## Questions
