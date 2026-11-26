@@ -1,3 +1,9 @@
+<!-- current-source-hold-624bbde249936b1eba44b98f3f4f49595c896fe8 -->
+
+**Historical drafts — not actionable at the current head.**
+
+**Needs Report Update — current revision not yet qualified.** Target advanced to `624bbde249936b1eba44b98f3f4f49595c896fe8` after the completed source assessment at `5240b3d4505534b82848a7b9c9e073be25663e4a`. The author reports a correction to the existing ganged-interface discussion; this is a reported fix pending independent changed-scope verification, not confirmed resolution of R1 or Q1. Two earlier human approvals are now dismissed; their historical reasoning and test claims remain retained, not current-head acceptance. Original completed general/SME coverage and stable finding IDs remain historical, not current-revision clearance. Prior findings and completed full-review history remain preserved; the coverage gap is not a confirmed code defect. Historical feedback drafts must not be submitted.
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/19
