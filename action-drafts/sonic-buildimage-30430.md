@@ -1,12 +1,8 @@
-<!-- current-source-hold-0504bfcfcc99947672e6d1fb622c565f1dff0a59 -->
+# Current source drafts
 
-**Historical drafts — not actionable at the current head.**
+## questions
+Current narrow update verified: NvidiaSysfsOe.set_lpmode now rejects direct firmware-control configuration with OSError rather than writing its policy. Software API/readback and ordinary CpoPort/CMIS dispatch are unchanged; this is not closure of R1–R8 or Q3’s software-register serialization. Document the direct method’s unsupported-operation exception; no new blocker was established.
 
-**Needs Report Update — current revision not yet qualified.** Target advanced from the covered revision `97dd087f87423f1e31d5cd13c3ef371a620ccf4f` to `0504bfcfcc99947672e6d1fb622c565f1dff0a59`. Changed source and its reached dependency contracts require independent reconciliation. Prior completed full-panel and bounded follow-up evidence remain preserved; historical findings are not current-head qualification. An earlier human approval at the old revision is now dismissed; its history is retained, not effective current-head acceptance. The coverage gap is not a confirmed code defect. Do not submit historical feedback drafts.
-
-# Current report20 material follow-up drafts
-
-## Questions
 Please clarify/correct the current source conditions below, retaining existing discussions.
 
 Existing threads R1–R3 and new R8 should be reconciled where already raised, not reposted. R1: chassis.py::get_sfp_list_for_polling imports cpo_device’s missing selected-common lock contract even without CPO; align actual common3374 dependency to compatible source and verify effective image pin. R2: get_elsfp_change_event overwrites the requested timeout; preserve overall finite deadline and use positive slices for indefinite waits. R3: ELS descriptors do not follow main mode/ASIC resets; reconcile independently owned ELS subscriptions without sharing poll/FD objects. R8: on persistent immediately-ready read errors the ELS loop warns/continues with no backoff; contain repeated retries/logging with a bounded delay or safe descriptor retirement and a failing-node control. External CPU/count observations are not reviewer measurements.
@@ -15,9 +11,13 @@ Distinct held source findings remain: R4 — chassis.py::get_asic_change_event e
 
 Nonblocking N1 legacy dummy-state recovery should use the migrated port-object identity consistently. Q1/Q2 power diagnosis/recovery and bank/ASIC fanout limits remain qualified. New Q3: in proposed common790ed488, the low-power setter and target-selector update different bits of the same byte26 without a shared lock on all setter entrances. If this combination is adopted, shared NVIDIA API-level serialization is more complete than one platform wrapper; add a same-byte interleaving control. The currently selected image first encounters R1. No current-image physical firmware misdirection, frequency or corruption was established.
 
-HEAD97dd087f87423f1e31d5cd13c3ef371a620ccf4f BASE93f8290638bb838004aaf27c918c44bf98efa607. Original full three-general+SME source panel retained at unchanged bytes; new independent general+separate-SME material claims checks and own missing-source closures/coordinator grounding, not whole-matrix rerun. Source-only fake poll/clock/byte controls, no native imports/tests/firmware/device/Redis/build/install/network operations. Report:https://github.com/yxieca/sonic-review-reports/pull/20. Check current source, dependency pins and replies before manual feedback; no automatic submission.
+HEAD0504bfcfcc99947672e6d1fb622c565f1dff0a59 BASE93f8290638bb838004aaf27c918c44bf98efa607. Original full three-general+SME source panel retained at unchanged bytes; new independent general+separate-SME material claims checks and own missing-source closures/coordinator grounding, not whole-matrix rerun. Source-only fake poll/clock/byte controls, no native imports/tests/firmware/device/Redis/build/install/network operations. Report:https://github.com/yxieca/sonic-review-reports/pull/20. Check current source, dependency pins and replies before manual feedback; no automatic submission.
 
-## Request changes
+Bounded independent general/SME update; prior full panel carried unchanged source. No native/device/firmware operation. Earlier dismissed approval is not current acceptance.
+
+## request-changes
+Current narrow update verified: NvidiaSysfsOe.set_lpmode now rejects direct firmware-control configuration with OSError rather than writing its policy. Software API/readback and ordinary CpoPort/CMIS dispatch are unchanged; this is not closure of R1–R8 or Q3’s software-register serialization. Document the direct method’s unsupported-operation exception; no new blocker was established.
+
 Please address the source conditions below before source acceptance.
 
 Existing threads R1–R3 and new R8 should be reconciled where already raised, not reposted. R1: chassis.py::get_sfp_list_for_polling imports cpo_device’s missing selected-common lock contract even without CPO; align actual common3374 dependency to compatible source and verify effective image pin. R2: get_elsfp_change_event overwrites the requested timeout; preserve overall finite deadline and use positive slices for indefinite waits. R3: ELS descriptors do not follow main mode/ASIC resets; reconcile independently owned ELS subscriptions without sharing poll/FD objects. R8: on persistent immediately-ready read errors the ELS loop warns/continues with no backoff; contain repeated retries/logging with a bounded delay or safe descriptor retirement and a failing-node control. External CPU/count observations are not reviewer measurements.
@@ -26,4 +26,6 @@ Distinct held source findings remain: R4 — chassis.py::get_asic_change_event e
 
 Nonblocking N1 legacy dummy-state recovery should use the migrated port-object identity consistently. Q1/Q2 power diagnosis/recovery and bank/ASIC fanout limits remain qualified. New Q3: in proposed common790ed488, the low-power setter and target-selector update different bits of the same byte26 without a shared lock on all setter entrances. If this combination is adopted, shared NVIDIA API-level serialization is more complete than one platform wrapper; add a same-byte interleaving control. The currently selected image first encounters R1. No current-image physical firmware misdirection, frequency or corruption was established.
 
-HEAD97dd087f87423f1e31d5cd13c3ef371a620ccf4f BASE93f8290638bb838004aaf27c918c44bf98efa607. Original full three-general+SME source panel retained at unchanged bytes; new independent general+separate-SME material claims checks and own missing-source closures/coordinator grounding, not whole-matrix rerun. Source-only fake poll/clock/byte controls, no native imports/tests/firmware/device/Redis/build/install/network operations. Report:https://github.com/yxieca/sonic-review-reports/pull/20. Check current source, dependency pins and replies before manual feedback; no automatic submission.
+HEAD0504bfcfcc99947672e6d1fb622c565f1dff0a59 BASE93f8290638bb838004aaf27c918c44bf98efa607. Original full three-general+SME source panel retained at unchanged bytes; new independent general+separate-SME material claims checks and own missing-source closures/coordinator grounding, not whole-matrix rerun. Source-only fake poll/clock/byte controls, no native imports/tests/firmware/device/Redis/build/install/network operations. Report:https://github.com/yxieca/sonic-review-reports/pull/20. Check current source, dependency pins and replies before manual feedback; no automatic submission.
+
+Bounded independent general/SME update; prior full panel carried unchanged source. No native/device/firmware operation. Earlier dismissed approval is not current acceptance.
