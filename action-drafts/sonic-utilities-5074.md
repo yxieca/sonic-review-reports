@@ -1,3 +1,5 @@
+> **Needs Report Update — new external merge-resolution claims need source verification.** Original R1 correction remains; #5012 DOM/error/cache/test composition is not yet qualified. Historical drafts held.
+
 # Current report19 DOM-correction drafts
 
 ## Comment
