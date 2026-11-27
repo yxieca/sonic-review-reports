@@ -1,3 +1,11 @@
+# Archived review — target merged
+
+Target https://github.com/sonic-net/sonic-swss/pull/5187 merged at `2026-11-27T04:04:39Z` (merge commit `b2696aa26f670cd5be276cf9207763b8b1b61621`). Reviewed head: `886f51251fd660b83975c7d3c3ce65c65dbe7806`. [Current-head source approval](https://github.com/sonic-net/sonic-swss/pull/5187#pullrequestreview-6077019226) remains verified. Required CI passed. No target merge or other target mutation was performed during archival.
+
+N1 remains a partially corrected, nonblocking documentation recommendation; target merge does not establish that its remaining descriptions were fixed. Original full and incremental source coverage and validation limits are preserved below. Earlier waiting states and reader drafts are historical; temporary actions are retired.
+
+## Historical drafts — not actionable
+
 # Current report72 source-equivalent drafts
 
 ## Comment
