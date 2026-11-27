@@ -1,3 +1,11 @@
+# Archived review — target merged
+
+Target https://github.com/sonic-net/sonic-mgmt-framework/pull/203 merged at `2026-11-27T05:48:55Z` (merge commit `740be66d46a5e1b2b8815cdac4aec85a01580e71`). Reviewed head: `6c932ad921a3519beb0ecc429f1825f03be27a25`. [Current-head source approval](https://github.com/sonic-net/sonic-swss/pull/203#pullrequestreview-6083964447) remains verified. Required CI passed. No target merge or other target mutation was performed during archival.
+
+R1 is source-resolved: Make cleanup excludes BUILD.bazel alongside routes.go. Q1 syntax-probe isolation and N1 dependency documentation remain nonblocking recommendations; merge does not establish these follow-ups fixed. Original full and incremental source coverage and validation limits are preserved below. Earlier waiting states and reader drafts are historical; temporary actions are retired.
+
+## Historical drafts — not actionable
+
 # Current editable feedback
 
 ## Comment
