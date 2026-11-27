@@ -1,3 +1,5 @@
+**Freshness hold — target advanced to `463c9f28b087b61892182b59616c999a620300f2` on 2026-11-26.** The assessments and draft texts below are retained historical evidence, not clearance at this revision. Current changed-source review is incomplete; target feedback is held.
+
 # Current human-operated drafts: sonic-mgmt #28850
 
 Target head: `551639a26205168f539a1deb66262442cc7aa426`
