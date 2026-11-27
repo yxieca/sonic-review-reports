@@ -1,9 +1,7 @@
-> **Needs Report Update — material external poller/port/API and integration evidence pending source reconciliation.** Prior OE-only refusal and unchanged-source evidence preserved; no external667test count or merge-order claim accepted without source. Historical drafts held.
-
-# Current source drafts
+# Current evidence drafts
 
 ## questions
-Current narrow update verified: NvidiaSysfsOe.set_lpmode now rejects direct firmware-control configuration with OSError rather than writing its policy. Software API/readback and ordinary CpoPort/CMIS dispatch are unchanged; this is not closure of R1–R8 or Q3’s software-register serialization. Document the direct method’s unsupported-operation exception; no new blocker was established.
+Current external review source-confirmed: directOE firmware-controlrefusal doesnotaffect CpoPortModuleXcvrpolicysetter, Q4conditionalAPIagreementnit no currentcallerproven. SameELSreadyreaderror/powerprecedence andQ3softwarebyte26CDBlock conditions remain. #29725containsolderindex/owner/key/thermalcorrections requestedrebase mustpreserve; #790OPEN neededsource notcurrentgitlink. External667tests/2649poll/84768warning numbersattributednotexecuted. Currentfixed/retainedIDs unchanged, allhumanraised WaitingAuthorResponse no duplicatefeedback.
 
 Please clarify/correct the current source conditions below, retaining existing discussions.
 
@@ -15,10 +13,8 @@ Nonblocking N1 legacy dummy-state recovery should use the migrated port-object i
 
 HEAD0504bfcfcc99947672e6d1fb622c565f1dff0a59 BASE93f8290638bb838004aaf27c918c44bf98efa607. Original full three-general+SME source panel retained at unchanged bytes; new independent general+separate-SME material claims checks and own missing-source closures/coordinator grounding, not whole-matrix rerun. Source-only fake poll/clock/byte controls, no native imports/tests/firmware/device/Redis/build/install/network operations. Report:https://github.com/yxieca/sonic-review-reports/pull/20. Check current source, dependency pins and replies before manual feedback; no automatic submission.
 
-Bounded independent general/SME update; prior full panel carried unchanged source. No native/device/firmware operation. Earlier dismissed approval is not current acceptance.
-
 ## request-changes
-Current narrow update verified: NvidiaSysfsOe.set_lpmode now rejects direct firmware-control configuration with OSError rather than writing its policy. Software API/readback and ordinary CpoPort/CMIS dispatch are unchanged; this is not closure of R1–R8 or Q3’s software-register serialization. Document the direct method’s unsupported-operation exception; no new blocker was established.
+Current external review source-confirmed: directOE firmware-controlrefusal doesnotaffect CpoPortModuleXcvrpolicysetter, Q4conditionalAPIagreementnit no currentcallerproven. SameELSreadyreaderror/powerprecedence andQ3softwarebyte26CDBlock conditions remain. #29725containsolderindex/owner/key/thermalcorrections requestedrebase mustpreserve; #790OPEN neededsource notcurrentgitlink. External667tests/2649poll/84768warning numbersattributednotexecuted. Currentfixed/retainedIDs unchanged, allhumanraised WaitingAuthorResponse no duplicatefeedback.
 
 Please address the source conditions below before source acceptance.
 
@@ -29,5 +25,3 @@ Distinct held source findings remain: R4 — chassis.py::get_asic_change_event e
 Nonblocking N1 legacy dummy-state recovery should use the migrated port-object identity consistently. Q1/Q2 power diagnosis/recovery and bank/ASIC fanout limits remain qualified. New Q3: in proposed common790ed488, the low-power setter and target-selector update different bits of the same byte26 without a shared lock on all setter entrances. If this combination is adopted, shared NVIDIA API-level serialization is more complete than one platform wrapper; add a same-byte interleaving control. The currently selected image first encounters R1. No current-image physical firmware misdirection, frequency or corruption was established.
 
 HEAD0504bfcfcc99947672e6d1fb622c565f1dff0a59 BASE93f8290638bb838004aaf27c918c44bf98efa607. Original full three-general+SME source panel retained at unchanged bytes; new independent general+separate-SME material claims checks and own missing-source closures/coordinator grounding, not whole-matrix rerun. Source-only fake poll/clock/byte controls, no native imports/tests/firmware/device/Redis/build/install/network operations. Report:https://github.com/yxieca/sonic-review-reports/pull/20. Check current source, dependency pins and replies before manual feedback; no automatic submission.
-
-Bounded independent general/SME update; prior full panel carried unchanged source. No native/device/firmware operation. Earlier dismissed approval is not current acceptance.
