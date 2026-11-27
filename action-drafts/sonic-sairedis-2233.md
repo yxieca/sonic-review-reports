@@ -1,17 +1,13 @@
-# Current held feedback drafts
+# Current receipt/status drafts
 
 ## Comment
-Current source follow-up at `42b391c24af4c86407673eedde6d98ca80de9b83` carries the resolved normal/ASAN fortification policy and reviews the refreshed Make-input inventory plus new boundary tests. The one inventory digest now matches the incorporated target-branch Makefile; the 373 expected owner/source pairs are unchanged.
+**Source approval already submitted:** [review6084440683](https://github.com/sonic-net/sonic-sairedis/pull/2233#pullrequestreview-6084440683) is APPROVED at current `42b391c24af4c86407673eedde6d98ca80de9b83`. The target is OPEN/non-draft. The [report acknowledgment](https://github.com/yxieca/sonic-review-reports/pull/75#issuecomment-7211725016) is preserved. This is a report-only status correction, not a repeated approval or new source review.
 
-Nonblocking N1 documentation accuracy and N2 joined/split macro audit parsing remain as previously recorded. The new ZeroMQ tests exercise oversized notifications, requests and replies; the FlexCounter test injects a partial-data bulk-call failure and asserts that its discarded meter class is absent. These are source-reviewed assertions, not tests executed by this reviewer.
+R1 remains source-resolved; N1 documentation and N2 audit argument parsing remain nonblocking. CI/integration readiness is separate from source approval; WaitingCI is retained, with no merge, retry or native execution. Earlier draft/held-decision wording below is historical, not current.
 
-The target remains draft. Existing source approval decision and held acknowledgment remain preserved, not replayed. No formal target review, CI retry or merge was performed. Report: https://github.com/yxieca/sonic-review-reports/pull/75. Recheck current status and integration before any manual verdict.
+## Approval receipt reference (not a new submission)
+**Source approval already submitted:** [review6084440683](https://github.com/sonic-net/sonic-sairedis/pull/2233#pullrequestreview-6084440683) is APPROVED at current `42b391c24af4c86407673eedde6d98ca80de9b83`. The target is OPEN/non-draft. The [report acknowledgment](https://github.com/yxieca/sonic-review-reports/pull/75#issuecomment-7211725016) is preserved. This is a report-only status correction, not a repeated approval or new source review.
 
-## Approval draft (held)
-Current source follow-up at `42b391c24af4c86407673eedde6d98ca80de9b83` carries the resolved normal/ASAN fortification policy and reviews the refreshed Make-input inventory plus new boundary tests. The one inventory digest now matches the incorporated target-branch Makefile; the 373 expected owner/source pairs are unchanged.
+R1 remains source-resolved; N1 documentation and N2 audit argument parsing remain nonblocking. CI/integration readiness is separate from source approval; WaitingCI is retained, with no merge, retry or native execution. Earlier draft/held-decision wording below is historical, not current.
 
-Nonblocking N1 documentation accuracy and N2 joined/split macro audit parsing remain as previously recorded. The new ZeroMQ tests exercise oversized notifications, requests and replies; the FlexCounter test injects a partial-data bulk-call failure and asserts that its discarded meter class is absent. These are source-reviewed assertions, not tests executed by this reviewer.
-
-The target remains draft. Existing source approval decision and held acknowledgment remain preserved, not replayed. No formal target review, CI retry or merge was performed. Report: https://github.com/yxieca/sonic-review-reports/pull/75. Recheck current status and integration before any manual verdict.
-
-Historical approval intent remains held; this editable draft does not release draft/CI gates or submit automatically.
+Historical reference only: existing approval is already submitted. Do not submit a duplicate.
