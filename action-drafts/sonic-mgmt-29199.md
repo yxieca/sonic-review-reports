@@ -1,3 +1,5 @@
+> Current Q1 external review cleared; own R1/R2 remain correction-required. No source approval or target submission.
+
 # Self-contained reader drafts
 
 Report: https://github.com/yxieca/sonic-review-reports/pull/26
@@ -57,3 +59,8 @@ Check current revision and replies, and avoid duplicating existing feedback. Thi
 ## Prior draft history
 
 The prior wording is preserved in the preceding report commit. This update expands author-facing explanations only; it does not change findings, severity, source coverage, target verdict or submission state.
+
+
+**Q1 external-review gate cleared:** [current-head approval6084615107](https://github.com/sonic-net/sonic-mgmt/pull/29199#pullrequestreview-6084615107) explicitly clears the earlier merge-order/external-review objection. Redfish41 is merged; Redfish50 remains a nonblocking follow-up whose final API/record shape should remain aligned with the audit tests. The dated Changes Requested6034554222 record is preserved as historical, not current controlling Q1 state.
+
+**Our distinct R1/R2 remain unchanged and correction-required.** This receipt is not our source approval, a CI-ready claim, target feedback or merge. No independent source panel was rerun solely to reconcile another reviewer's status. Reviewed HEAD `8fd84017fc27f07c22e99346a2b794ba76dface2`; report https://github.com/yxieca/sonic-review-reports/pull/26.
