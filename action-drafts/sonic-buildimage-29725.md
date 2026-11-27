@@ -1,3 +1,5 @@
+> **Needs Report Update — new external ELS/dispatch evidence pending source verification.** Current source remains0ec5b497; original fixed/retained findings and prior panels preserved. New read-error, absent-power, descriptor-refresh, event-routing and prerequisite claims are not accepted merely from test reports. Historical drafts held.
+
 # Current report22 recovery/thermal drafts
 
 ## Questions
