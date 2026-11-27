@@ -1,3 +1,14 @@
+# Current decision/freshness hold — gNMI #924
+
+Target: https://github.com/sonic-net/sonic-gnmi/pull/924
+Current target HEAD: `be95e865091d7757b335b101919723d265712aed`.
+
+**Source follow-up queued; current feedback drafts are inert.** A new human review asks for reconciliation of the native subscription check's selected Common/Management source origins, pins and hashes. The request is input to review, not a verified new blocking defect or a completed source assessment. Existing full source coverage and R1-resolved/N1-nonblocking dispositions are preserved below as the prior snapshot; current decision readiness is held until this newly raised source-origin scope is grounded.
+
+No target approval, comment, review dismissal, CI retry or native validation is performed by this metadata hold. Do not use or repeat historical drafts while the follow-up is queued.
+
+## Historical editable text — do not submit
+
 # Current feedback
 
 ## Comment
