@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review draft · sonic-utilities #5007</title>
+<style>body{font:17px/1.55 system-ui,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;color:#18212e}a{color:#1755aa}nav{display:flex;gap:20px;flex-wrap:wrap}textarea{box-sizing:border-box;width:100%;height:380px;font:15px/1.5 ui-monospace,monospace;padding:14px}button{font:inherit;background:#1755aa;color:white;border:0;border-radius:6px;padding:12px 18px;cursor:pointer}.note{background:#fff5dc;padding:14px;border-radius:6px}#status{min-height:1.5em}</style>
+<h1>Review draft: sonic-utilities #5007</h1>
+<p><a href="https://github.com/yxieca/sonic-review-reports/pull/18">Review report</a> · <a href="https://github.com/sonic-net/sonic-utilities/pull/5007">Target PR</a></p>
+<p class="note">HEADba3451bf. Existingfixesretained, CtrlC/laterHUP and5012composition qualified. WaitingAuthorResponse. No PTY/native tests. Copy/open only.</p>
+<nav><a href="#questions">Questions</a> · <a href="#request-changes">Request changes</a></nav>
+<h2 id="heading"></h2><p id="instructions"></p><label for="draft">Review and edit the text before copying:</label><textarea id="draft" spellcheck="false"></textarea>
+<p><button id="copy" type="button">Copy draft and open GitHub</button> · <a id="target" target="_blank" rel="noopener noreferrer">Open GitHub only</a></p>
+<p id="status" role="status" aria-live="polite"></p><p>No tokens, analytics, external scripts or automatic API calls. The text stays in this page until you copy it.</p>
+<script>const drafts={"comment": {"label": "Comment without approval", "url": "https://github.com/sonic-net/sonic-utilities/pull/5007", "instructions": "Existing human concerns require response; no duplicate feedback. Nothing submits automatically.", "text": "Original R1/N1/N2 lost-session/source fixes remain. N5 concrete Minor: initial Ctrl-C uses default SIGINT instead of _interrupt_on_termination HUP/TERMguard; laterHUP/TERM orsecondCtrlC can interruptAbortcleanup. abortedlog is interruption, notCDBacknowledgement. IncludeSIGINTfirst-signal bookkeeping andlateHUPdetach-only behavior whilepreservingignorednohup/handlerrestoration. Q2conditional5012: avoid logger=Logger beforelog=logger.Logger, which shadowsmodule; resolve tooneconsistentinstance. N6docs mustgivefirst-subportDOMdisable/restore; N7orderregression shouldrecord echo andrun/commit inoneeventtrace, notonlylinebeforeOK. Allalreadyhumanraised, no duplicatedfeedback. External PTY/native/mutation countsattributed, no reviewer signals/tests/imports/device/Redis/build/merge. Originalpanel carried unchangedba3451bf; boundedindependentgeneral/SMEsourcechecks. Report:https://github.com/yxieca/sonic-review-reports/pull/18. Checkcurrentintegration/reviewstatebeforemanualaction."}, "approve": {"label": "Source approval after integration reconciliation", "url": "https://github.com/sonic-net/sonic-utilities/pull/5007/files", "instructions": "Existing human concerns require response; no duplicate feedback. Nothing submits automatically.", "text": "Original R1/N1/N2 lost-session/source fixes remain. N5 concrete Minor: initial Ctrl-C uses default SIGINT instead of _interrupt_on_termination HUP/TERMguard; laterHUP/TERM orsecondCtrlC can interruptAbortcleanup. abortedlog is interruption, notCDBacknowledgement. IncludeSIGINTfirst-signal bookkeeping andlateHUPdetach-only behavior whilepreservingignorednohup/handlerrestoration. Q2conditional5012: avoid logger=Logger beforelog=logger.Logger, which shadowsmodule; resolve tooneconsistentinstance. N6docs mustgivefirst-subportDOMdisable/restore; N7orderregression shouldrecord echo andrun/commit inoneeventtrace, notonlylinebeforeOK. Allalreadyhumanraised, no duplicatedfeedback. External PTY/native/mutation countsattributed, no reviewer signals/tests/imports/device/Redis/build/merge. Originalpanel carried unchangedba3451bf; boundedindependentgeneral/SMEsourcechecks. Report:https://github.com/yxieca/sonic-review-reports/pull/18. Checkcurrentintegration/reviewstatebeforemanualaction."}};
+let selected;
+function render(){const key=location.hash.slice(1);selected=drafts[key]||drafts.comment;document.getElementById('heading').textContent=selected.label;document.getElementById('instructions').textContent=selected.instructions;document.getElementById('draft').value=selected.text;document.getElementById('target').href=selected.url;document.getElementById('status').textContent='';}
+window.addEventListener('hashchange',render);
+document.getElementById('copy').addEventListener('click',async()=>{
+ const text=document.getElementById('draft').value;
+ window.open(selected.url,'_blank','noopener,noreferrer');
+ try{if(!navigator.clipboard)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(text);document.getElementById('status').textContent='Draft copied. Paste it on GitHub, select the intended action and review before submitting. If no tab opened, use Open GitHub only.';}
+ catch(error){document.getElementById('draft').focus();document.getElementById('draft').select();document.getElementById('status').textContent='Automatic copying was unavailable. Copy the selected text manually, then paste it on GitHub. Nothing has been submitted.';}
+});
+render();
+
+
+
+
+
+
+
+
+
+
+
+</script></html>
