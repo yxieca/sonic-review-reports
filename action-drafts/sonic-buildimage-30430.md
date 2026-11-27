@@ -1,3 +1,5 @@
+> **Needs Report Update — material external poller/port/API and integration evidence pending source reconciliation.** Prior OE-only refusal and unchanged-source evidence preserved; no external667test count or merge-order claim accepted without source. Historical drafts held.
+
 # Current source drafts
 
 ## questions
