@@ -1,3 +1,5 @@
+> Freshness hold: target6c932ad9 review pending. Historical drafts; do not submit.
+
 # Human-operated target drafts
 
 Target: https://github.com/sonic-net/sonic-mgmt-framework/pull/203
