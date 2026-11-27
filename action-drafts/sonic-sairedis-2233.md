@@ -1,3 +1,5 @@
+> Freshness hold: target42b391c2 review pending. Historical drafts; do not submit.
+
 # Current human-operated feedback drafts
 
 Target: https://github.com/sonic-net/sonic-sairedis/pull/2233
