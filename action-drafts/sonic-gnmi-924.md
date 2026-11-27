@@ -1,5 +1,10 @@
 # Current source follow-up feedback
 
+## Current revision freshness — 2026-11-27
+**STALE — current target HEAD `d6bf42518cd70243f7495d9977db8fcac60b949b` is not yet source-qualified.** The conclusions and drafts below apply only to the prior reviewed revision `b75f80523deb71f7c4810596a92dfb19e0e4182a`. Do not use the approval draft for the new revision. Prior complete independent coverage and history remain intact; current changed-scope coverage is incomplete. No new blocking source finding is asserted.
+
+## Preserved prior reviewed content
+
 ## Comment
 **Native-source origin request reconciled at `b75f80523deb71f7c4810596a92dfb19e0e4182a`.** `tools/ci/native_subscription.py` downloads sonic-net Common and Management sources at immutable revisions d8d59ad0/7259c3a1 and checks the declared SHA256 before reuse/extraction. Bazel overrides point SDK/runtime/SWIG/codegen builds at those checkouts; private native Go preparation explicitly replaces Management Common with the same local checkout before tidy/vendor. This addresses source-origin consistency within that independent race-test graph, not universal equality with the ordinary registry/Make graph.
 
