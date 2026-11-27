@@ -1,8 +1,8 @@
-> **Needs Report Update — new external evidence pending source reconciliation.** Current VDM bank/wrapper/unsupported-OE and dependency-order claims at unchanged8ae91709 require bounded verification. Prior panels and IDs preserved; no external native test adopted. Historical drafts held.
-
-# Current report24 retained conditions
+# Current external-evidence drafts
 
 ## questions
+Current external evidence: R1 bankless raw VDM offset is in Common790 and exposed by the new CPO publisher; a port/API routing refactor alone cannot add bank stride. Q2-E1: after OE factory ValueError is skipped in OE collection, generic VDM support via port wrapper can let the same error terminate task; use intendedOEAPI with perportValueError containment. Conditionalpollable/failingfactorycase, notallCPO failure. N2missing optionalhook is logged/contained andREADYcontinues, notnewMajorlinkfailure. #946firstproductionpatch overlap/#790 interfaces require merge coordination, no mergepermission. External497/mutations notexecutedhere. Allconcerns already raised; WaitingAuthorResponse.
+
 Current update: common.py removes an unused API wrapper and uses explicit missing-device failure instead of inventing copper; new CPO/media tests cover actual current-base getter behavior. Original VDM consumer/raw reader and post-powerup source are unchanged, so R1/N1/N2/Q1/Q2 remain. Broader upstream rebase is not authored Rust/ycabled behavior under this review.
 
 Please reconcile R1 and the qualified optional API/metadata questions in their existing discussions.
@@ -18,6 +18,8 @@ HEAD8ae91709d7b8c3844bae11f981ea31dd05e6d8c2 BASEec2f48525155da2ac061b131fda665b
 Bounded independent current general/SME checks; original full panel carried unchanged PR paths. Existing concerns already raised; no duplicate target feedback.
 
 ## request-changes
+Current external evidence: R1 bankless raw VDM offset is in Common790 and exposed by the new CPO publisher; a port/API routing refactor alone cannot add bank stride. Q2-E1: after OE factory ValueError is skipped in OE collection, generic VDM support via port wrapper can let the same error terminate task; use intendedOEAPI with perportValueError containment. Conditionalpollable/failingfactorycase, notallCPO failure. N2missing optionalhook is logged/contained andREADYcontinues, notnewMajorlinkfailure. #946firstproductionpatch overlap/#790 interfaces require merge coordination, no mergepermission. External497/mutations notexecutedhere. Allconcerns already raised; WaitingAuthorResponse.
+
 Current update: common.py removes an unused API wrapper and uses explicit missing-device failure instead of inventing copper; new CPO/media tests cover actual current-base getter behavior. Original VDM consumer/raw reader and post-powerup source are unchanged, so R1/N1/N2/Q1/Q2 remain. Broader upstream rebase is not authored Rust/ycabled behavior under this review.
 
 Please resolve R1 before source acceptance; other notes are nonblocking.
