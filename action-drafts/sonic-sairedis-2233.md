@@ -1,3 +1,22 @@
+# Archived source review — target MERGED
+
+<!-- terminal-archive-report75-20261127 -->
+Target: https://github.com/sonic-net/sonic-sairedis/pull/2233 · Report: https://github.com/yxieca/sonic-review-reports/pull/75
+
+The target merged at `2026-11-28T04:22:51Z` with merge commit `fbf9200c4ae2a9b2287b3ac77abcd9ab75e2ac36`. Reviewed terminal HEAD: `42b391c24af4c86407673eedde6d98ca80de9b83`. Verified source approval submitted before merge: [approval receipt](https://github.com/sonic-net/sonic-sairedis/pull/2233#pullrequestreview-6084440683).
+
+## Terminal finding outcomes
+
+| ID | Outcome |
+|---|---|
+| R1 | Source-resolved; preserved correction history. |
+| N1 | Nonblocking documentation accuracy recommendation retained; merge does not prove it was corrected. |
+| N2 | Nonblocking joined/split macro audit-parser recommendation retained; merge does not prove it was corrected. |
+
+Temporary actions are retired. Earlier readiness states and reader drafts below are historical, not current submission instructions. Original full independent coverage and subsequent changed-scope checks, dissent, source history and validation limits are preserved. Installed-image qualification is not inferred from merge or external CI. No target merge, feedback, native test, build or CI retry was performed during archival.
+
+## Historical drafts — not actionable
+
 # Current receipt/status drafts
 
 ## Comment
